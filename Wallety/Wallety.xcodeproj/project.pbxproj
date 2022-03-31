@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		12482D7C27F5F14E00D292CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12482D7B27F5F14E00D292CA /* AppDelegate.swift */; };
 		12482D7E27F5F14E00D292CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12482D7D27F5F14E00D292CA /* SceneDelegate.swift */; };
-		12482D8027F5F14E00D292CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12482D7F27F5F14E00D292CA /* ViewController.swift */; };
+		12482D8027F5F14E00D292CA /* AfterLaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12482D7F27F5F14E00D292CA /* AfterLaunchVC.swift */; };
 		12482D8627F5F14E00D292CA /* Wallety.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 12482D8427F5F14E00D292CA /* Wallety.xcdatamodeld */; };
 		12482D8827F5F14F00D292CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12482D8727F5F14F00D292CA /* Assets.xcassets */; };
 		12482D8B27F5F14F00D292CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12482D8927F5F14F00D292CA /* LaunchScreen.storyboard */; };
@@ -19,6 +19,10 @@
 		12482DA027F5FC5500D292CA /* TestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12482D9F27F5FC5500D292CA /* TestInteractor.swift */; };
 		12482DA327F5FC9C00D292CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12482DA227F5FC9C00D292CA /* Images.xcassets */; };
 		12482DA527F5FCAF00D292CA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12482DA427F5FCAF00D292CA /* Colors.xcassets */; };
+		12F1D6E027F60B4B0003B10C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F1D6DF27F60B4B0003B10C /* R.generated.swift */; };
+		12F1D6E327F61A6C0003B10C /* WTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F1D6E227F61A6C0003B10C /* WTextField.swift */; };
+		12F1D6E627F62B670003B10C /* AfterLaunchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F1D6E527F62B670003B10C /* AfterLaunchVM.swift */; };
+		12F1D6E827F62EBE0003B10C /* WButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F1D6E727F62EBE0003B10C /* WButton.swift */; };
 		B8B8CDC8A9A6735023332E72 /* Pods_Wallety.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C81E6607564A6C96BA94D9 /* Pods_Wallety.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,7 +31,7 @@
 		12482D7827F5F14E00D292CA /* Wallety.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wallety.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12482D7B27F5F14E00D292CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12482D7D27F5F14E00D292CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		12482D7F27F5F14E00D292CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		12482D7F27F5F14E00D292CA /* AfterLaunchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterLaunchVC.swift; sourceTree = "<group>"; };
 		12482D8527F5F14E00D292CA /* Wallety.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Wallety.xcdatamodel; sourceTree = "<group>"; };
 		12482D8727F5F14F00D292CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12482D8A27F5F14F00D292CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +42,10 @@
 		12482D9F27F5FC5500D292CA /* TestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInteractor.swift; sourceTree = "<group>"; };
 		12482DA227F5FC9C00D292CA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		12482DA427F5FCAF00D292CA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		12F1D6DF27F60B4B0003B10C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		12F1D6E227F61A6C0003B10C /* WTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTextField.swift; sourceTree = "<group>"; };
+		12F1D6E527F62B670003B10C /* AfterLaunchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterLaunchVM.swift; sourceTree = "<group>"; };
+		12F1D6E727F62EBE0003B10C /* WButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WButton.swift; sourceTree = "<group>"; };
 		14F6F45C43FE1BBF5541CC8D /* Pods-Wallety.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wallety.release.xcconfig"; path = "Target Support Files/Pods-Wallety/Pods-Wallety.release.xcconfig"; sourceTree = "<group>"; };
 		648DE7A7D9810EC5752A5772 /* Pods-Wallety.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wallety.debug.xcconfig"; path = "Target Support Files/Pods-Wallety/Pods-Wallety.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +107,8 @@
 		12482D9527F5FB9A00D292CA /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				12F1D6E427F62B4F0003B10C /* ViewModels */,
+				12F1D6E127F61A3C0003B10C /* CustomControls */,
 				12482D9727F5FBB900D292CA /* Views */,
 				12482D9627F5FBB000D292CA /* VC */,
 			);
@@ -109,7 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				12482D9327F5F62200D292CA /* SplashScreenVC.swift */,
-				12482D7F27F5F14E00D292CA /* ViewController.swift */,
+				12482D7F27F5F14E00D292CA /* AfterLaunchVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -149,11 +159,29 @@
 		12482DA127F5FC6F00D292CA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				12F1D6DF27F60B4B0003B10C /* R.generated.swift */,
 				12482D8727F5F14F00D292CA /* Assets.xcassets */,
 				12482DA227F5FC9C00D292CA /* Images.xcassets */,
 				12482DA427F5FCAF00D292CA /* Colors.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		12F1D6E127F61A3C0003B10C /* CustomControls */ = {
+			isa = PBXGroup;
+			children = (
+				12F1D6E227F61A6C0003B10C /* WTextField.swift */,
+				12F1D6E727F62EBE0003B10C /* WButton.swift */,
+			);
+			path = CustomControls;
+			sourceTree = "<group>";
+		};
+		12F1D6E427F62B4F0003B10C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				12F1D6E527F62B670003B10C /* AfterLaunchVM.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		52EA8C17D992FD24102A554A /* Frameworks */ = {
@@ -310,12 +338,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12482D8027F5F14E00D292CA /* ViewController.swift in Sources */,
+				12482D8027F5F14E00D292CA /* AfterLaunchVC.swift in Sources */,
 				12482D7C27F5F14E00D292CA /* AppDelegate.swift in Sources */,
+				12F1D6E027F60B4B0003B10C /* R.generated.swift in Sources */,
 				12482DA027F5FC5500D292CA /* TestInteractor.swift in Sources */,
 				12482D8627F5F14E00D292CA /* Wallety.xcdatamodeld in Sources */,
 				12482D9427F5F62200D292CA /* SplashScreenVC.swift in Sources */,
 				12482D9D27F5FC2F00D292CA /* TestService.swift in Sources */,
+				12F1D6E827F62EBE0003B10C /* WButton.swift in Sources */,
+				12F1D6E327F61A6C0003B10C /* WTextField.swift in Sources */,
+				12F1D6E627F62B670003B10C /* AfterLaunchVM.swift in Sources */,
 				12482D9A27F5FBFE00D292CA /* AfterLaunchView.swift in Sources */,
 				12482D7E27F5F14E00D292CA /* SceneDelegate.swift in Sources */,
 			);
