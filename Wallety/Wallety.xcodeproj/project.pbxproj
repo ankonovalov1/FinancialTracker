@@ -19,9 +19,11 @@
 		12482DA027F5FC5500D292CA /* TestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12482D9F27F5FC5500D292CA /* TestInteractor.swift */; };
 		12482DA327F5FC9C00D292CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12482DA227F5FC9C00D292CA /* Images.xcassets */; };
 		12482DA527F5FCAF00D292CA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12482DA427F5FCAF00D292CA /* Colors.xcassets */; };
+		B8B8CDC8A9A6735023332E72 /* Pods_Wallety.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C81E6607564A6C96BA94D9 /* Pods_Wallety.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04C81E6607564A6C96BA94D9 /* Pods_Wallety.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wallety.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		12482D7827F5F14E00D292CA /* Wallety.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wallety.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12482D7B27F5F14E00D292CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12482D7D27F5F14E00D292CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +38,8 @@
 		12482D9F27F5FC5500D292CA /* TestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInteractor.swift; sourceTree = "<group>"; };
 		12482DA227F5FC9C00D292CA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		12482DA427F5FCAF00D292CA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		14F6F45C43FE1BBF5541CC8D /* Pods-Wallety.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wallety.release.xcconfig"; path = "Target Support Files/Pods-Wallety/Pods-Wallety.release.xcconfig"; sourceTree = "<group>"; };
+		648DE7A7D9810EC5752A5772 /* Pods-Wallety.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wallety.debug.xcconfig"; path = "Target Support Files/Pods-Wallety/Pods-Wallety.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8B8CDC8A9A6735023332E72 /* Pods_Wallety.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +59,8 @@
 			children = (
 				12482D7A27F5F14E00D292CA /* Wallety */,
 				12482D7927F5F14E00D292CA /* Products */,
+				FE468A8521B53B26FB467AD1 /* Pods */,
+				52EA8C17D992FD24102A554A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,6 +156,23 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		52EA8C17D992FD24102A554A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04C81E6607564A6C96BA94D9 /* Pods_Wallety.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FE468A8521B53B26FB467AD1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				648DE7A7D9810EC5752A5772 /* Pods-Wallety.debug.xcconfig */,
+				14F6F45C43FE1BBF5541CC8D /* Pods-Wallety.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,9 +180,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 12482D8F27F5F14F00D292CA /* Build configuration list for PBXNativeTarget "Wallety" */;
 			buildPhases = (
+				BBBBB796F34F64C85F58AC5E /* [CP] Check Pods Manifest.lock */,
+				12F1D6DE27F600220003B10C /* Run Script for R.Swift */,
 				12482D7427F5F14E00D292CA /* Sources */,
 				12482D7527F5F14E00D292CA /* Frameworks */,
 				12482D7627F5F14E00D292CA /* Resources */,
+				E1D99B944593D958F688A8F1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -215,6 +242,68 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12F1D6DE27F600220003B10C /* Run Script for R.Swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script for R.Swift";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		BBBBB796F34F64C85F58AC5E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Wallety-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1D99B944593D958F688A8F1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wallety/Pods-Wallety-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wallety/Pods-Wallety-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Wallety/Pods-Wallety-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		12482D7427F5F14E00D292CA /* Sources */ = {
@@ -362,6 +451,7 @@
 		};
 		12482D9027F5F14F00D292CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 648DE7A7D9810EC5752A5772 /* Pods-Wallety.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -391,6 +481,7 @@
 		};
 		12482D9127F5F14F00D292CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14F6F45C43FE1BBF5541CC8D /* Pods-Wallety.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
