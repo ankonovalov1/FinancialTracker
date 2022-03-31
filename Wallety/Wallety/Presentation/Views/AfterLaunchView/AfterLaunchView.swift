@@ -72,6 +72,17 @@ final class AfterLaunchView: UIView {
         return view
     }()
     
+    lazy var frameLayer: CALayer = {
+        let layer = CALayer()
+        layer.backgroundColor = R.color.secondaryBackground()?.cgColor
+        let bounds = UIScreen.main.bounds
+        let height = (bounds.height / 2) + (30 * 2)
+        let yOffset = (bounds.height/2) - 30
+        layer.frame = CGRect(x: 0, y: yOffset, width: bounds.width, height: height)
+        layer.cornerRadius = 30
+        return layer
+    }()
+    
     // MARK: Constructors
     
     override init(frame: CGRect) {
@@ -88,6 +99,9 @@ final class AfterLaunchView: UIView {
     // MARK: Manage subviews
     
     private func addSubviews() {
+        
+        self.layer.addSublayer(frameLayer)
+        
         [
             walletImage,
             mainLabel,
@@ -106,7 +120,7 @@ final class AfterLaunchView: UIView {
         walletImage.snp.makeConstraints { make in
             make.width.height.equalTo(200)
             make.centerX.equalTo(self)
-            make.top.equalTo(safeAreaLayoutGuide.snp.top).offset(50)
+            make.top.equalTo(safeAreaLayoutGuide.snp.top).offset(30)
         }
         
         mainLabel.snp.makeConstraints { make in
@@ -114,31 +128,31 @@ final class AfterLaunchView: UIView {
             make.right.equalTo(self).offset(-30)
             make.height.equalTo(80)
             make.centerX.equalTo(self)
-            make.top.equalTo(walletImage.snp.bottom).offset(40)
+            make.top.equalTo(self.snp.centerY)
         }
         
         balanceTextField.snp.makeConstraints { make in
             make.left.equalTo(self).offset(30)
             make.right.equalTo(self).offset(-30)
-            make.height.equalTo(50)
+            make.height.equalTo(49)
             make.centerX.equalTo(self)
-            make.bottom.equalTo(setButton.snp.top).offset(-19)
+            make.top.equalTo(mainLabel.snp.bottom).offset(48)
         }
         
         setButton.snp.makeConstraints { make in
             make.left.equalTo(self).offset(30)
             make.right.equalTo(self).offset(-30)
-            make.height.equalTo(50)
+            make.height.equalTo(49)
             make.centerX.equalTo(self)
-            make.bottom.equalTo(skipButton.snp.top).offset(-19)
+            make.top.equalTo(balanceTextField.snp.bottom).offset(19)
         }
         
         skipButton.snp.makeConstraints { make in
             make.left.equalTo(self).offset(30)
             make.right.equalTo(self).offset(-30)
-            make.height.equalTo(50)
+            make.height.equalTo(20)
             make.centerX.equalTo(self)
-            make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).offset(-70)
+            make.top.equalTo(setButton.snp.bottom).offset(19)
         }
         
     }
