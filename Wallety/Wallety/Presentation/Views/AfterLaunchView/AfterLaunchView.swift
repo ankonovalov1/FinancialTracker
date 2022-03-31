@@ -8,7 +8,7 @@ final class AfterLaunchView: UIView {
     lazy var walletImage: UIImageView = {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.image = R.image.afterLaunchImage()
+        view.image = R.image.moneyCircle()
         return view
     }()
     
@@ -16,8 +16,7 @@ final class AfterLaunchView: UIView {
         let view = UILabel()
         view.text  = "Установите свой текущий баланс"
         view.textColor = .white
-        let font = UIFont(name: "KohinoorGujarati-Regular", size: 22)!
-        view.lineBreakMode = .byWordWrapping
+        let font = UIFont(name: "KohinoorGujarati-Regular", size: 24)!
         view.numberOfLines = 2
         view.font = font
         view.textAlignment = .center
@@ -43,8 +42,8 @@ final class AfterLaunchView: UIView {
         return view
     }()
     
-    lazy var setButton: UIButton = {
-        let view = UIButton()
+    lazy var setButton: WButton = {
+        let view = WButton()
         view.backgroundColor = R.color.baseElements()
         let title = NSAttributedString(
             string: "Установить",
@@ -107,15 +106,15 @@ final class AfterLaunchView: UIView {
         walletImage.snp.makeConstraints { make in
             make.width.height.equalTo(200)
             make.centerX.equalTo(self)
-            make.top.equalTo(self).offset(50)
+            make.top.equalTo(safeAreaLayoutGuide.snp.top).offset(50)
         }
         
         mainLabel.snp.makeConstraints { make in
             make.left.equalTo(self).offset(30)
             make.right.equalTo(self).offset(-30)
-            make.height.equalTo(70)
+            make.height.equalTo(80)
             make.centerX.equalTo(self)
-            make.top.equalTo(walletImage.snp.bottom).offset(80)
+            make.top.equalTo(walletImage.snp.bottom).offset(40)
         }
         
         balanceTextField.snp.makeConstraints { make in
@@ -139,7 +138,7 @@ final class AfterLaunchView: UIView {
             make.right.equalTo(self).offset(-30)
             make.height.equalTo(50)
             make.centerX.equalTo(self)
-            make.bottom.equalTo(self.snp.bottom).offset(-70)
+            make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).offset(-70)
         }
         
     }

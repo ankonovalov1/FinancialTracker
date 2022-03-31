@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "after-launch-image.png",
+      "filename" : "money-circle-2.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "after-launch-image@2x.png",
+      "filename" : "money-circle.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "after-launch-image@3x.png",
+      "filename" : "money-circle-1.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
