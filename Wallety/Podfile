@@ -1,0 +1,12 @@
+platform :ios, '13.0'
+
+target 'Wallety' do
+  use_frameworks!
+
+   pod 'SnapKit', '~> 5.0.0'
+   pod 'Alamofire', '~> 5.5'
+   pod 'Swinject'
+   pod 'R.swift'
+   pod 'SwiftMessages'	
+
+end
