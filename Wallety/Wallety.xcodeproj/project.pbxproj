@@ -19,6 +19,12 @@
 		12482DA027F5FC5500D292CA /* TestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12482D9F27F5FC5500D292CA /* TestInteractor.swift */; };
 		12482DA327F5FC9C00D292CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12482DA227F5FC9C00D292CA /* Images.xcassets */; };
 		12482DA527F5FCAF00D292CA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12482DA427F5FCAF00D292CA /* Colors.xcassets */; };
+		1255FC3B27F6683A002029DE /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255FC3A27F6683A002029DE /* Navigator.swift */; };
+		1255FC3E27F66AF6002029DE /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255FC3D27F66AF6002029DE /* Destination.swift */; };
+		1255FC4127F67013002029DE /* RouterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255FC4027F67013002029DE /* RouterFactory.swift */; };
+		1255FC4327F67102002029DE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255FC4227F67102002029DE /* Router.swift */; };
+		1255FC4527F671C1002029DE /* MainScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255FC4427F671C1002029DE /* MainScreenVC.swift */; };
+		1255FC4827F67AE0002029DE /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255FC4727F67AE0002029DE /* SplashScreenView.swift */; };
 		12F1D6E027F60B4B0003B10C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F1D6DF27F60B4B0003B10C /* R.generated.swift */; };
 		12F1D6E327F61A6C0003B10C /* WTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F1D6E227F61A6C0003B10C /* WTextField.swift */; };
 		12F1D6E627F62B670003B10C /* AfterLaunchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F1D6E527F62B670003B10C /* AfterLaunchVM.swift */; };
@@ -42,6 +48,12 @@
 		12482D9F27F5FC5500D292CA /* TestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInteractor.swift; sourceTree = "<group>"; };
 		12482DA227F5FC9C00D292CA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		12482DA427F5FCAF00D292CA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		1255FC3A27F6683A002029DE /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		1255FC3D27F66AF6002029DE /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
+		1255FC4027F67013002029DE /* RouterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterFactory.swift; sourceTree = "<group>"; };
+		1255FC4227F67102002029DE /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		1255FC4427F671C1002029DE /* MainScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenVC.swift; sourceTree = "<group>"; };
+		1255FC4727F67AE0002029DE /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		12F1D6DF27F60B4B0003B10C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		12F1D6E227F61A6C0003B10C /* WTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTextField.swift; sourceTree = "<group>"; };
 		12F1D6E527F62B670003B10C /* AfterLaunchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterLaunchVM.swift; sourceTree = "<group>"; };
@@ -107,6 +119,8 @@
 		12482D9527F5FB9A00D292CA /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				1255FC3C27F66A6F002029DE /* Enumerations */,
+				1255FC3927F6681B002029DE /* Navigation */,
 				12F1D6E427F62B4F0003B10C /* ViewModels */,
 				12F1D6E127F61A3C0003B10C /* CustomControls */,
 				12482D9727F5FBB900D292CA /* Views */,
@@ -120,6 +134,7 @@
 			children = (
 				12482D9327F5F62200D292CA /* SplashScreenVC.swift */,
 				12482D7F27F5F14E00D292CA /* AfterLaunchVC.swift */,
+				1255FC4427F671C1002029DE /* MainScreenVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -127,6 +142,7 @@
 		12482D9727F5FBB900D292CA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1255FC4627F67AC0002029DE /* SplashScreenView */,
 				12482D9827F5FBC300D292CA /* AfterLaunchView */,
 			);
 			path = Views;
@@ -165,6 +181,40 @@
 				12482DA427F5FCAF00D292CA /* Colors.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		1255FC3927F6681B002029DE /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				1255FC3F27F66E87002029DE /* Routing */,
+				1255FC3A27F6683A002029DE /* Navigator.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		1255FC3C27F66A6F002029DE /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				1255FC3D27F66AF6002029DE /* Destination.swift */,
+			);
+			path = Enumerations;
+			sourceTree = "<group>";
+		};
+		1255FC3F27F66E87002029DE /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				1255FC4027F67013002029DE /* RouterFactory.swift */,
+				1255FC4227F67102002029DE /* Router.swift */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
+		1255FC4627F67AC0002029DE /* SplashScreenView */ = {
+			isa = PBXGroup;
+			children = (
+				1255FC4727F67AE0002029DE /* SplashScreenView.swift */,
+			);
+			path = SplashScreenView;
 			sourceTree = "<group>";
 		};
 		12F1D6E127F61A3C0003B10C /* CustomControls */ = {
@@ -341,9 +391,15 @@
 				12482D8027F5F14E00D292CA /* AfterLaunchVC.swift in Sources */,
 				12482D7C27F5F14E00D292CA /* AppDelegate.swift in Sources */,
 				12F1D6E027F60B4B0003B10C /* R.generated.swift in Sources */,
+				1255FC3B27F6683A002029DE /* Navigator.swift in Sources */,
 				12482DA027F5FC5500D292CA /* TestInteractor.swift in Sources */,
+				1255FC4127F67013002029DE /* RouterFactory.swift in Sources */,
+				1255FC4527F671C1002029DE /* MainScreenVC.swift in Sources */,
 				12482D8627F5F14E00D292CA /* Wallety.xcdatamodeld in Sources */,
+				1255FC3E27F66AF6002029DE /* Destination.swift in Sources */,
+				1255FC4327F67102002029DE /* Router.swift in Sources */,
 				12482D9427F5F62200D292CA /* SplashScreenVC.swift in Sources */,
+				1255FC4827F67AE0002029DE /* SplashScreenView.swift in Sources */,
 				12482D9D27F5FC2F00D292CA /* TestService.swift in Sources */,
 				12F1D6E827F62EBE0003B10C /* WButton.swift in Sources */,
 				12F1D6E327F61A6C0003B10C /* WTextField.swift in Sources */,
