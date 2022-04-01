@@ -4,8 +4,8 @@ final class AfterLaunchVC: UIViewController {
     
     // MARK: Properties
     
-    let mainView = AfterLaunchView()
-    let viewModel = AfterLaunchVM()
+    private let mainView = AfterLaunchView()
+    private let viewModel = AfterLaunchVM()
     
     // MARK: VC lifecycle
 

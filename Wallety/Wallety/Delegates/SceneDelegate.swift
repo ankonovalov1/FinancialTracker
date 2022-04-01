@@ -3,13 +3,26 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var navigationController: UINavigationController?
+    var routerFactory: RouterFactoryProtocol?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-     
-        guard let scene = scene as? UIWindowScene else { return }
+        
+        navigationController = UINavigationController()
+        routerFactory = RouterFactory()
+        
+        guard
+            let scene = scene as? UIWindowScene,
+            let navigationController = navigationController,
+            let routerFactory = routerFactory
+        else { return }
+        
+        let vc = prepareViewControllerForLaunch(routerFactory)
+        navigationController.isNavigationBarHidden = true
+        navigationController.setViewControllers([vc], animated: false)
+        
         window = UIWindow(windowScene: scene)
-        window?.rootViewController = AfterLaunchVC()
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
 
@@ -42,6 +55,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+    }
+    
+    private func prepareViewControllerForLaunch(_ factory: RouterFactoryProtocol) -> UIViewController {
+        let router = factory.createRouter(for: .splash)
+        return router.configure()
     }
 
 
