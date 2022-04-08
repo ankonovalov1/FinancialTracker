@@ -5,7 +5,7 @@ final class MainScreenVC: UIViewController {
     // MARK: - Properties
     
     let mainView = MainScreenView()
-    let testArray = [1,2,3,4,5,6,7,8,9,10]
+    let viewModel = MainScreenVM()
     
     // MARK: - Lifecycle
 
@@ -22,7 +22,7 @@ final class MainScreenVC: UIViewController {
 extension MainScreenVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return testArray.count
+        return viewModel.transactions.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -30,7 +30,8 @@ extension MainScreenVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: IncomeSpendingViewCell.id, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: IncomeSpendingViewCell.id, for: indexPath) as! IncomeSpendingViewCell
+        cell.configure(transaction: viewModel.transactions[indexPath.row])
         return cell
     }
     

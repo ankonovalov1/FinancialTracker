@@ -6,9 +6,19 @@ final class AfterLaunchVC: UIViewController {
     
     private let mainView = AfterLaunchView()
     private let viewModel = AfterLaunchVM()
+    private let navigator: NavigatorProtocol
     
     // MARK: VC lifecycle
-
+    
+    init(navigator: NavigatorProtocol) {
+        self.navigator = navigator
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = mainView
@@ -23,7 +33,7 @@ final class AfterLaunchVC: UIViewController {
     }
     
     @objc private func setBalanceTapped() {
-        
+        navigator.navigate(to: .main)
     }
     
     // MARK: Private func

@@ -30,7 +30,13 @@ struct SplashScreenRouter: RouterProtocol {
 struct AfterLaunchScreenRouter: RouterProtocol {
     
     func configure() -> UIViewController {
-        return AfterLaunchVC()
+        guard
+            let delegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
+            let navigationController = delegate.navigationController,
+            let factory = delegate.routerFactory
+        else { return UIViewController() }
+        let navigator = Navigator(navigationController: navigationController, factory: factory)
+        return AfterLaunchVC(navigator: navigator)
     }
     
 }

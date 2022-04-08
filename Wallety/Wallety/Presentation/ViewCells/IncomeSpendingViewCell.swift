@@ -49,6 +49,20 @@ final class IncomeSpendingViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: Internal
+    
+    func configure(transaction: TransactionVM) {
+        typeLabel.text = transaction.kind
+        valueLabel.text = transaction.value
+        dateLabel.text = transaction.date
+        switch transaction.type {
+        case .ask:
+            valueLabel.textColor = R.color.baseElementsRed()
+        case .bid:
+            valueLabel.textColor = R.color.baseElementsGreen()
+        }
+    }
+    
     // MARK: Private
     
     private func manageView() {
