@@ -1,0 +1,74 @@
+import UIKit
+
+final class IncomeSpendingViewCell: UITableViewCell {
+    
+    // MARK: - Properties
+
+    static let id = "IncomeSpendingViewCell"
+    
+    // MARK: - Views
+    
+    lazy var typeLabel: UILabel = {
+        let label = UILabel(text: "1", font: UIFont(name: "KohinoorGujarati-Regular", size: 8)!, textColor: .white)
+        label.textAlignment = .center
+        return label
+    }()
+    
+    lazy var valueLabel: UILabel = {
+        let label = UILabel(text: "1", font: UIFont(name: "KohinoorGujarati-Regular", size: 14)!, textColor: .white)
+        label.textAlignment = .center
+        return label
+    }()
+    
+    lazy var dateLabel: UILabel = {
+        let label = UILabel(text: "1", font: UIFont(name: "KohinoorGujarati-Regular", size: 8)!, textColor: .white)
+        label.textAlignment = .center
+        return label
+    }()
+    
+    lazy var stackForLabels: UIStackView = {
+        let stack = UIStackView(arrangedSubviews: [typeLabel, valueLabel, dateLabel])
+        stack.axis = .horizontal
+        stack.backgroundColor = R.color.secondaryBackground()
+        stack.spacing = 0
+        stack.distribution = .fillEqually
+        stack.layer.cornerRadius = 12
+        return stack
+    }()
+    
+    // MARK:  - Lifecycle
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        manageView()
+        addSubviews()
+        addConstraints()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: Private
+    
+    private func manageView() {
+        self.backgroundColor = .clear
+        self.layer.cornerRadius = 12
+    }
+    
+    private func addSubviews() {
+        self.addSubview(stackForLabels)
+    }
+    
+    private func addConstraints() {
+        
+        stackForLabels.snp.makeConstraints { make in
+            make.top.equalTo(self).offset(5)
+            make.left.equalTo(self).offset(5)
+            make.bottom.equalTo(self).offset(-5)
+            make.right.equalTo(self).offset(-5)
+        }
+        
+    }
+    
+}

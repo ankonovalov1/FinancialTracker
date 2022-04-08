@@ -37,14 +37,14 @@ final class AfterLaunchView: UIView {
         view.keyboardType = .decimalPad
         view.layer.borderWidth = 1
         view.layer.cornerRadius = 10
-        view.layer.borderColor = R.color.baseElements()?.cgColor
+        view.layer.borderColor = R.color.baseElementsBlue()?.cgColor
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     lazy var setButton: WButton = {
-        let view = WButton()
-        view.backgroundColor = R.color.baseElements()
+        let view = WButton(type: .system)
+        view.backgroundColor = R.color.baseElementsBlue()
         let title = NSAttributedString(
             string: "Установить",
             attributes: [
@@ -59,7 +59,7 @@ final class AfterLaunchView: UIView {
     }()
     
     lazy var skipButton: UIButton = {
-        let view = UIButton()
+        let view = UIButton(type: .system)
         let title = NSAttributedString(
             string: "Пропустить",
             attributes: [
