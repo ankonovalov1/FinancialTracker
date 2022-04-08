@@ -31,6 +31,9 @@
 		12C1167B280019DD00D6B8C0 /* IncomeSpendingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1167A280019DD00D6B8C0 /* IncomeSpendingViewCell.swift */; };
 		12C1167E28002AE900D6B8C0 /* MainScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1167D28002AE900D6B8C0 /* MainScreenVM.swift */; };
 		12C1168028002B1900D6B8C0 /* TransactionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1167F28002B1900D6B8C0 /* TransactionVM.swift */; };
+		12C116822800610C00D6B8C0 /* ProfileScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C116812800610C00D6B8C0 /* ProfileScreenVC.swift */; };
+		12C116842800614A00D6B8C0 /* StatisticScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C116832800614A00D6B8C0 /* StatisticScreenVC.swift */; };
+		12C116862800617700D6B8C0 /* SettingsScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C116852800617700D6B8C0 /* SettingsScreenVC.swift */; };
 		12F1D6E027F60B4B0003B10C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F1D6DF27F60B4B0003B10C /* R.generated.swift */; };
 		12F1D6E327F61A6C0003B10C /* WTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F1D6E227F61A6C0003B10C /* WTextField.swift */; };
 		12F1D6E627F62B670003B10C /* AfterLaunchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F1D6E527F62B670003B10C /* AfterLaunchVM.swift */; };
@@ -66,6 +69,9 @@
 		12C1167A280019DD00D6B8C0 /* IncomeSpendingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeSpendingViewCell.swift; sourceTree = "<group>"; };
 		12C1167D28002AE900D6B8C0 /* MainScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenVM.swift; sourceTree = "<group>"; };
 		12C1167F28002B1900D6B8C0 /* TransactionVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionVM.swift; sourceTree = "<group>"; };
+		12C116812800610C00D6B8C0 /* ProfileScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenVC.swift; sourceTree = "<group>"; };
+		12C116832800614A00D6B8C0 /* StatisticScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticScreenVC.swift; sourceTree = "<group>"; };
+		12C116852800617700D6B8C0 /* SettingsScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenVC.swift; sourceTree = "<group>"; };
 		12F1D6DF27F60B4B0003B10C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		12F1D6E227F61A6C0003B10C /* WTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTextField.swift; sourceTree = "<group>"; };
 		12F1D6E527F62B670003B10C /* AfterLaunchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterLaunchVM.swift; sourceTree = "<group>"; };
@@ -149,6 +155,9 @@
 				12482D9327F5F62200D292CA /* SplashScreenVC.swift */,
 				12482D7F27F5F14E00D292CA /* AfterLaunchVC.swift */,
 				1255FC4427F671C1002029DE /* MainScreenVC.swift */,
+				12C116812800610C00D6B8C0 /* ProfileScreenVC.swift */,
+				12C116832800614A00D6B8C0 /* StatisticScreenVC.swift */,
+				12C116852800617700D6B8C0 /* SettingsScreenVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -439,9 +448,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				12482D8027F5F14E00D292CA /* AfterLaunchVC.swift in Sources */,
+				12C116862800617700D6B8C0 /* SettingsScreenVC.swift in Sources */,
 				12C1167527FFFED600D6B8C0 /* BalanceInfoView.swift in Sources */,
 				12482D7C27F5F14E00D292CA /* AppDelegate.swift in Sources */,
 				12C1167B280019DD00D6B8C0 /* IncomeSpendingViewCell.swift in Sources */,
+				12C116822800610C00D6B8C0 /* ProfileScreenVC.swift in Sources */,
 				12C1167327FFFD3500D6B8C0 /* MainScreenView.swift in Sources */,
 				12F1D6E027F60B4B0003B10C /* R.generated.swift in Sources */,
 				12C116782800018000D6B8C0 /* UILabel + Extensions.swift in Sources */,
@@ -460,6 +471,7 @@
 				12F1D6E327F61A6C0003B10C /* WTextField.swift in Sources */,
 				12F1D6E627F62B670003B10C /* AfterLaunchVM.swift in Sources */,
 				12482D9A27F5FBFE00D292CA /* AfterLaunchView.swift in Sources */,
+				12C116842800614A00D6B8C0 /* StatisticScreenVC.swift in Sources */,
 				12482D7E27F5F14E00D292CA /* SceneDelegate.swift in Sources */,
 				12C1168028002B1900D6B8C0 /* TransactionVM.swift in Sources */,
 			);

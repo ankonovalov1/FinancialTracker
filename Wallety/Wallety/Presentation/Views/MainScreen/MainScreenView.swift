@@ -65,11 +65,11 @@ final class MainScreenView: UIView {
         return view
     }()
     
-    lazy var lineLayer: CALayer = {
-        let line = CALayer()
-        line.backgroundColor = R.color.secondaryBackground()?.cgColor
-        line.frame = CGRect(x: 35, y: 318, width: 305, height: 1)
-        return line
+    lazy var lineView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = R.color.secondaryBackground()
+        return view
     }()
     
     lazy var incomeSpendingLabel: UILabel = {
@@ -95,7 +95,6 @@ final class MainScreenView: UIView {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = .clear
         tableView.separatorStyle = .none
-        tableView.allowsSelection = false
         tableView.showsVerticalScrollIndicator = false
         tableView.register(IncomeSpendingViewCell.self, forCellReuseIdentifier: IncomeSpendingViewCell.id)
         return tableView
@@ -127,14 +126,13 @@ final class MainScreenView: UIView {
             balanceValueLabel,
             stackForPlusMinusButtons,
             stackForInfoViews,
+            lineView,
             incomeSpendingLabel,
             dateButton,
             infoTableView
         ].forEach {
             self.addSubview($0)
         }
-        
-        self.layer.addSublayer(lineLayer)
         
     }
     
@@ -165,6 +163,13 @@ final class MainScreenView: UIView {
             make.left.equalTo(self.snp.left).offset(35)
             make.right.equalTo(self.snp.right).offset(-35)
             make.height.equalTo(55)
+        }
+        
+        lineView.snp.makeConstraints { make in
+            make.top.equalTo(stackForInfoViews.snp.bottom).offset(22)
+            make.left.equalTo(self.snp.left).offset(35)
+            make.right.equalTo(self.snp.right).offset(-35)
+            make.height.equalTo(1)
         }
         
         incomeSpendingLabel.snp.makeConstraints { make in

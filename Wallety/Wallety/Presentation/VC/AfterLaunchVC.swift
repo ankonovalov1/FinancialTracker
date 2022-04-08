@@ -33,7 +33,7 @@ final class AfterLaunchVC: UIViewController {
     }
     
     @objc private func setBalanceTapped() {
-        navigator.navigate(to: .main)
+        navigator.navigate(to: .mainTabScreen)
     }
     
     // MARK: Private func
