@@ -14,6 +14,8 @@ struct RouterFactory: RouterFactoryProtocol {
             return AfterLaunchScreenRouter()
         case .splash:
             return SplashScreenRouter()
+        case .mainTabScreen:
+            return MainTabScreenRouter()
         }
     }
     

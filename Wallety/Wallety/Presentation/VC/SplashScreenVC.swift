@@ -27,7 +27,12 @@ final class SplashScreenVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
-            self.navigator.navigate(to: .afterLaunch)
+            if UserDefaults.standard.bool(forKey: StringKeys.skipAfterLaunch) {
+                self.navigator.navigate(to: .mainTabScreen)
+            }
+            else {
+                self.navigator.navigate(to: .afterLaunch)
+            }
         }
     }
 

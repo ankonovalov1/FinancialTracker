@@ -25,6 +25,21 @@
 		1255FC4327F67102002029DE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255FC4227F67102002029DE /* Router.swift */; };
 		1255FC4527F671C1002029DE /* MainScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255FC4427F671C1002029DE /* MainScreenVC.swift */; };
 		1255FC4827F67AE0002029DE /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255FC4727F67AE0002029DE /* SplashScreenView.swift */; };
+		12C1167327FFFD3500D6B8C0 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1167227FFFD3500D6B8C0 /* MainScreenView.swift */; };
+		12C1167527FFFED600D6B8C0 /* BalanceInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1167427FFFED600D6B8C0 /* BalanceInfoView.swift */; };
+		12C116782800018000D6B8C0 /* UILabel + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C116772800018000D6B8C0 /* UILabel + Extensions.swift */; };
+		12C1167B280019DD00D6B8C0 /* IncomeSpendingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1167A280019DD00D6B8C0 /* IncomeSpendingViewCell.swift */; };
+		12C1167E28002AE900D6B8C0 /* MainScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1167D28002AE900D6B8C0 /* MainScreenVM.swift */; };
+		12C1168028002B1900D6B8C0 /* TransactionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1167F28002B1900D6B8C0 /* TransactionVM.swift */; };
+		12C116822800610C00D6B8C0 /* ProfileScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C116812800610C00D6B8C0 /* ProfileScreenVC.swift */; };
+		12C116842800614A00D6B8C0 /* StatisticScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C116832800614A00D6B8C0 /* StatisticScreenVC.swift */; };
+		12C116862800617700D6B8C0 /* SettingsScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C116852800617700D6B8C0 /* SettingsScreenVC.swift */; };
+		12C116892804286800D6B8C0 /* ProfileScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C116882804286800D6B8C0 /* ProfileScreenView.swift */; };
+		12C1168B280439F500D6B8C0 /* ProfileScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1168A280439F500D6B8C0 /* ProfileScreenVM.swift */; };
+		12C1168F28043A8000D6B8C0 /* ProfileEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1168E28043A8000D6B8C0 /* ProfileEntity.swift */; };
+		12C1169228043ABD00D6B8C0 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1169128043ABD00D6B8C0 /* ProfileModel.swift */; };
+		12C1169428043B0E00D6B8C0 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1169328043B0E00D6B8C0 /* Account.swift */; };
+		12C1169628045EDC00D6B8C0 /* StringKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1169528045EDC00D6B8C0 /* StringKeys.swift */; };
 		12F1D6E027F60B4B0003B10C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F1D6DF27F60B4B0003B10C /* R.generated.swift */; };
 		12F1D6E327F61A6C0003B10C /* WTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F1D6E227F61A6C0003B10C /* WTextField.swift */; };
 		12F1D6E627F62B670003B10C /* AfterLaunchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F1D6E527F62B670003B10C /* AfterLaunchVM.swift */; };
@@ -54,6 +69,21 @@
 		1255FC4227F67102002029DE /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		1255FC4427F671C1002029DE /* MainScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenVC.swift; sourceTree = "<group>"; };
 		1255FC4727F67AE0002029DE /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		12C1167227FFFD3500D6B8C0 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		12C1167427FFFED600D6B8C0 /* BalanceInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceInfoView.swift; sourceTree = "<group>"; };
+		12C116772800018000D6B8C0 /* UILabel + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extensions.swift"; sourceTree = "<group>"; };
+		12C1167A280019DD00D6B8C0 /* IncomeSpendingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeSpendingViewCell.swift; sourceTree = "<group>"; };
+		12C1167D28002AE900D6B8C0 /* MainScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenVM.swift; sourceTree = "<group>"; };
+		12C1167F28002B1900D6B8C0 /* TransactionVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionVM.swift; sourceTree = "<group>"; };
+		12C116812800610C00D6B8C0 /* ProfileScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenVC.swift; sourceTree = "<group>"; };
+		12C116832800614A00D6B8C0 /* StatisticScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticScreenVC.swift; sourceTree = "<group>"; };
+		12C116852800617700D6B8C0 /* SettingsScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenVC.swift; sourceTree = "<group>"; };
+		12C116882804286800D6B8C0 /* ProfileScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenView.swift; sourceTree = "<group>"; };
+		12C1168A280439F500D6B8C0 /* ProfileScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenVM.swift; sourceTree = "<group>"; };
+		12C1168E28043A8000D6B8C0 /* ProfileEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEntity.swift; sourceTree = "<group>"; };
+		12C1169128043ABD00D6B8C0 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		12C1169328043B0E00D6B8C0 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		12C1169528045EDC00D6B8C0 /* StringKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringKeys.swift; sourceTree = "<group>"; };
 		12F1D6DF27F60B4B0003B10C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		12F1D6E227F61A6C0003B10C /* WTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTextField.swift; sourceTree = "<group>"; };
 		12F1D6E527F62B670003B10C /* AfterLaunchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterLaunchVM.swift; sourceTree = "<group>"; };
@@ -103,6 +133,7 @@
 				12482D8927F5F14F00D292CA /* LaunchScreen.storyboard */,
 				12482D8C27F5F14F00D292CA /* Info.plist */,
 				12482D8427F5F14E00D292CA /* Wallety.xcdatamodeld */,
+				12C1169528045EDC00D6B8C0 /* StringKeys.swift */,
 			);
 			path = Wallety;
 			sourceTree = "<group>";
@@ -119,6 +150,9 @@
 		12482D9527F5FB9A00D292CA /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				12C1169028043AA500D6B8C0 /* Models */,
+				12C11679280019A700D6B8C0 /* ViewCells */,
+				12C116762800016800D6B8C0 /* Extensions */,
 				1255FC3C27F66A6F002029DE /* Enumerations */,
 				1255FC3927F6681B002029DE /* Navigation */,
 				12F1D6E427F62B4F0003B10C /* ViewModels */,
@@ -135,6 +169,9 @@
 				12482D9327F5F62200D292CA /* SplashScreenVC.swift */,
 				12482D7F27F5F14E00D292CA /* AfterLaunchVC.swift */,
 				1255FC4427F671C1002029DE /* MainScreenVC.swift */,
+				12C116812800610C00D6B8C0 /* ProfileScreenVC.swift */,
+				12C116832800614A00D6B8C0 /* StatisticScreenVC.swift */,
+				12C116852800617700D6B8C0 /* SettingsScreenVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -142,18 +179,20 @@
 		12482D9727F5FBB900D292CA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1255FC4627F67AC0002029DE /* SplashScreenView */,
-				12482D9827F5FBC300D292CA /* AfterLaunchView */,
+				12C116872804284800D6B8C0 /* ProfileScreen */,
+				12C1167127FFFD1400D6B8C0 /* MainScreen */,
+				1255FC4627F67AC0002029DE /* SplashScreen */,
+				12482D9827F5FBC300D292CA /* AfterLaunch */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		12482D9827F5FBC300D292CA /* AfterLaunchView */ = {
+		12482D9827F5FBC300D292CA /* AfterLaunch */ = {
 			isa = PBXGroup;
 			children = (
 				12482D9927F5FBFE00D292CA /* AfterLaunchView.swift */,
 			);
-			path = AfterLaunchView;
+			path = AfterLaunch;
 			sourceTree = "<group>";
 		};
 		12482D9B27F5FC1B00D292CA /* Data */ = {
@@ -167,7 +206,8 @@
 		12482D9E27F5FC3F00D292CA /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				12482D9F27F5FC5500D292CA /* TestInteractor.swift */,
+				12C1168D28043A4200D6B8C0 /* Entities */,
+				12C1168C28043A3800D6B8C0 /* Interactors */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -209,12 +249,78 @@
 			path = Routing;
 			sourceTree = "<group>";
 		};
-		1255FC4627F67AC0002029DE /* SplashScreenView */ = {
+		1255FC4627F67AC0002029DE /* SplashScreen */ = {
 			isa = PBXGroup;
 			children = (
 				1255FC4727F67AE0002029DE /* SplashScreenView.swift */,
 			);
-			path = SplashScreenView;
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		12C1167127FFFD1400D6B8C0 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				12C1167227FFFD3500D6B8C0 /* MainScreenView.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		12C116762800016800D6B8C0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				12C116772800018000D6B8C0 /* UILabel + Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		12C11679280019A700D6B8C0 /* ViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				12C1167A280019DD00D6B8C0 /* IncomeSpendingViewCell.swift */,
+			);
+			path = ViewCells;
+			sourceTree = "<group>";
+		};
+		12C1167C28002A6C00D6B8C0 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				12C1167D28002AE900D6B8C0 /* MainScreenVM.swift */,
+				12C1167F28002B1900D6B8C0 /* TransactionVM.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		12C116872804284800D6B8C0 /* ProfileScreen */ = {
+			isa = PBXGroup;
+			children = (
+				12C116882804286800D6B8C0 /* ProfileScreenView.swift */,
+			);
+			path = ProfileScreen;
+			sourceTree = "<group>";
+		};
+		12C1168C28043A3800D6B8C0 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				12482D9F27F5FC5500D292CA /* TestInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		12C1168D28043A4200D6B8C0 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				12C1168E28043A8000D6B8C0 /* ProfileEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		12C1169028043AA500D6B8C0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				12C1169128043ABD00D6B8C0 /* ProfileModel.swift */,
+				12C1169328043B0E00D6B8C0 /* Account.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		12F1D6E127F61A3C0003B10C /* CustomControls */ = {
@@ -222,6 +328,7 @@
 			children = (
 				12F1D6E227F61A6C0003B10C /* WTextField.swift */,
 				12F1D6E727F62EBE0003B10C /* WButton.swift */,
+				12C1167427FFFED600D6B8C0 /* BalanceInfoView.swift */,
 			);
 			path = CustomControls;
 			sourceTree = "<group>";
@@ -229,7 +336,9 @@
 		12F1D6E427F62B4F0003B10C /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				12C1167C28002A6C00D6B8C0 /* MainScreen */,
 				12F1D6E527F62B670003B10C /* AfterLaunchVM.swift */,
+				12C1168A280439F500D6B8C0 /* ProfileScreenVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -389,23 +498,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				12482D8027F5F14E00D292CA /* AfterLaunchVC.swift in Sources */,
+				12C1169628045EDC00D6B8C0 /* StringKeys.swift in Sources */,
+				12C116862800617700D6B8C0 /* SettingsScreenVC.swift in Sources */,
+				12C1167527FFFED600D6B8C0 /* BalanceInfoView.swift in Sources */,
 				12482D7C27F5F14E00D292CA /* AppDelegate.swift in Sources */,
+				12C1167B280019DD00D6B8C0 /* IncomeSpendingViewCell.swift in Sources */,
+				12C116822800610C00D6B8C0 /* ProfileScreenVC.swift in Sources */,
+				12C1167327FFFD3500D6B8C0 /* MainScreenView.swift in Sources */,
 				12F1D6E027F60B4B0003B10C /* R.generated.swift in Sources */,
+				12C116782800018000D6B8C0 /* UILabel + Extensions.swift in Sources */,
 				1255FC3B27F6683A002029DE /* Navigator.swift in Sources */,
 				12482DA027F5FC5500D292CA /* TestInteractor.swift in Sources */,
 				1255FC4127F67013002029DE /* RouterFactory.swift in Sources */,
+				12C1167E28002AE900D6B8C0 /* MainScreenVM.swift in Sources */,
+				12C1168B280439F500D6B8C0 /* ProfileScreenVM.swift in Sources */,
 				1255FC4527F671C1002029DE /* MainScreenVC.swift in Sources */,
 				12482D8627F5F14E00D292CA /* Wallety.xcdatamodeld in Sources */,
 				1255FC3E27F66AF6002029DE /* Destination.swift in Sources */,
 				1255FC4327F67102002029DE /* Router.swift in Sources */,
+				12C1169228043ABD00D6B8C0 /* ProfileModel.swift in Sources */,
 				12482D9427F5F62200D292CA /* SplashScreenVC.swift in Sources */,
+				12C116892804286800D6B8C0 /* ProfileScreenView.swift in Sources */,
+				12C1169428043B0E00D6B8C0 /* Account.swift in Sources */,
+				12C1168F28043A8000D6B8C0 /* ProfileEntity.swift in Sources */,
 				1255FC4827F67AE0002029DE /* SplashScreenView.swift in Sources */,
 				12482D9D27F5FC2F00D292CA /* TestService.swift in Sources */,
 				12F1D6E827F62EBE0003B10C /* WButton.swift in Sources */,
 				12F1D6E327F61A6C0003B10C /* WTextField.swift in Sources */,
 				12F1D6E627F62B670003B10C /* AfterLaunchVM.swift in Sources */,
 				12482D9A27F5FBFE00D292CA /* AfterLaunchView.swift in Sources */,
+				12C116842800614A00D6B8C0 /* StatisticScreenVC.swift in Sources */,
 				12482D7E27F5F14E00D292CA /* SceneDelegate.swift in Sources */,
+				12C1168028002B1900D6B8C0 /* TransactionVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
