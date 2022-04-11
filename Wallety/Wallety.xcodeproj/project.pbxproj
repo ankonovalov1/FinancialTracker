@@ -34,6 +34,7 @@
 		12C116822800610C00D6B8C0 /* ProfileScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C116812800610C00D6B8C0 /* ProfileScreenVC.swift */; };
 		12C116842800614A00D6B8C0 /* StatisticScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C116832800614A00D6B8C0 /* StatisticScreenVC.swift */; };
 		12C116862800617700D6B8C0 /* SettingsScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C116852800617700D6B8C0 /* SettingsScreenVC.swift */; };
+		12C116892804286800D6B8C0 /* ProfileScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C116882804286800D6B8C0 /* ProfileScreenView.swift */; };
 		12F1D6E027F60B4B0003B10C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F1D6DF27F60B4B0003B10C /* R.generated.swift */; };
 		12F1D6E327F61A6C0003B10C /* WTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F1D6E227F61A6C0003B10C /* WTextField.swift */; };
 		12F1D6E627F62B670003B10C /* AfterLaunchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F1D6E527F62B670003B10C /* AfterLaunchVM.swift */; };
@@ -72,6 +73,7 @@
 		12C116812800610C00D6B8C0 /* ProfileScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenVC.swift; sourceTree = "<group>"; };
 		12C116832800614A00D6B8C0 /* StatisticScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticScreenVC.swift; sourceTree = "<group>"; };
 		12C116852800617700D6B8C0 /* SettingsScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenVC.swift; sourceTree = "<group>"; };
+		12C116882804286800D6B8C0 /* ProfileScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenView.swift; sourceTree = "<group>"; };
 		12F1D6DF27F60B4B0003B10C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		12F1D6E227F61A6C0003B10C /* WTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTextField.swift; sourceTree = "<group>"; };
 		12F1D6E527F62B670003B10C /* AfterLaunchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterLaunchVM.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 		12482D9727F5FBB900D292CA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				12C116872804284800D6B8C0 /* ProfileScreen */,
 				12C1167127FFFD1400D6B8C0 /* MainScreen */,
 				1255FC4627F67AC0002029DE /* SplashScreen */,
 				12482D9827F5FBC300D292CA /* AfterLaunch */,
@@ -272,6 +275,14 @@
 				12C1167F28002B1900D6B8C0 /* TransactionVM.swift */,
 			);
 			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		12C116872804284800D6B8C0 /* ProfileScreen */ = {
+			isa = PBXGroup;
+			children = (
+				12C116882804286800D6B8C0 /* ProfileScreenView.swift */,
+			);
+			path = ProfileScreen;
 			sourceTree = "<group>";
 		};
 		12F1D6E127F61A3C0003B10C /* CustomControls */ = {
@@ -465,6 +476,7 @@
 				1255FC3E27F66AF6002029DE /* Destination.swift in Sources */,
 				1255FC4327F67102002029DE /* Router.swift in Sources */,
 				12482D9427F5F62200D292CA /* SplashScreenVC.swift in Sources */,
+				12C116892804286800D6B8C0 /* ProfileScreenView.swift in Sources */,
 				1255FC4827F67AE0002029DE /* SplashScreenView.swift in Sources */,
 				12482D9D27F5FC2F00D292CA /* TestService.swift in Sources */,
 				12F1D6E827F62EBE0003B10C /* WButton.swift in Sources */,

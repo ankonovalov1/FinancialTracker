@@ -2,6 +2,10 @@ import UIKit
 
 final class ProfileScreenVC: UIViewController {
     
+    // MARK: - Properties
+    
+    let mainView = ProfileScreenView()
+    
     // MARK: - Lifecycle
     
     init() {
@@ -16,7 +20,7 @@ final class ProfileScreenVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view = mainView
     }
 
 }
