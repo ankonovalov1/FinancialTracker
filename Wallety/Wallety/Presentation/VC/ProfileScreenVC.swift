@@ -13,6 +13,9 @@ final class ProfileScreenVC: UIViewController {
         super.init(nibName: nil, bundle: nil)
         self.tabBarItem.image = UIImage(resource: R.image.profileTabWhite)
         self.tabBarItem.selectedImage = UIImage(resource: R.image.profileTabBlue)
+        mainView.emailTextField.delegate = self
+        mainView.nicknameTextField.delegate = self
+        mainView.changeButton.addTarget(self, action: #selector(changeEditingMode), for: .touchUpInside)
     }
     
     required init?(coder: NSCoder) {
@@ -25,15 +28,48 @@ final class ProfileScreenVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        configure()
+        configureValues()
     }
     
-    private func configure() {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        self.view.endEditing(true)
+    }
+    
+    // MARK: - Private
+    
+    private func configureValues() {
         mainView.nicknameTextField.text = viewModel.model.nickname
         mainView.emailTextField.text = viewModel.model.email
-        mainView.balanceTextField.text = String(viewModel.model.account.balance)
-        mainView.dutyTextField.text = String(viewModel.model.account.duty)
-        mainView.investmentTextField.text = String(viewModel.model.account.investment)
+        mainView.balanceValueLabel.text = String(viewModel.model.account.balance)
+        mainView.dutyValueLabel.text = String(viewModel.model.account.duty)
+        mainView.investmentValueLabel.text = String(viewModel.model.account.investment)
+    }
+    
+    @objc private func changeEditingMode() {
+        if viewModel.isEditing {
+            mainView.enableEditing(false)
+        }
+        else {
+            mainView.enableEditing(true)
+        }
+        viewModel.isEditing.toggle()
     }
 
+}
+
+extension ProfileScreenVC: UITextFieldDelegate {
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+        
+    }
+    
 }

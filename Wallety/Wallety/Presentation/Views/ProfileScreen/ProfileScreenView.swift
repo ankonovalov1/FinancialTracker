@@ -18,6 +18,7 @@ final class ProfileScreenView: UIView {
         view.font = font
         view.textColor = .white
         view.textAlignment = .center
+        view.isEnabled = false
         return view
     }()
     
@@ -58,6 +59,7 @@ final class ProfileScreenView: UIView {
         view.textColor = .white
         view.keyboardType = .emailAddress
         view.textAlignment = .right
+        view.isEnabled = false
         return view
     }()
     
@@ -152,6 +154,22 @@ final class ProfileScreenView: UIView {
         return view
     }()
     
+    lazy var changeButton: WButton = {
+        let view = WButton(type: .system)
+        view.backgroundColor = R.color.baseElementsBlue()
+        let title = NSAttributedString(
+            string: "Изменить",
+            attributes: [
+                NSAttributedString.Key.foregroundColor: UIColor.white,
+                NSAttributedString.Key.font: UIFont(name: "KohinoorGujarati-Regular", size: 14)!
+            ]
+        )
+        view.setAttributedTitle(title, for: .normal)
+        view.layer.cornerRadius = 10
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: .zero)
         manageView()
@@ -167,12 +185,44 @@ final class ProfileScreenView: UIView {
         self.backgroundColor = R.color.primaryBackground()
     }
     
+    // MARK: - Internal
+
+    func enableEditing(_ enable: Bool) {
+        
+        nicknameTextField.isEnabled = enable
+        emailTextField.isEnabled = enable
+        
+        var title: NSAttributedString
+        if enable {
+            title = NSAttributedString(
+                string: "Сохранить",
+                attributes: [
+                    NSAttributedString.Key.foregroundColor: UIColor.white,
+                    NSAttributedString.Key.font: UIFont(name: "KohinoorGujarati-Regular", size: 14)!
+                ]
+            )
+        }
+        else {
+            title = NSAttributedString(
+                string: "Изменить",
+                attributes: [
+                    NSAttributedString.Key.foregroundColor: UIColor.white,
+                    NSAttributedString.Key.font: UIFont(name: "KohinoorGujarati-Regular", size: 14)!
+                ]
+            )
+        }
+        changeButton.setAttributedTitle(title, for: .normal)
+    }
+    
+    // MARK: - Private
+    
     private func addSubviews() {
         
         [
             profileLogo,
             nicknameTextField,
-            stackForInputs
+            stackForInputs,
+            changeButton
         ].forEach {
             self.addSubview($0)
         }
@@ -180,26 +230,34 @@ final class ProfileScreenView: UIView {
     }
     
     private func addConstraints() {
-        
         profileLogo.snp.makeConstraints { make in
-            make.top.equalTo(self.snp.top).offset(100)
-            make.centerX.equalTo(self.snp.centerX)
+            make.top.equalTo(self).offset(100)
+            make.centerX.equalTo(self)
             make.width.equalTo(132)
             make.height.equalTo(132)
         }
         
         nicknameTextField.snp.makeConstraints { make in
             make.top.equalTo(profileLogo.snp.bottom).offset(26)
-            make.centerX.equalTo(self.snp.centerX)
-            make.width.equalTo(self.snp.width)
+            make.centerX.equalTo(self)
+            make.width.equalTo(self)
             make.height.equalTo(16)
         }
         
         stackForInputs.snp.makeConstraints { make in
             make.top.equalTo(nicknameTextField.snp.bottom).offset(44)
-            make.centerX.equalTo(self.snp.centerX)
-            make.width.equalTo(305)
+            make.centerX.equalTo(self)
+            make.left.equalTo(self).offset(35)
+            make.right.equalTo(self).offset(-35)
             make.height.equalTo(121)
+        }
+        
+        changeButton.snp.makeConstraints { make in
+            make.top.equalTo(stackForInputs.snp.bottom).offset(26)
+            make.centerX.equalTo(self)
+            make.left.equalTo(self).offset(35)
+            make.right.equalTo(self).offset(-35)
+            make.height.equalTo(49)
         }
         
     }
