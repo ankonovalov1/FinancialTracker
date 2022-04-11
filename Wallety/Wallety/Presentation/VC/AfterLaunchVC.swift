@@ -33,6 +33,7 @@ final class AfterLaunchVC: UIViewController {
     }
     
     @objc private func setBalanceTapped() {
+        UserDefaults.standard.set(true, forKey: StringKeys.skipAfterLaunch)
         navigator.navigate(to: .mainTabScreen)
     }
     
