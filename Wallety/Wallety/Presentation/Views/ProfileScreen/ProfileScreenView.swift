@@ -1,6 +1,8 @@
 import UIKit
 
 final class ProfileScreenView: UIView {
+    
+    // MARK: - Views
 
     lazy var profileLogo: UIImageView = {
         let view = UIImageView()
@@ -170,6 +172,8 @@ final class ProfileScreenView: UIView {
         return view
     }()
     
+    // MARK: - Lifecycle
+    
     override init(frame: CGRect) {
         super.init(frame: .zero)
         manageView()
@@ -179,10 +183,6 @@ final class ProfileScreenView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    private func manageView() {
-        self.backgroundColor = R.color.primaryBackground()
     }
     
     // MARK: - Internal
@@ -215,6 +215,10 @@ final class ProfileScreenView: UIView {
     }
     
     // MARK: - Private
+    
+    private func manageView() {
+        self.backgroundColor = R.color.primaryBackground()
+    }
     
     private func addSubviews() {
         
