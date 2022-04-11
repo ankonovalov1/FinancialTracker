@@ -62,7 +62,7 @@ final class ProfileScreenView: UIView {
     }()
     
     lazy var stackForBalances: UIStackView = {
-        let view = UIStackView(arrangedSubviews: [balanceLabel, balanceTextField])
+        let view = UIStackView(arrangedSubviews: [balanceLabel, balanceValueLabel])
         view.translatesAutoresizingMaskIntoConstraints = false
         view.axis = .horizontal
         view.distribution = .fillEqually
@@ -80,20 +80,19 @@ final class ProfileScreenView: UIView {
         return view
     }()
     
-    lazy var balanceTextField: UITextField = {
-        let view = UITextField()
+    lazy var balanceValueLabel: UILabel = {
+        let view = UILabel()
         let font = UIFont(name: "KohinoorGujarati-Regular", size: 14)!
         view.translatesAutoresizingMaskIntoConstraints = false
         view.text = "Баланс"
         view.font = font
         view.textColor = R.color.baseElementsGreen()
-        view.keyboardType = .numberPad
         view.textAlignment = .right
         return view
     }()
     
     lazy var stackForDuty: UIStackView = {
-        let view = UIStackView(arrangedSubviews: [dutyLabel, dutyTextField])
+        let view = UIStackView(arrangedSubviews: [dutyLabel, dutyValueLabel])
         view.translatesAutoresizingMaskIntoConstraints = false
         view.axis = .horizontal
         view.distribution = .fillEqually
@@ -111,20 +110,19 @@ final class ProfileScreenView: UIView {
         return view
     }()
     
-    lazy var dutyTextField: UITextField = {
-        let view = UITextField()
+    lazy var dutyValueLabel: UILabel = {
+        let view = UILabel()
         let font = UIFont(name: "KohinoorGujarati-Regular", size: 14)!
         view.translatesAutoresizingMaskIntoConstraints = false
         view.text = "Долги"
         view.font = font
         view.textColor = R.color.baseElementsRed()
-        view.keyboardType = .numberPad
         view.textAlignment = .right
         return view
     }()
     
     lazy var stackForInvestments: UIStackView = {
-        let view = UIStackView(arrangedSubviews: [investmentLabel, investmentTextField])
+        let view = UIStackView(arrangedSubviews: [investmentLabel, investmentValueLabel])
         view.translatesAutoresizingMaskIntoConstraints = false
         view.axis = .horizontal
         view.distribution = .fillEqually
@@ -142,14 +140,13 @@ final class ProfileScreenView: UIView {
         return view
     }()
     
-    lazy var investmentTextField: UITextField = {
-        let view = UITextField()
+    lazy var investmentValueLabel: UILabel = {
+        let view = UILabel()
         let font = UIFont(name: "KohinoorGujarati-Regular", size: 14)!
         view.translatesAutoresizingMaskIntoConstraints = false
         view.text = "Инвестиции"
         view.font = font
         view.textColor = R.color.baseElementsBlue()
-        view.keyboardType = .numberPad
         view.textAlignment = .right
         view.isEnabled = false
         return view
