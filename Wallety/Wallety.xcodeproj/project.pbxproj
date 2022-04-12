@@ -40,6 +40,7 @@
 		12C1169228043ABD00D6B8C0 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1169128043ABD00D6B8C0 /* ProfileModel.swift */; };
 		12C1169428043B0E00D6B8C0 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1169328043B0E00D6B8C0 /* Account.swift */; };
 		12C1169628045EDC00D6B8C0 /* StringKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1169528045EDC00D6B8C0 /* StringKeys.swift */; };
+		12C1169928056DE900D6B8C0 /* ImagePickerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1169828056DE900D6B8C0 /* ImagePickerHandler.swift */; };
 		12F1D6E027F60B4B0003B10C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F1D6DF27F60B4B0003B10C /* R.generated.swift */; };
 		12F1D6E327F61A6C0003B10C /* WTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F1D6E227F61A6C0003B10C /* WTextField.swift */; };
 		12F1D6E627F62B670003B10C /* AfterLaunchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F1D6E527F62B670003B10C /* AfterLaunchVM.swift */; };
@@ -84,6 +85,7 @@
 		12C1169128043ABD00D6B8C0 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		12C1169328043B0E00D6B8C0 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		12C1169528045EDC00D6B8C0 /* StringKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringKeys.swift; sourceTree = "<group>"; };
+		12C1169828056DE900D6B8C0 /* ImagePickerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerHandler.swift; sourceTree = "<group>"; };
 		12F1D6DF27F60B4B0003B10C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		12F1D6E227F61A6C0003B10C /* WTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTextField.swift; sourceTree = "<group>"; };
 		12F1D6E527F62B670003B10C /* AfterLaunchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterLaunchVM.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 		12482D9527F5FB9A00D292CA /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				12C1169728056DD800D6B8C0 /* Handlers */,
 				12C1169028043AA500D6B8C0 /* Models */,
 				12C11679280019A700D6B8C0 /* ViewCells */,
 				12C116762800016800D6B8C0 /* Extensions */,
@@ -321,6 +324,14 @@
 				12C1169328043B0E00D6B8C0 /* Account.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		12C1169728056DD800D6B8C0 /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				12C1169828056DE900D6B8C0 /* ImagePickerHandler.swift */,
+			);
+			path = Handlers;
 			sourceTree = "<group>";
 		};
 		12F1D6E127F61A3C0003B10C /* CustomControls */ = {
@@ -529,6 +540,7 @@
 				12482D9A27F5FBFE00D292CA /* AfterLaunchView.swift in Sources */,
 				12C116842800614A00D6B8C0 /* StatisticScreenVC.swift in Sources */,
 				12482D7E27F5F14E00D292CA /* SceneDelegate.swift in Sources */,
+				12C1169928056DE900D6B8C0 /* ImagePickerHandler.swift in Sources */,
 				12C1168028002B1900D6B8C0 /* TransactionVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,6 +6,7 @@ final class ProfileScreenVC: UIViewController {
     
     let mainView = ProfileScreenView()
     let viewModel = ProfileScreenVM()
+    var imagePicker: ImagePickerProtocol = ImagePickerHandler()
     
     // MARK: - Lifecycle
     
@@ -13,6 +14,7 @@ final class ProfileScreenVC: UIViewController {
         super.init(nibName: nil, bundle: nil)
         self.tabBarItem.image = UIImage(resource: R.image.profileTabWhite)
         self.tabBarItem.selectedImage = UIImage(resource: R.image.profileTabBlue)
+        imagePicker.presenter = self
         setDelegates()
         setTargets()
     }
@@ -68,15 +70,11 @@ final class ProfileScreenVC: UIViewController {
     }
     
     @objc private func chooseImage() {
-        print("tapped")
-        if #available(iOS 14, *) {
-            let vc = UIImagePickerController()
-            vc.delegate = self
-            self.present(vc, animated: true)
+        imagePicker.didSelect = { [weak self] image in
+            guard let image = image else { return }
+            self?.mainView.profileLogo.image = image
         }
-        else {
-            
-        }
+        imagePicker.present()
     }
     
 }
@@ -95,13 +93,4 @@ extension ProfileScreenVC: UITextFieldDelegate {
         
     }
     
-}
-
-extension ProfileScreenVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        picker.dismiss(animated: true)
-        guard let image = info[.originalImage] as? UIImage else { return }
-        mainView.profileLogo.image = image
-    }
 }
