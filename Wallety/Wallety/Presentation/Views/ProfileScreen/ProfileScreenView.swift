@@ -8,7 +8,9 @@ final class ProfileScreenView: UIView {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.image = UIImage(resource: R.image.profileLogo)
-        view.contentMode = .scaleAspectFit
+        view.contentMode = .scaleToFill
+        view.layer.cornerRadius = 132 / 2
+        view.layer.masksToBounds = true
         return view
     }()
     
