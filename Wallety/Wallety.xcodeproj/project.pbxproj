@@ -41,6 +41,9 @@
 		12C1169428043B0E00D6B8C0 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1169328043B0E00D6B8C0 /* Account.swift */; };
 		12C1169628045EDC00D6B8C0 /* StringKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1169528045EDC00D6B8C0 /* StringKeys.swift */; };
 		12C1169928056DE900D6B8C0 /* ImagePickerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1169828056DE900D6B8C0 /* ImagePickerHandler.swift */; };
+		12C1169C2805D53600D6B8C0 /* SettingsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1169B2805D53600D6B8C0 /* SettingsScreenView.swift */; };
+		12C1169E2805E01200D6B8C0 /* SettingsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1169D2805E01200D6B8C0 /* SettingsViewCell.swift */; };
+		12C116A02806AC2600D6B8C0 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1169F2806AC2600D6B8C0 /* MainTabController.swift */; };
 		12F1D6E027F60B4B0003B10C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F1D6DF27F60B4B0003B10C /* R.generated.swift */; };
 		12F1D6E327F61A6C0003B10C /* WTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F1D6E227F61A6C0003B10C /* WTextField.swift */; };
 		12F1D6E627F62B670003B10C /* AfterLaunchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F1D6E527F62B670003B10C /* AfterLaunchVM.swift */; };
@@ -86,6 +89,9 @@
 		12C1169328043B0E00D6B8C0 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		12C1169528045EDC00D6B8C0 /* StringKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringKeys.swift; sourceTree = "<group>"; };
 		12C1169828056DE900D6B8C0 /* ImagePickerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerHandler.swift; sourceTree = "<group>"; };
+		12C1169B2805D53600D6B8C0 /* SettingsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenView.swift; sourceTree = "<group>"; };
+		12C1169D2805E01200D6B8C0 /* SettingsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewCell.swift; sourceTree = "<group>"; };
+		12C1169F2806AC2600D6B8C0 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
 		12F1D6DF27F60B4B0003B10C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		12F1D6E227F61A6C0003B10C /* WTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTextField.swift; sourceTree = "<group>"; };
 		12F1D6E527F62B670003B10C /* AfterLaunchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterLaunchVM.swift; sourceTree = "<group>"; };
@@ -175,6 +181,7 @@
 				12C116812800610C00D6B8C0 /* ProfileScreenVC.swift */,
 				12C116832800614A00D6B8C0 /* StatisticScreenVC.swift */,
 				12C116852800617700D6B8C0 /* SettingsScreenVC.swift */,
+				12C1169F2806AC2600D6B8C0 /* MainTabController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -182,6 +189,7 @@
 		12482D9727F5FBB900D292CA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				12C1169A2805D50100D6B8C0 /* SettingsScreen */,
 				12C116872804284800D6B8C0 /* ProfileScreen */,
 				12C1167127FFFD1400D6B8C0 /* MainScreen */,
 				1255FC4627F67AC0002029DE /* SplashScreen */,
@@ -280,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				12C1167A280019DD00D6B8C0 /* IncomeSpendingViewCell.swift */,
+				12C1169D2805E01200D6B8C0 /* SettingsViewCell.swift */,
 			);
 			path = ViewCells;
 			sourceTree = "<group>";
@@ -332,6 +341,14 @@
 				12C1169828056DE900D6B8C0 /* ImagePickerHandler.swift */,
 			);
 			path = Handlers;
+			sourceTree = "<group>";
+		};
+		12C1169A2805D50100D6B8C0 /* SettingsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				12C1169B2805D53600D6B8C0 /* SettingsScreenView.swift */,
+			);
+			path = SettingsScreen;
 			sourceTree = "<group>";
 		};
 		12F1D6E127F61A3C0003B10C /* CustomControls */ = {
@@ -509,10 +526,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				12482D8027F5F14E00D292CA /* AfterLaunchVC.swift in Sources */,
+				12C1169E2805E01200D6B8C0 /* SettingsViewCell.swift in Sources */,
 				12C1169628045EDC00D6B8C0 /* StringKeys.swift in Sources */,
 				12C116862800617700D6B8C0 /* SettingsScreenVC.swift in Sources */,
 				12C1167527FFFED600D6B8C0 /* BalanceInfoView.swift in Sources */,
 				12482D7C27F5F14E00D292CA /* AppDelegate.swift in Sources */,
+				12C116A02806AC2600D6B8C0 /* MainTabController.swift in Sources */,
+				12C1169C2805D53600D6B8C0 /* SettingsScreenView.swift in Sources */,
 				12C1167B280019DD00D6B8C0 /* IncomeSpendingViewCell.swift in Sources */,
 				12C116822800610C00D6B8C0 /* ProfileScreenVC.swift in Sources */,
 				12C1167327FFFD3500D6B8C0 /* MainScreenView.swift in Sources */,
