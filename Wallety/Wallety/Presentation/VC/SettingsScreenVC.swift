@@ -56,10 +56,6 @@ extension SettingsScreenVC: UITableViewDelegate, UITableViewDataSource {
         return 26
     }
     
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        return UIView()
-    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: SettingsViewCell.id, for: indexPath)
         return cell
