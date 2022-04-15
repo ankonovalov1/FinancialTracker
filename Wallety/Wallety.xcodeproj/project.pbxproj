@@ -44,6 +44,8 @@
 		12C1169C2805D53600D6B8C0 /* SettingsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1169B2805D53600D6B8C0 /* SettingsScreenView.swift */; };
 		12C1169E2805E01200D6B8C0 /* SettingsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1169D2805E01200D6B8C0 /* SettingsViewCell.swift */; };
 		12C116A02806AC2600D6B8C0 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1169F2806AC2600D6B8C0 /* MainTabController.swift */; };
+		12C116A22806FC2C00D6B8C0 /* PopupHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C116A12806FC2C00D6B8C0 /* PopupHandler.swift */; };
+		12C116A52806FF2F00D6B8C0 /* ChoicePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C116A42806FF2F00D6B8C0 /* ChoicePopup.swift */; };
 		12F1D6E027F60B4B0003B10C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F1D6DF27F60B4B0003B10C /* R.generated.swift */; };
 		12F1D6E327F61A6C0003B10C /* WTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F1D6E227F61A6C0003B10C /* WTextField.swift */; };
 		12F1D6E627F62B670003B10C /* AfterLaunchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F1D6E527F62B670003B10C /* AfterLaunchVM.swift */; };
@@ -92,6 +94,8 @@
 		12C1169B2805D53600D6B8C0 /* SettingsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenView.swift; sourceTree = "<group>"; };
 		12C1169D2805E01200D6B8C0 /* SettingsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewCell.swift; sourceTree = "<group>"; };
 		12C1169F2806AC2600D6B8C0 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
+		12C116A12806FC2C00D6B8C0 /* PopupHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupHandler.swift; sourceTree = "<group>"; };
+		12C116A42806FF2F00D6B8C0 /* ChoicePopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicePopup.swift; sourceTree = "<group>"; };
 		12F1D6DF27F60B4B0003B10C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		12F1D6E227F61A6C0003B10C /* WTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTextField.swift; sourceTree = "<group>"; };
 		12F1D6E527F62B670003B10C /* AfterLaunchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterLaunchVM.swift; sourceTree = "<group>"; };
@@ -189,6 +193,7 @@
 		12482D9727F5FBB900D292CA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				12C116A32806FE3100D6B8C0 /* Popups */,
 				12C1169A2805D50100D6B8C0 /* SettingsScreen */,
 				12C116872804284800D6B8C0 /* ProfileScreen */,
 				12C1167127FFFD1400D6B8C0 /* MainScreen */,
@@ -339,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				12C1169828056DE900D6B8C0 /* ImagePickerHandler.swift */,
+				12C116A12806FC2C00D6B8C0 /* PopupHandler.swift */,
 			);
 			path = Handlers;
 			sourceTree = "<group>";
@@ -349,6 +355,14 @@
 				12C1169B2805D53600D6B8C0 /* SettingsScreenView.swift */,
 			);
 			path = SettingsScreen;
+			sourceTree = "<group>";
+		};
+		12C116A32806FE3100D6B8C0 /* Popups */ = {
+			isa = PBXGroup;
+			children = (
+				12C116A42806FF2F00D6B8C0 /* ChoicePopup.swift */,
+			);
+			path = Popups;
 			sourceTree = "<group>";
 		};
 		12F1D6E127F61A3C0003B10C /* CustomControls */ = {
@@ -526,6 +540,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				12482D8027F5F14E00D292CA /* AfterLaunchVC.swift in Sources */,
+				12C116A22806FC2C00D6B8C0 /* PopupHandler.swift in Sources */,
 				12C1169E2805E01200D6B8C0 /* SettingsViewCell.swift in Sources */,
 				12C1169628045EDC00D6B8C0 /* StringKeys.swift in Sources */,
 				12C116862800617700D6B8C0 /* SettingsScreenVC.swift in Sources */,
@@ -540,6 +555,7 @@
 				12C116782800018000D6B8C0 /* UILabel + Extensions.swift in Sources */,
 				1255FC3B27F6683A002029DE /* Navigator.swift in Sources */,
 				12482DA027F5FC5500D292CA /* TestInteractor.swift in Sources */,
+				12C116A52806FF2F00D6B8C0 /* ChoicePopup.swift in Sources */,
 				1255FC4127F67013002029DE /* RouterFactory.swift in Sources */,
 				12C1167E28002AE900D6B8C0 /* MainScreenVM.swift in Sources */,
 				12C1168B280439F500D6B8C0 /* ProfileScreenVM.swift in Sources */,

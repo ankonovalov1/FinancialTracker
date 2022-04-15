@@ -7,6 +7,6 @@ target 'Wallety' do
    pod 'Alamofire', '~> 5.5'
    pod 'Swinject'
    pod 'R.swift'
-   pod 'SwiftMessages'	
+   pod 'SwiftEntryKit', '2.0.0'
 
 end

@@ -9,7 +9,12 @@ struct MainTabScreenRouter: RouterProtocol {
     
     func configure() -> UIViewController {
         let vc = MainTabController()
-        vc.setViewControllers([MainScreenVC(),StatisticScreenVC(),ProfileScreenVC(),SettingsScreenVC()], animated: false)
+        vc.setViewControllers([
+            MainScreenVC(),
+            StatisticScreenVC(),
+            ProfileScreenVC(),
+            SettingsScreenVC()
+        ], animated: false)
         return vc
     }
     
