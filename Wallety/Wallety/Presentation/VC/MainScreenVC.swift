@@ -1,5 +1,4 @@
 import UIKit
-import SwiftEntryKit
 
 final class MainScreenVC: UIViewController {
     
@@ -28,15 +27,6 @@ final class MainScreenVC: UIViewController {
     
     // MARK: - @objc methods
     
-    @objc private func openPopup() {
-        let view = ChoicePopup(frame: CGRect(x: 0, y: 0, width: 200, height: 220))
-        var attr = EKAttributes()
-        attr.position = .center
-        attr.displayDuration = .infinity
-        attr.entryBackground = .visualEffect(style: .standard)
-        SwiftEntryKit.display(entry: view, using: attr)
-    }
-    
     // MARK: - Private
     
     private func configureTabBar() {
@@ -45,7 +35,7 @@ final class MainScreenVC: UIViewController {
     }
     
     private func addTargets() {
-        mainView.increaseBalanceButton.addTarget(self, action: #selector(openPopup), for: .touchUpInside)
+        // TODO: - add targets
     }
     
     private func configureDelegates() {

@@ -1,14 +1,15 @@
 import Foundation
+import SwiftEntryKit
 
 final class PopupHandler {
     
-    enum PopupType {
-        case chooseTheme
-        case chooseLanguage
-    }
-    
-    func show(popup: PopupType) {
-        
+    func show(factory: PopupFactory) {
+        let view = factory.createPopup()
+        var attr = EKAttributes()
+        attr.position = .center
+        attr.displayDuration = .infinity
+        attr.entryBackground = .visualEffect(style: .standard)
+        SwiftEntryKit.display(entry: view, using: attr)
     }
     
 }

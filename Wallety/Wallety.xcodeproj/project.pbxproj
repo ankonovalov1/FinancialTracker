@@ -25,6 +25,7 @@
 		1255FC4327F67102002029DE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255FC4227F67102002029DE /* Router.swift */; };
 		1255FC4527F671C1002029DE /* MainScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255FC4427F671C1002029DE /* MainScreenVC.swift */; };
 		1255FC4827F67AE0002029DE /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255FC4727F67AE0002029DE /* SplashScreenView.swift */; };
+		12B86DC6280C1A940036FDD3 /* PopupFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B86DC5280C1A940036FDD3 /* PopupFactory.swift */; };
 		12C1167327FFFD3500D6B8C0 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1167227FFFD3500D6B8C0 /* MainScreenView.swift */; };
 		12C1167527FFFED600D6B8C0 /* BalanceInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1167427FFFED600D6B8C0 /* BalanceInfoView.swift */; };
 		12C116782800018000D6B8C0 /* UILabel + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C116772800018000D6B8C0 /* UILabel + Extensions.swift */; };
@@ -75,6 +76,7 @@
 		1255FC4227F67102002029DE /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		1255FC4427F671C1002029DE /* MainScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenVC.swift; sourceTree = "<group>"; };
 		1255FC4727F67AE0002029DE /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		12B86DC5280C1A940036FDD3 /* PopupFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupFactory.swift; sourceTree = "<group>"; };
 		12C1167227FFFD3500D6B8C0 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		12C1167427FFFED600D6B8C0 /* BalanceInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceInfoView.swift; sourceTree = "<group>"; };
 		12C116772800018000D6B8C0 /* UILabel + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extensions.swift"; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 		12482D9527F5FB9A00D292CA /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				12B86DC4280C1A380036FDD3 /* Factories */,
 				12C1169728056DD800D6B8C0 /* Handlers */,
 				12C1169028043AA500D6B8C0 /* Models */,
 				12C11679280019A700D6B8C0 /* ViewCells */,
@@ -259,7 +262,6 @@
 		1255FC3F27F66E87002029DE /* Routing */ = {
 			isa = PBXGroup;
 			children = (
-				1255FC4027F67013002029DE /* RouterFactory.swift */,
 				1255FC4227F67102002029DE /* Router.swift */,
 			);
 			path = Routing;
@@ -271,6 +273,15 @@
 				1255FC4727F67AE0002029DE /* SplashScreenView.swift */,
 			);
 			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		12B86DC4280C1A380036FDD3 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				1255FC4027F67013002029DE /* RouterFactory.swift */,
+				12B86DC5280C1A940036FDD3 /* PopupFactory.swift */,
+			);
+			path = Factories;
 			sourceTree = "<group>";
 		};
 		12C1167127FFFD1400D6B8C0 /* MainScreen */ = {
@@ -564,6 +575,7 @@
 				1255FC3E27F66AF6002029DE /* Destination.swift in Sources */,
 				1255FC4327F67102002029DE /* Router.swift in Sources */,
 				12C1169228043ABD00D6B8C0 /* ProfileModel.swift in Sources */,
+				12B86DC6280C1A940036FDD3 /* PopupFactory.swift in Sources */,
 				12482D9427F5F62200D292CA /* SplashScreenVC.swift in Sources */,
 				12C116892804286800D6B8C0 /* ProfileScreenView.swift in Sources */,
 				12C1169428043B0E00D6B8C0 /* Account.swift in Sources */,
