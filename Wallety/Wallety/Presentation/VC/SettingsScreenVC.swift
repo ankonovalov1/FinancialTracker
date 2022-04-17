@@ -84,6 +84,11 @@ extension SettingsScreenVC: UITableViewDelegate, UITableViewDataSource {
             else if cellType == .policy {
                 self.navigationController?.present(PrivacyPoliceVC(), animated: true)
             }
+            else if cellType == .mark {
+                guard let url = URL(string: "https://www.apple.com/app-store/")
+                else { return }
+                UIApplication.shared.open(url)
+            }
         }
         return cell
     }
