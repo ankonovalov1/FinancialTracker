@@ -1,11 +1,11 @@
 import UIKit
 
-final class AfterLaunchVC: UIViewController {
+final class StartBalanceScreenVC: UIViewController {
     
     // MARK: Properties
     
-    private let mainView = AfterLaunchView()
-    private let viewModel = AfterLaunchVM()
+    private let mainView = StartBalanceView()
+    private let viewModel = StartBalanceVM()
     private let navigator: NavigatorProtocol
     
     // MARK: VC lifecycle
@@ -29,7 +29,8 @@ final class AfterLaunchVC: UIViewController {
     // MARK: @objc func
     
     @objc private func skipTapped() {
-        
+        UserDefaults.standard.set(true, forKey: StringKeys.skipAfterLaunch)
+        navigator.navigate(to: .mainTabScreen)
     }
     
     @objc private func setBalanceTapped() {
@@ -56,7 +57,7 @@ final class AfterLaunchVC: UIViewController {
 
 }
 
-extension AfterLaunchVC: UITextFieldDelegate {
+extension StartBalanceScreenVC: UITextFieldDelegate {
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
         guard let isEmpty = textField.text?.isEmpty else { return }

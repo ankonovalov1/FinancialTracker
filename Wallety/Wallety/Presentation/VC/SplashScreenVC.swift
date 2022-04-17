@@ -7,7 +7,7 @@ final class SplashScreenVC: UIViewController {
     private let mainView = SplashScreenView()
     private let navigator: NavigatorProtocol
     
-    // MARK: Constructors
+    // MARK: - Lifecycle
     
     init(navigator: NavigatorProtocol) {
         self.navigator = navigator
@@ -18,20 +18,18 @@ final class SplashScreenVC: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: VC lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = mainView
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
             if UserDefaults.standard.bool(forKey: StringKeys.skipAfterLaunch) {
                 self.navigator.navigate(to: .mainTabScreen)
             }
             else {
-                self.navigator.navigate(to: .afterLaunch)
+                self.navigator.navigate(to: .setCurrency)
             }
         }
     }

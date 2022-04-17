@@ -1,9 +1,9 @@
 import UIKit
 import SnapKit
 
-class SplashScreenView: UIView {
+final class SplashScreenView: UIView {
 
-    // MARK: Views
+    // MARK: - Views
     
     lazy var logoImage: UIImageView = {
         let view = UIImageView()
@@ -36,7 +36,7 @@ class SplashScreenView: UIView {
         return view
     }()
     
-    // MARK: Constructors
+    // MARK: - Lifecycle
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
@@ -49,7 +49,7 @@ class SplashScreenView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: Private
+    // MARK: - Manage subviews
     
     private func addSubviews() {
         [
@@ -60,6 +60,8 @@ class SplashScreenView: UIView {
                 self.addSubview($0)
         }
     }
+    
+    // MARK: - Constraints
     
     private func setConstraints() {
         
