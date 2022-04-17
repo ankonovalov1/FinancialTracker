@@ -54,6 +54,15 @@ final class SettingsViewCell: UITableViewCell {
 
     }
     
+    // MARK: - Internal
+    
+    func setup(model: SettingModel) {
+        titleImageView.image = model.image
+        titleLabel.attributedText = NSAttributedString(string: model.title, attributes: [
+            NSAttributedString.Key.font : UIFont(name: "KohinoorGujarati-Regular", size: 12)!
+        ])
+    }
+    
     // MARK: - Private
     
     private func  manageView() {
