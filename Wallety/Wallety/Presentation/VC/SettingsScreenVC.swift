@@ -81,6 +81,9 @@ extension SettingsScreenVC: UITableViewDelegate, UITableViewDataSource {
             if cellType == .about {
                 self.navigationController?.present(AboutScreenVC(), animated: true)
             }
+            else if cellType == .policy {
+                self.navigationController?.present(PrivacyPoliceVC(), animated: true)
+            }
         }
         return cell
     }

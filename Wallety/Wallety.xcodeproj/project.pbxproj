@@ -33,6 +33,8 @@
 		12B86DD1280C547D0036FDD3 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B86DD0280C547D0036FDD3 /* SettingModel.swift */; };
 		12B86DD3280C74C00036FDD3 /* AboutScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B86DD2280C74C00036FDD3 /* AboutScreenVC.swift */; };
 		12B86DD5280C75320036FDD3 /* AboutScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B86DD4280C75320036FDD3 /* AboutScreenView.swift */; };
+		12B86DD7280C81D50036FDD3 /* PrivacyPoliceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B86DD6280C81D50036FDD3 /* PrivacyPoliceVC.swift */; };
+		12B86DD9280C821D0036FDD3 /* PrivacyPoliceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B86DD8280C821D0036FDD3 /* PrivacyPoliceView.swift */; };
 		12C1167327FFFD3500D6B8C0 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1167227FFFD3500D6B8C0 /* MainScreenView.swift */; };
 		12C1167527FFFED600D6B8C0 /* BalanceInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1167427FFFED600D6B8C0 /* BalanceInfoView.swift */; };
 		12C116782800018000D6B8C0 /* UILabel + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C116772800018000D6B8C0 /* UILabel + Extensions.swift */; };
@@ -91,6 +93,8 @@
 		12B86DD0280C547D0036FDD3 /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
 		12B86DD2280C74C00036FDD3 /* AboutScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutScreenVC.swift; sourceTree = "<group>"; };
 		12B86DD4280C75320036FDD3 /* AboutScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutScreenView.swift; sourceTree = "<group>"; };
+		12B86DD6280C81D50036FDD3 /* PrivacyPoliceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPoliceVC.swift; sourceTree = "<group>"; };
+		12B86DD8280C821D0036FDD3 /* PrivacyPoliceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPoliceView.swift; sourceTree = "<group>"; };
 		12C1167227FFFD3500D6B8C0 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		12C1167427FFFED600D6B8C0 /* BalanceInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceInfoView.swift; sourceTree = "<group>"; };
 		12C116772800018000D6B8C0 /* UILabel + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extensions.swift"; sourceTree = "<group>"; };
@@ -205,6 +209,7 @@
 				12C1169F2806AC2600D6B8C0 /* MainTabController.swift */,
 				12B86DC7280C1D090036FDD3 /* StartCurrencyScreenVC.swift */,
 				12B86DD2280C74C00036FDD3 /* AboutScreenVC.swift */,
+				12B86DD6280C81D50036FDD3 /* PrivacyPoliceVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -375,6 +380,7 @@
 			children = (
 				12C1169B2805D53600D6B8C0 /* SettingsScreenView.swift */,
 				12B86DD4280C75320036FDD3 /* AboutScreenView.swift */,
+				12B86DD8280C821D0036FDD3 /* PrivacyPoliceView.swift */,
 			);
 			path = SettingsScreen;
 			sourceTree = "<group>";
@@ -580,8 +586,10 @@
 				12F1D6E027F60B4B0003B10C /* R.generated.swift in Sources */,
 				12C116782800018000D6B8C0 /* UILabel + Extensions.swift in Sources */,
 				1255FC3B27F6683A002029DE /* Navigator.swift in Sources */,
+				12B86DD9280C821D0036FDD3 /* PrivacyPoliceView.swift in Sources */,
 				12B86DCF280C53F40036FDD3 /* SettingVM.swift in Sources */,
 				12482DA027F5FC5500D292CA /* TestInteractor.swift in Sources */,
+				12B86DD7280C81D50036FDD3 /* PrivacyPoliceVC.swift in Sources */,
 				12C116A52806FF2F00D6B8C0 /* ChoicePopup.swift in Sources */,
 				1255FC4127F67013002029DE /* RouterFactory.swift in Sources */,
 				12C1167E28002AE900D6B8C0 /* MainScreenVM.swift in Sources */,

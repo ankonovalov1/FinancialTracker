@@ -7,11 +7,13 @@ final class AboutScreenView: UIView {
     lazy var appImage: UIImageView = {
         let image = UIImage(resource: R.image.moneyCircle)
         let view = UIImageView(image: image)
+        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     lazy var appNameLabel: UILabel = {
         let view = UILabel()
+        view.translatesAutoresizingMaskIntoConstraints = false
         let font = UIFont(name: "KohinoorGujarati-Regular", size: 18)!
         view.textColor = .white
         view.text = "WALLETY"
@@ -20,6 +22,7 @@ final class AboutScreenView: UIView {
     
     lazy var appVersionLabel: UILabel = {
         let view = UILabel()
+        view.translatesAutoresizingMaskIntoConstraints = false
         let font = UIFont(name: "KohinoorGujarati-Regular", size: 18)!
         view.textColor = .white
         view.text = "Version: 1.0.0"
@@ -28,6 +31,7 @@ final class AboutScreenView: UIView {
     
     lazy var descriptionLabel: UILabel = {
         let view = UILabel()
+        view.translatesAutoresizingMaskIntoConstraints = false
         let font = UIFont(name: "KohinoorGujarati-Regular", size: 16)!
         view.textColor = .white
         view.text = "Удобное приложение для учета ваших финансов"
