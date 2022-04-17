@@ -10,7 +10,9 @@ struct RouterFactory: RouterFactoryProtocol {
         switch path {
         case .main:
             return MainScreenRouter()
-        case .afterLaunch:
+        case .setCurrency:
+            return StartCurrencyScreenRouter()
+        case .setBalance:
             return AfterLaunchScreenRouter()
         case .splash:
             return SplashScreenRouter()

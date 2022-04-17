@@ -1,6 +1,6 @@
 import Foundation
 
-final class AfterLaunchVM {
+final class StartBalanceVM {
     
     var balanceChanged: ((Bool) -> ())?
     var isBalanceEmpty: Bool = true {

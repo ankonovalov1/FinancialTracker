@@ -1,9 +1,9 @@
 import UIKit
 import SnapKit
 
-final class AfterLaunchView: UIView {
+final class StartBalanceView: UIView {
     
-    // MARK: Views
+    // MARK: - Views
     
     lazy var walletImage: UIImageView = {
         let view = UIImageView()
@@ -83,7 +83,7 @@ final class AfterLaunchView: UIView {
         return layer
     }()
     
-    // MARK: Constructors
+    // MARK: - Lifecycle
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
@@ -96,7 +96,7 @@ final class AfterLaunchView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: Manage subviews
+    // MARK: - Manage subviews
     
     private func addSubviews() {
         
@@ -113,7 +113,7 @@ final class AfterLaunchView: UIView {
         }
     }
     
-    // MARK: Constraints
+    // MARK: - Constraints
     
     private func setConstraints() {
         

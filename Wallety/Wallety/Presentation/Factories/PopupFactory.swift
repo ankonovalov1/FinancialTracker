@@ -1,7 +1,11 @@
 import Foundation
 import UIKit
 
-enum PopupFactory {
+protocol PopupFactoryProtocol {
+    func createPopup() -> UIView
+}
+
+enum PopupFactory: PopupFactoryProtocol {
     
     case chooseTheme
     case chooseLanguage
