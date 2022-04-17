@@ -2,7 +2,8 @@ import Foundation
 
 enum Destination {
     case splash
-    case afterLaunch
+    case setCurrency
+    case setBalance
     case main
     case mainTabScreen
 }

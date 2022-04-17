@@ -5,6 +5,8 @@ final class MainTabController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tabBar.backgroundColor = R.color.secondaryBackground()
+        tabBar.barTintColor = R.color.secondaryBackground()
+        tabBar.isTranslucent = false
     }
     
     override func setViewControllers(_ viewControllers: [UIViewController]?, animated: Bool) {

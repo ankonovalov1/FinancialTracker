@@ -39,7 +39,7 @@ final class SettingsScreenView: UIView {
     private func addConstraints() {
         
         tableView.snp.makeConstraints { make in
-            make.top.equalTo(self).offset(62)
+            make.top.equalTo(safeAreaLayoutGuide)
             make.left.bottom.right.equalTo(self)
         }
         

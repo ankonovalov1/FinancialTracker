@@ -11,8 +11,7 @@ final class MainScreenVC: UIViewController {
     
     init() {
         super.init(nibName: nil, bundle: nil)
-        self.tabBarItem.image = UIImage(resource: R.image.walletTabWhite)
-        self.tabBarItem.selectedImage = UIImage(resource: R.image.walletTabBlue)
+        configureTabBar()
     }
     
     required init?(coder: NSCoder) {
@@ -22,7 +21,24 @@ final class MainScreenVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = mainView
-        
+        addTargets()
+        configureDelegates()
+    }
+    
+    // MARK: - @objc methods
+    
+    // MARK: - Private
+    
+    private func configureTabBar() {
+        self.tabBarItem.image = UIImage(resource: R.image.walletTabWhite)
+        self.tabBarItem.selectedImage = UIImage(resource: R.image.walletTabBlue)
+    }
+    
+    private func addTargets() {
+        // TODO: - add targets
+    }
+    
+    private func configureDelegates() {
         mainView.infoTableView.delegate = self
         mainView.infoTableView.dataSource = self
     }
