@@ -5,6 +5,7 @@ final class SettingsScreenVC: UIViewController {
     // MARK: - Lifecycle
     
     let mainView = SettingsScreenView()
+    let viewModel = SettingsScreenVM()
     
     // MARK: - Lifecycle
     
@@ -17,10 +18,24 @@ final class SettingsScreenVC: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    deinit {
+        print("SettingsScreenVC - was desposed")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = mainView
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     // MARK: - Private
@@ -41,11 +56,11 @@ final class SettingsScreenVC: UIViewController {
 extension SettingsScreenVC: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return viewModel.data.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return viewModel.data[section].settings.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -57,7 +72,24 @@ extension SettingsScreenVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: SettingsViewCell.id, for: indexPath)
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: SettingsViewCell.id, for: indexPath) as? SettingsViewCell else { return UITableViewCell() }
+        
+        let models = viewModel.data[indexPath.section]
+        cell.setup(model: models.settings[indexPath.row])
+        cell.navigate = { cellType in
+            if cellType == .about {
+                self.navigationController?.present(AboutScreenVC(), animated: true)
+            }
+            else if cellType == .policy {
+                self.navigationController?.present(PrivacyPoliceVC(), animated: true)
+            }
+            else if cellType == .mark {
+                guard let url = URL(string: "https://www.apple.com/app-store/")
+                else { return }
+                UIApplication.shared.open(url)
+            }
+        }
         return cell
     }
     

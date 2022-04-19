@@ -5,6 +5,9 @@ final class SettingsViewCell: UITableViewCell {
     // MARK: - Properties
     
     static let id = "SettingsViewCell"
+    private var cellType: SettingCellType = .none
+    
+    var navigate: ((SettingCellType) -> Void)?
     
     // MARK: - Views
     
@@ -19,8 +22,7 @@ final class SettingsViewCell: UITableViewCell {
     }()
     
     lazy var titleImageView: UIImageView = {
-        let image = UIImage(resource: R.image.aboutInfoWhite)
-        let view = UIImageView(image: image)
+        let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.contentMode = .scaleAspectFit
         return view
@@ -29,7 +31,6 @@ final class SettingsViewCell: UITableViewCell {
     lazy var titleLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = "Тема"
         view.textColor = .white
         return view
     }()
@@ -51,7 +52,26 @@ final class SettingsViewCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        if selected {
+            UIView.animate(withDuration: 0.3) {
+                self.backgroundColor = R.color.baseElementsBlue()
+            } completion: { _ in
+                self.backgroundColor = R.color.secondaryBackground()
+            }
+            navigate?(cellType)
+        }
+    }
+    
+    // MARK: - Internal
+    
+    func setup(model: SettingModel) {
+        
+        titleImageView.image = model.image
+        cellType = model.cellType
+        titleLabel.attributedText = NSAttributedString(string: cellType.rawValue, attributes: [
+            NSAttributedString.Key.font : UIFont(name: "KohinoorGujarati-Regular", size: 12)!
+        ])
+        
     }
     
     // MARK: - Private
