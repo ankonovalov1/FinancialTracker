@@ -40,6 +40,7 @@ final class NotificationScreenView: UIView {
         let view = UIStackView(arrangedSubviews: [noNotificationLabel, tooltipLabel])
         view.axis = .vertical
         view.distribution = .fill
+        view.isHidden = true
         return view
     }()
     
@@ -59,6 +60,14 @@ final class NotificationScreenView: UIView {
         return view
     }()
     
+    lazy var notificationTableView: UITableView = {
+        let view = UITableView()
+        view.backgroundColor = R.color.primaryBackground()
+        view.showsVerticalScrollIndicator = false
+        view.separatorStyle = .none
+        return view
+    }()
+    
     // MARK: - Lifecycle
     
     override init(frame: CGRect) {
@@ -72,6 +81,24 @@ final class NotificationScreenView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Internal
+    
+    func change(state: ViewState) {
+        
+        switch state {
+        case .hasData:
+            notificationTableView.isHidden = false
+            emptyStack.isHidden = true
+        case .loading:
+            notificationTableView.isHidden = true
+            emptyStack.isHidden = true
+        case .empty:
+            notificationTableView.isHidden = true
+            emptyStack.isHidden = false
+        }
+        
+    }
+    
     // MARK: - Manage views
     
     private func manageView() {
@@ -82,7 +109,8 @@ final class NotificationScreenView: UIView {
         [
             stackForLabelSwitcher,
             allNotificationLabel,
-            emptyStack
+            emptyStack,
+            notificationTableView
         ].forEach {
             self.addSubview($0)
         }
@@ -107,6 +135,14 @@ final class NotificationScreenView: UIView {
         emptyStack.snp.makeConstraints { make in
             make.centerX.equalTo(self)
             make.centerY.equalTo(self)
+        }
+        
+        notificationTableView.snp.makeConstraints { make in
+            make.top.equalTo(allNotificationLabel.snp.bottom).offset(30)
+            make.bottom.equalTo(self)
+            make.centerX.equalTo(self)
+            make.left.equalTo(self).offset(35)
+            make.right.equalTo(self).offset(-35)
         }
         
     }
