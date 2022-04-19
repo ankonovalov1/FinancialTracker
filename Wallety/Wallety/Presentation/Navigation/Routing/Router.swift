@@ -13,7 +13,7 @@ struct MainTabScreenRouter: RouterProtocol {
             MainScreenVC(),
             StatisticScreenVC(),
             ProfileScreenVC(),
-            SettingsScreenVC()
+            UINavigationController(rootViewController:  SettingsScreenVC())
         ], animated: false)
         return vc
     }
