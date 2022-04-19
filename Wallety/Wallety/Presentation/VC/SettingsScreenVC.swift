@@ -89,6 +89,9 @@ extension SettingsScreenVC: UITableViewDelegate, UITableViewDataSource {
                 else { return }
                 UIApplication.shared.open(url)
             }
+            else if cellType == .notification {
+                self.navigationController?.present(NotificationScreenVC(), animated: true)
+            }
         }
         return cell
     }
