@@ -92,6 +92,9 @@ extension SettingsScreenVC: UITableViewDelegate, UITableViewDataSource {
             else if cellType == .notification {
                 self.navigationController?.present(NotificationScreenVC(), animated: true)
             }
+            else if cellType == .categories {
+                self.navigationController?.present(CategoriesScreenVC(), animated: true)
+            }
         }
         return cell
     }
