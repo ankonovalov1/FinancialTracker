@@ -6,6 +6,7 @@ final class NotificationScreenView: UIView {
 
     lazy var stackForLabelSwitcher: UIStackView = {
         let view = UIStackView(arrangedSubviews: [onOffLabel, notificationSwitcher])
+        view.translatesAutoresizingMaskIntoConstraints = false
         view.axis = .horizontal
         view.distribution = .fill
         return view
@@ -32,12 +33,14 @@ final class NotificationScreenView: UIView {
         let view = UILabel(text: "Все нотификации",
                            font: UIFont(name: "KohinoorGujarati-Regular", size: 16)!,
                            textColor: .white)
+        view.translatesAutoresizingMaskIntoConstraints = false
         view.textAlignment = .left
         return view
     }()
     
     lazy var emptyStack: UIStackView = {
         let view = UIStackView(arrangedSubviews: [noNotificationLabel, tooltipLabel])
+        view.translatesAutoresizingMaskIntoConstraints = false
         view.axis = .vertical
         view.distribution = .fill
         view.isHidden = true
@@ -62,6 +65,7 @@ final class NotificationScreenView: UIView {
     
     lazy var notificationTableView: UITableView = {
         let view = UITableView()
+        view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = R.color.primaryBackground()
         view.showsVerticalScrollIndicator = false
         view.separatorStyle = .none
