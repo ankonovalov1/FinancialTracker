@@ -26,7 +26,7 @@ final class SettingsScreenView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - Private
+    // MARK: - Manage views
     
     private func manageView() {
         self.backgroundColor = R.color.primaryBackground()
@@ -35,6 +35,8 @@ final class SettingsScreenView: UIView {
     private func addSubviews() {
         self.addSubview(tableView)
     }
+    
+    // MARK: - Constraints
     
     private func addConstraints() {
         
