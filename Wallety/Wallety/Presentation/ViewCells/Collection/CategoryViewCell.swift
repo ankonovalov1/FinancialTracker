@@ -9,10 +9,11 @@ final class CategoryViewCell: UICollectionViewCell {
     // MARK: - Views
     
     lazy var nameLabel: UILabel = {
-        let view = UILabel(text: "",
+        let view = UILabel(text: "Ho-",
                            font: UIFont(name: "KohinoorGujarati-Regular", size: 10)!,
                            textColor: .white)
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.textAlignment = .center
         return view
     }()
     
@@ -20,6 +21,10 @@ final class CategoryViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
+        manageView()
+        addSubviews()
+        addConstraints()
+        
     }
     
     required init?(coder: NSCoder) {
@@ -29,8 +34,8 @@ final class CategoryViewCell: UICollectionViewCell {
     // MARK: - Manage views
     
     private func manageView() {
-        self.translatesAutoresizingMaskIntoConstraints = false
-        self.backgroundColor = R.color.secondaryBackground()
+        //self.translatesAutoresizingMaskIntoConstraints = false
+        self.backgroundColor = R.color.baseElementsBlue()
         self.layer.cornerRadius = 8
     }
     

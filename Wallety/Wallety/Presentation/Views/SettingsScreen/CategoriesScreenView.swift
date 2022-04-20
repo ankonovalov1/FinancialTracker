@@ -20,6 +20,19 @@ final class CategoriesScreenView: UIView {
         return view
     }()
     
+    lazy var incomeCollectionView: UICollectionView = {
+        let layout = LeftAlignedCollectionViewFlowLayout()
+        layout.minimumInteritemSpacing = 10
+        layout.minimumLineSpacing = 12
+        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        layout.scrollDirection = .vertical
+        let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .clear
+        view.showsVerticalScrollIndicator = false
+        return view
+    }()
+    
     lazy var spendingLabel: UILabel = {
         let view = UILabel(text: "Расходы",
                            font: UIFont(name: "KohinoorGujarati-Regular", size: 16)!,
@@ -33,6 +46,19 @@ final class CategoriesScreenView: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 12
         view.backgroundColor = R.color.secondaryBackground()
+        return view
+    }()
+    
+    lazy var spendingCollectionView: UICollectionView = {
+        let layout = LeftAlignedCollectionViewFlowLayout()
+        layout.minimumInteritemSpacing = 10
+        layout.minimumLineSpacing = 10
+        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        layout.scrollDirection = .vertical
+        let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .clear
+        view.showsVerticalScrollIndicator = false
         return view
     }()
     
@@ -83,7 +109,10 @@ final class CategoriesScreenView: UIView {
     
     private func addSubviews() {
         
+        incomeBackgroundView.addSubview(incomeCollectionView)
         incomeBackgroundView.addSubview(addIncomeButton)
+        
+        spendingBackgroundView.addSubview(spendingCollectionView)
         spendingBackgroundView.addSubview(addSpendingButton)
         
         [
@@ -134,6 +163,16 @@ final class CategoriesScreenView: UIView {
             make.bottom.equalTo(spendingBackgroundView).offset(-15)
             make.right.equalTo(spendingBackgroundView).offset(-15)
             make.height.width.equalTo(34)
+        }
+        
+        incomeCollectionView.snp.makeConstraints { make in
+            make.top.left.equalTo(incomeBackgroundView).offset(15)
+            make.bottom.right.equalTo(incomeBackgroundView).offset(-15)
+        }
+        
+        spendingCollectionView.snp.makeConstraints { make in
+            make.top.left.equalTo(spendingBackgroundView).offset(15)
+            make.bottom.right.equalTo(spendingBackgroundView).offset(-15)
         }
         
     }
