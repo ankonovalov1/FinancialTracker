@@ -12,6 +12,7 @@ final class CategoriesScreenVC: UIViewController {
         super.viewDidLoad()
         self.view = mainView
         setupCollectionView()
+      
     }
     
     // MARK: - Private

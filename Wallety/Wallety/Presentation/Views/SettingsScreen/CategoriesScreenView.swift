@@ -3,7 +3,7 @@ import UIKit
 final class CategoriesScreenView: UIView {
     
     // MARK: - Views
-
+    
     lazy var incomeLabel: UILabel = {
         let view = UILabel(text: "Доходы",
                            font: UIFont(name: "KohinoorGujarati-Regular", size: 16)!,
@@ -46,6 +46,7 @@ final class CategoriesScreenView: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 12
         view.backgroundColor = R.color.secondaryBackground()
+        
         return view
     }()
     

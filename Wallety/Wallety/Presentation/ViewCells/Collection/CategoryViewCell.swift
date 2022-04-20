@@ -34,7 +34,6 @@ final class CategoryViewCell: UICollectionViewCell {
     // MARK: - Manage views
     
     private func manageView() {
-        //self.translatesAutoresizingMaskIntoConstraints = false
         self.backgroundColor = R.color.baseElementsBlue()
         self.layer.cornerRadius = 8
     }
