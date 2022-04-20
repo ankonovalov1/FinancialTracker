@@ -1,6 +1,6 @@
 import UIKit
 
-final class CategoryViewCell: UICollectionViewCell {
+final class TitleViewCell: UICollectionViewCell {
     
     // MARK: - Properties
     
@@ -21,10 +21,8 @@ final class CategoryViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
-        manageView()
         addSubviews()
         addConstraints()
-        
     }
     
     required init?(coder: NSCoder) {
@@ -33,9 +31,9 @@ final class CategoryViewCell: UICollectionViewCell {
     
     // MARK: - Manage views
     
-    private func manageView() {
-        self.backgroundColor = R.color.baseElementsBlue()
-        self.layer.cornerRadius = 8
+    func manageView(backgroundColor: UIColor? = .clear, cornerRadius: CGFloat = 8) {
+        self.backgroundColor = backgroundColor
+        self.layer.cornerRadius = cornerRadius
     }
     
     private func addSubviews() {
