@@ -78,6 +78,20 @@ final class StatisticScreenVC: UIViewController {
             ChartDataEntry(x: 14, y: 320),
             ChartDataEntry(x: 15, y: 400),
             ChartDataEntry(x: 16, y: 340),
+            ChartDataEntry(x: 17, y: 100),
+            ChartDataEntry(x: 18, y: 140),
+            ChartDataEntry(x: 19, y: 80),
+            ChartDataEntry(x: 20, y: 10),
+            ChartDataEntry(x: 21, y: 230),
+            ChartDataEntry(x: 22, y: 140),
+            ChartDataEntry(x: 23, y: 150),
+            ChartDataEntry(x: 24, y: 160),
+            ChartDataEntry(x: 25, y: 170),
+            ChartDataEntry(x: 26, y: 180),
+            ChartDataEntry(x: 27, y: 95),
+            ChartDataEntry(x: 28, y: 350),
+            ChartDataEntry(x: 29, y: 300),
+            ChartDataEntry(x: 30, y: 320),
         ]
         
         let dataSet = LineChartDataSet(entries: entries)
@@ -91,7 +105,6 @@ final class StatisticScreenVC: UIViewController {
         dataSet.drawFilledEnabled = true
         dataSet.colors = [color]
         dataSet.drawValuesEnabled = false
-        
         let data = LineChartData(dataSet: dataSet)
         mainView.setChartData(data: data)
     }

@@ -44,6 +44,8 @@ final class StatisticScreenView: UIView {
         chart.leftAxis.gridColor = R.color.secondaryBackground()!
         chart.leftAxis.axisLineColor = R.color.secondaryBackground()!
         chart.legend.enabled = false
+        chart.doubleTapToZoomEnabled = false
+        chart.pinchZoomEnabled = false
         chart.translatesAutoresizingMaskIntoConstraints = false
         chart.backgroundColor = .clear
         return chart
