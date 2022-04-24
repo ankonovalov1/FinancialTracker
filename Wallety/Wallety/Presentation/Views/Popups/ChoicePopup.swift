@@ -105,7 +105,7 @@ final class ChoicePopup: UIView {
         }
         
         mainTitleLabel.snp.makeConstraints { make in
-            make.top.equalTo(titleImage.snp.top).offset(12)
+            make.top.equalTo(titleImage.snp.bottom).offset(12)
             make.centerX.equalTo(self)
         }
         

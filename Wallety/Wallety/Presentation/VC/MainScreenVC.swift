@@ -1,4 +1,5 @@
 import UIKit
+import SwiftEntryKit
 
 final class MainScreenVC: UIViewController {
     
@@ -28,7 +29,9 @@ final class MainScreenVC: UIViewController {
     // MARK: - @objc methods
     
     @objc private func switchState() {
-            mainView.change(state: .empty)
+            //mainView.change(state: .empty)
+        let handler = PopupHandler()
+        handler.show(factory: .chooseLanguage)
     }
     
     // MARK: - Private
