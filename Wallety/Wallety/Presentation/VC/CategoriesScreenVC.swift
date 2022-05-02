@@ -20,11 +20,11 @@ final class CategoriesScreenVC: UIViewController {
     private func setupCollectionView() {
         mainView.spendingCollectionView.dataSource = self
         mainView.spendingCollectionView.delegate = self
-        mainView.spendingCollectionView.register(CategoryViewCell.self, forCellWithReuseIdentifier: CategoryViewCell.id)
+        mainView.spendingCollectionView.register(TitleViewCell.self, forCellWithReuseIdentifier: TitleViewCell.id)
         
         mainView.incomeCollectionView.dataSource = self
         mainView.incomeCollectionView.delegate = self
-        mainView.incomeCollectionView.register(CategoryViewCell.self, forCellWithReuseIdentifier: CategoryViewCell.id)
+        mainView.incomeCollectionView.register(TitleViewCell.self, forCellWithReuseIdentifier: TitleViewCell.id)
     }
     
 }
@@ -36,7 +36,8 @@ extension CategoriesScreenVC: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryViewCell.id, for: indexPath) as? CategoryViewCell else { return UICollectionViewCell() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TitleViewCell.id, for: indexPath) as? TitleViewCell else { return UICollectionViewCell() }
+        cell.manageView(backgroundColor: R.color.baseElementsBlue())
         return cell
     }
     
