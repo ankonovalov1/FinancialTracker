@@ -1,4 +1,5 @@
 import UIKit
+import SwiftEntryKit
 
 final class MainScreenVC: UIViewController {
     
@@ -27,6 +28,12 @@ final class MainScreenVC: UIViewController {
     
     // MARK: - @objc methods
     
+    @objc private func switchState() {
+            //mainView.change(state: .empty)
+        let handler = PopupHandler()
+        handler.show(factory: .chooseLanguage)
+    }
+    
     // MARK: - Private
     
     private func configureTabBar() {
@@ -35,7 +42,7 @@ final class MainScreenVC: UIViewController {
     }
     
     private func addTargets() {
-        // TODO: - add targets
+        mainView.increaseBalanceButton.addTarget(self, action: #selector(switchState), for: .touchUpInside)
     }
     
     private func configureDelegates() {
