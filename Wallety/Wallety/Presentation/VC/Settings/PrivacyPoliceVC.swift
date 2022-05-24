@@ -8,6 +8,15 @@ final class PrivacyPoliceVC: UIViewController {
     
     // MARK: - Lifecycle
     
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        self.hidesBottomBarWhenPushed = true
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     deinit {
         print("PrivacyPoliceVC - was desposed")
     }
@@ -15,6 +24,8 @@ final class PrivacyPoliceVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = mainView
+        self.navigationItem.title = "Политика конфиденциальности"
+        self.navigationController?.navigationBar.isOpaque = true
         loadContent()
     }
     

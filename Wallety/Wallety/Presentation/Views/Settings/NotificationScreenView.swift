@@ -125,7 +125,7 @@ final class NotificationScreenView: UIView {
     private func addConstraints() {
         
         stackForLabelSwitcher.snp.makeConstraints { make in
-            make.top.equalTo(safeAreaLayoutGuide).offset(70)
+            make.top.equalTo(safeAreaLayoutGuide).offset(50)
             make.centerX.equalTo(self)
             make.left.equalTo(self).offset(35)
             make.right.equalTo(self).offset(-35)
