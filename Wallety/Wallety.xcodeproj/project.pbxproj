@@ -158,6 +158,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		121A4348283D608200C54D9A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				12C116852800617700D6B8C0 /* SettingsScreenVC.swift */,
+				12B86DD2280C74C00036FDD3 /* AboutScreenVC.swift */,
+				12B86DD6280C81D50036FDD3 /* PrivacyPoliceVC.swift */,
+				12E3F95928102B24003CBF9F /* CategoriesScreenVC.swift */,
+				12E3F951280EFF6A003CBF9F /* NotificationScreenVC.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		121A4349283D60AC00C54D9A /* Launching */ = {
+			isa = PBXGroup;
+			children = (
+				12482D9327F5F62200D292CA /* SplashScreenVC.swift */,
+				12B86DC7280C1D090036FDD3 /* StartCurrencyScreenVC.swift */,
+				12482D7F27F5F14E00D292CA /* StartBalanceScreenVC.swift */,
+			);
+			path = Launching;
+			sourceTree = "<group>";
+		};
+		121A434A283D60EC00C54D9A /* Primary */ = {
+			isa = PBXGroup;
+			children = (
+				1255FC4427F671C1002029DE /* MainScreenVC.swift */,
+				12C116832800614A00D6B8C0 /* StatisticScreenVC.swift */,
+				12C116812800610C00D6B8C0 /* ProfileScreenVC.swift */,
+			);
+			path = Primary;
+			sourceTree = "<group>";
+		};
 		12482D6F27F5F14E00D292CA = {
 			isa = PBXGroup;
 			children = (
@@ -222,18 +254,10 @@
 		12482D9627F5FBB000D292CA /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				12482D9327F5F62200D292CA /* SplashScreenVC.swift */,
-				12482D7F27F5F14E00D292CA /* StartBalanceScreenVC.swift */,
-				1255FC4427F671C1002029DE /* MainScreenVC.swift */,
-				12C116812800610C00D6B8C0 /* ProfileScreenVC.swift */,
-				12C116832800614A00D6B8C0 /* StatisticScreenVC.swift */,
-				12C116852800617700D6B8C0 /* SettingsScreenVC.swift */,
+				121A434A283D60EC00C54D9A /* Primary */,
+				121A4349283D60AC00C54D9A /* Launching */,
+				121A4348283D608200C54D9A /* Settings */,
 				12C1169F2806AC2600D6B8C0 /* MainTabController.swift */,
-				12B86DC7280C1D090036FDD3 /* StartCurrencyScreenVC.swift */,
-				12B86DD2280C74C00036FDD3 /* AboutScreenVC.swift */,
-				12B86DD6280C81D50036FDD3 /* PrivacyPoliceVC.swift */,
-				12E3F951280EFF6A003CBF9F /* NotificationScreenVC.swift */,
-				12E3F95928102B24003CBF9F /* CategoriesScreenVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -747,6 +771,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -807,6 +832,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -829,11 +855,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 648DE7A7D9810EC5752A5772 /* Pods-Wallety.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MAD58T25US;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Wallety/Info.plist;
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app wants to use your photos";
@@ -860,11 +888,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 14F6F45C43FE1BBF5541CC8D /* Pods-Wallety.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MAD58T25US;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Wallety/Info.plist;
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app wants to use your photos";

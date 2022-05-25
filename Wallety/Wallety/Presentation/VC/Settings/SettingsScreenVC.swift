@@ -26,6 +26,7 @@ final class SettingsScreenVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = mainView
+        self.navigationItem.backButtonTitle = ""
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -79,10 +80,10 @@ extension SettingsScreenVC: UITableViewDelegate, UITableViewDataSource {
         cell.setup(model: models.settings[indexPath.row])
         cell.navigate = { cellType in
             if cellType == .about {
-                self.navigationController?.present(AboutScreenVC(), animated: true)
+                self.navigationController?.pushViewController(AboutScreenVC(), animated: true)
             }
             else if cellType == .policy {
-                self.navigationController?.present(PrivacyPoliceVC(), animated: true)
+                self.navigationController?.pushViewController(PrivacyPoliceVC(), animated: true)
             }
             else if cellType == .mark {
                 guard let url = URL(string: "https://www.apple.com/app-store/")
@@ -90,10 +91,10 @@ extension SettingsScreenVC: UITableViewDelegate, UITableViewDataSource {
                 UIApplication.shared.open(url)
             }
             else if cellType == .notification {
-                self.navigationController?.present(NotificationScreenVC(), animated: true)
+                self.navigationController?.pushViewController(NotificationScreenVC(), animated: true)
             }
             else if cellType == .categories {
-                self.navigationController?.present(CategoriesScreenVC(), animated: true)
+                self.navigationController?.pushViewController(CategoriesScreenVC(), animated: true)
             }
         }
         return cell

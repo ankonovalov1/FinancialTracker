@@ -4,15 +4,6 @@ final class PrivacyPoliceView: UIView {
     
     // MARK: - Views
     
-    lazy var titleLabel: UILabel = {
-        let view = UILabel(text: "Политика конфиденциальности",
-                           font: UIFont(name: "KohinoorGujarati-Regular", size: 20)!,
-                           textColor: .white)
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.textAlignment = .center
-        return view
-    }()
-    
     lazy var policyTextField: UITextView = {
         let view = UITextView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -47,8 +38,7 @@ final class PrivacyPoliceView: UIView {
     private func addSubviews() {
         
         [
-            titleLabel,
-            policyTextField,
+            policyTextField
         ].forEach {
             self.addSubview($0)
         }
@@ -59,15 +49,8 @@ final class PrivacyPoliceView: UIView {
     
     private func addConstraints() {
         
-        titleLabel.snp.makeConstraints { make in
-            make.top.equalTo(self).offset(36)
-            make.centerX.equalTo(self)
-            make.left.equalTo(self).offset(35)
-            make.right.equalTo(self).offset(-35)
-        }
-        
         policyTextField.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).offset(30)
+            make.top.equalTo(safeAreaLayoutGuide).offset(30)
             make.bottom.equalTo(self)
             make.centerX.equalTo(self)
             make.left.equalTo(self).offset(35)
