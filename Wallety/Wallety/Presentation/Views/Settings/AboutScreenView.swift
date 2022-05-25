@@ -77,7 +77,7 @@ final class AboutScreenView: UIView {
     private func addConstraints() {
         
         appImage.snp.makeConstraints { make in
-            make.top.equalTo(safeAreaLayoutGuide).offset(93)
+            make.top.equalTo(safeAreaLayoutGuide).offset(73)
             make.centerX.equalTo(self)
             make.height.width.equalTo(150)
         }

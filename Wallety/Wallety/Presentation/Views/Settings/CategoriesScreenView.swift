@@ -131,7 +131,7 @@ final class CategoriesScreenView: UIView {
     private func addConstraints() {
         
         incomeLabel.snp.makeConstraints { make in
-            make.top.equalTo(safeAreaLayoutGuide).offset(50)
+            make.top.equalTo(safeAreaLayoutGuide).offset(30)
             make.left.equalTo(self).offset(35)
         }
         

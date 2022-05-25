@@ -7,12 +7,28 @@ final class NotificationScreenVC: UIViewController {
     let mainView = NotificationScreenView()
     
     // MARK: - Lifecycle
-
+    
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        self.hidesBottomBarWhenPushed = true
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = mainView
+        self.navigationItem.title = "Нотификации"
+        self.navigationController?.navigationBar.tintColor = R.color.baseElementsBlue()
+       
         setupTableView()
         addTargets()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
     // MARK: - @objc
