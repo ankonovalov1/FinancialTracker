@@ -1,0 +1,13 @@
+// MARK: - Splash screen -
+
+"hello" = "Привет!";
+"control income and spendings" = "Контроллируй свои доходы и расходы в несколько кликов";
+
+// MARK: - Start Currency -
+
+"choose currency for" = "Выберите валюту для учета ваших средств";
+"dollar" = "Доллар";
+"ruble" = "Рубль";
+"euro" = "Евро";
+"set button" = "Установить";
+"change currency info" = "Вы всегда сможете поменять валюту в настройках приложения";
