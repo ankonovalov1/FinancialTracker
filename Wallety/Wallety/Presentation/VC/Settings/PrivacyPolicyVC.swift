@@ -1,10 +1,10 @@
 import UIKit
 
-final class PrivacyPoliceVC: UIViewController {
+final class PrivacyPolicyVC: UIViewController {
     
     // MARK: - Properties
     
-    let mainView = PrivacyPoliceView()
+    let mainView = PrivacyPolicyView()
     
     // MARK: - Lifecycle
     
@@ -18,13 +18,13 @@ final class PrivacyPoliceVC: UIViewController {
     }
     
     deinit {
-        print("PrivacyPoliceVC - was desposed")
+        print("PrivacyPolicyVC - was disposed")
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = mainView
-        self.navigationItem.title = "Политика конфиденциальности"
+        self.navigationItem.title = R.string.localizable.privacyPolicy()
         self.navigationController?.navigationBar.isOpaque = true
         loadContent()
     }

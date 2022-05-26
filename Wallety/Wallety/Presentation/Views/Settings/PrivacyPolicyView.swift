@@ -1,6 +1,6 @@
 import UIKit
 
-final class PrivacyPoliceView: UIView {
+final class PrivacyPolicyView: UIView {
     
     // MARK: - Views
     

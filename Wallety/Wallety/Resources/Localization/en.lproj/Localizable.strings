@@ -11,3 +11,20 @@
 "euro" = "Euro";
 "set button" = "Set";
 "change currency info" = "You can always change the currency in the application settings";
+
+// MARK: - StartBalanceView -
+
+"set current balance" = "Set your current balance";
+"balance" = "Balance";
+"skip" = "Skip";
+
+// MARK: - About App -
+
+"about app" = "About";
+"app name" = "WALLETY";
+"version number" = "Version: %@";
+"about app description" = "Convenient application for keeping track of your finances";
+
+// MARK: - Privacy Policy -
+
+"privacy policy" = "Privacy Policy";

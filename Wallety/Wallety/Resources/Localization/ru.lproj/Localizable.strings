@@ -11,3 +11,26 @@
 "euro" = "Евро";
 "set button" = "Установить";
 "change currency info" = "Вы всегда сможете поменять валюту в настройках приложения";
+
+
+// MARK: - StartBalanceView -
+
+"set current balance" = "Установите свой текущий баланс";
+"balance" = "Баланс";
+"skip" = "Пропустить";
+
+// MARK: - About App -
+
+"about app" = "О приложении";
+"app name" = "WALLETY";
+"version number" = "Версия: %@";
+"about app description" = "Удобное приложение для учета ваших финансов";
+
+// MARK: - Privacy Policy -
+
+"privacy policy" = "Политика конфиденциальности";
+
+
+
+
+
