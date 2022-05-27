@@ -20,7 +20,7 @@ final class NotificationScreenVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = mainView
-        self.navigationItem.title = "Нотификации"
+        self.navigationItem.title = R.string.localizable.notifications()
         self.navigationController?.navigationBar.tintColor = R.color.baseElementsBlue()
        
         setupTableView()

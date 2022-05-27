@@ -30,6 +30,56 @@
 
 "privacy policy" = "Политика конфиденциальности";
 
+// MARK: - Month -
+
+"monthJanuary" = "Январь";
+"monthFebruary" = "Февраль";
+"monthMarch" = "Март";
+"monthApril" = "Апрель";
+"monthMay" = "Май";
+"monthJune" = "Июнь";
+"monthJuly" = "Июль";
+"monthAugust" = "Август";
+"monthSeptember" = "Сентябрь";
+"monthOctober" = "Октябрь";
+"monthNovember" = "Ноябрь";
+"monthDecember" = "Декабрь";
+
+// MARK: - Statistic -
+
+"chart" = "График";
+"analysis" = "Анализ";
+"income" = "Доходы";
+"expenses" = "Расходы";
+"no Operations" = "Нет операций";
+"for this period" = "за данный период";
+
+// MARK: - Profile -
+
+"email" = "Email";
+"debts" = "Долги";
+"investments" = "Инвестиции";
+"button change" = "Изменить";
+"save" = "Сохранить";
+
+// MARK: - Notifications -
+
+"recieve notifications" = "Получать нотификации";
+"all notifications" = "Все нотификации";
+"no notifications" = "Нет нотификаций";
+"check if enabled" = "убедитесь, что они включены";
+
+// MARK: - SettingCellType -
+
+"theme" = "Тема";
+"currency" = "Валюта";
+"notifications" = "Нотификации";
+"categories" = "Категории";
+"app review" = "Оценить приложение";
+
+
+
+
 
 
 

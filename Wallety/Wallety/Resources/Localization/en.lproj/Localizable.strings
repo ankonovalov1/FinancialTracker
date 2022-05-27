@@ -28,3 +28,50 @@
 // MARK: - Privacy Policy -
 
 "privacy policy" = "Privacy Policy";
+
+// MARK: - Month -
+
+"monthJanuary" = "January";
+"monthFebruary" = "February";
+"monthMarch" = "March";
+"monthApril" = "April";
+"monthMay" = "May";
+"monthJune" = "June";
+"monthJuly" = "July";
+"monthAugust" = "August";
+"monthSeptember" = "September";
+"monthOctober" = "October";
+"monthNovember" = "November";
+"monthDecember" = "December";
+
+// MARK: - Statistic -
+
+"chart" = "Chart";
+"analysis" = "Analysis";
+"income" = "Income";
+"expenses" = "Expenses";
+"no Operations" = "No operations";
+"for this period" = "for this period";
+
+// MARK: - Profile -
+
+"email" = "Email";
+"debts" = "Debts";
+"investments" = "Investments";
+"button change" = "Change";
+"save" = "Save";
+
+// MARK: - Notifications -
+
+"recieve notifications" = "Recieve notifications";
+"all notifications" = "All notifications";
+"no notifications" = "No notifications";
+"check if enabled" = "make sure they are enabled";
+
+// MARK: - SettingCellType -
+
+"theme" = "Theme";
+"currency" = "Currency";
+"notifications" = "Notifications";
+"categories" = "Categories";
+"app review" = "Review app";

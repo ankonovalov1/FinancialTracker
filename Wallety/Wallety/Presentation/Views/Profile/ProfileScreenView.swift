@@ -48,7 +48,7 @@ final class ProfileScreenView: UIView {
         let view = UILabel()
         let font = UIFont(name: "KohinoorGujarati-Regular", size: 14)!
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = "Email"
+        view.text = R.string.localizable.email()
         view.font = font
         view.textColor = .white
         return view
@@ -58,7 +58,7 @@ final class ProfileScreenView: UIView {
         let view = UITextField()
         let font = UIFont(name: "KohinoorGujarati-Regular", size: 14)!
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = "Email"
+        view.text = R.string.localizable.email()
         view.font = font
         view.textColor = .white
         view.keyboardType = .emailAddress
@@ -80,7 +80,7 @@ final class ProfileScreenView: UIView {
         let view = UILabel()
         let font = UIFont(name: "KohinoorGujarati-Regular", size: 14)!
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = "Баланс"
+        view.text = R.string.localizable.balance()
         view.font = font
         view.textColor = .white
         return view
@@ -90,7 +90,7 @@ final class ProfileScreenView: UIView {
         let view = UILabel()
         let font = UIFont(name: "KohinoorGujarati-Regular", size: 14)!
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = "Баланс"
+        view.text = R.string.localizable.balance()
         view.font = font
         view.textColor = R.color.baseElementsGreen()
         view.textAlignment = .right
@@ -110,7 +110,7 @@ final class ProfileScreenView: UIView {
         let view = UILabel()
         let font = UIFont(name: "KohinoorGujarati-Regular", size: 14)!
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = "Долги"
+        view.text = R.string.localizable.debts()
         view.font = font
         view.textColor = .white
         return view
@@ -120,7 +120,7 @@ final class ProfileScreenView: UIView {
         let view = UILabel()
         let font = UIFont(name: "KohinoorGujarati-Regular", size: 14)!
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = "Долги"
+        view.text = R.string.localizable.debts()
         view.font = font
         view.textColor = R.color.baseElementsRed()
         view.textAlignment = .right
@@ -140,7 +140,7 @@ final class ProfileScreenView: UIView {
         let view = UILabel()
         let font = UIFont(name: "KohinoorGujarati-Regular", size: 14)!
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = "Инвестиции"
+        view.text = R.string.localizable.investments()
         view.font = font
         view.textColor = .white
         return view
@@ -150,7 +150,7 @@ final class ProfileScreenView: UIView {
         let view = UILabel()
         let font = UIFont(name: "KohinoorGujarati-Regular", size: 14)!
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = "Инвестиции"
+        view.text = R.string.localizable.investments()
         view.font = font
         view.textColor = R.color.baseElementsBlue()
         view.textAlignment = .right
@@ -162,7 +162,7 @@ final class ProfileScreenView: UIView {
         let view = WButton(type: .system)
         view.backgroundColor = R.color.baseElementsBlue()
         let title = NSAttributedString(
-            string: "Изменить",
+            string:  R.string.localizable.buttonChange(),
             attributes: [
                 NSAttributedString.Key.foregroundColor: UIColor.white,
                 NSAttributedString.Key.font: UIFont(name: "KohinoorGujarati-Regular", size: 14)!
@@ -197,7 +197,7 @@ final class ProfileScreenView: UIView {
         var title: NSAttributedString
         if enable {
             title = NSAttributedString(
-                string: "Сохранить",
+                string: R.string.localizable.save(),
                 attributes: [
                     NSAttributedString.Key.foregroundColor: UIColor.white,
                     NSAttributedString.Key.font: UIFont(name: "KohinoorGujarati-Regular", size: 14)!
@@ -206,7 +206,7 @@ final class ProfileScreenView: UIView {
         }
         else {
             title = NSAttributedString(
-                string: "Изменить",
+                string:  R.string.localizable.buttonChange(),
                 attributes: [
                     NSAttributedString.Key.foregroundColor: UIColor.white,
                     NSAttributedString.Key.font: UIFont(name: "KohinoorGujarati-Regular", size: 14)!
