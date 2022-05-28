@@ -5,7 +5,7 @@ final class CategoriesScreenView: UIView {
     // MARK: - Views
     
     lazy var incomeLabel: UILabel = {
-        let view = UILabel(text: "Доходы",
+        let view = UILabel(text: R.string.localizable.income(),
                            font: UIFont(name: "KohinoorGujarati-Regular", size: 16)!,
                            textColor: .white)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -34,7 +34,7 @@ final class CategoriesScreenView: UIView {
     }()
     
     lazy var spendingLabel: UILabel = {
-        let view = UILabel(text: "Расходы",
+        let view = UILabel(text: R.string.localizable.expenses(),
                            font: UIFont(name: "KohinoorGujarati-Regular", size: 16)!,
                            textColor: .white)
         view.translatesAutoresizingMaskIntoConstraints = false

@@ -13,7 +13,7 @@ final class NotificationScreenView: UIView {
     }()
     
     lazy var onOffLabel: UILabel = {
-        let view = UILabel(text: "Получать нотификации",
+        let view = UILabel(text: R.string.localizable.recieveNotifications(),
                            font: UIFont(name: "KohinoorGujarati-Regular", size: 16)!,
                            textColor: .white)
         view.textAlignment = .left
@@ -30,7 +30,7 @@ final class NotificationScreenView: UIView {
     }()
     
     lazy var allNotificationLabel: UILabel = {
-        let view = UILabel(text: "Все нотификации",
+        let view = UILabel(text: R.string.localizable.allNotifications(),
                            font: UIFont(name: "KohinoorGujarati-Regular", size: 16)!,
                            textColor: .white)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -48,7 +48,7 @@ final class NotificationScreenView: UIView {
     }()
     
     lazy var noNotificationLabel: UILabel = {
-        let view = UILabel(text: "Нет нотификаций",
+        let view = UILabel(text: R.string.localizable.noNotifications(),
                            font: UIFont(name: "KohinoorGujarati-Regular", size: 26)!,
                            textColor: .white)
         view.textAlignment = .center
@@ -56,7 +56,7 @@ final class NotificationScreenView: UIView {
     }()
     
     lazy var tooltipLabel: UILabel = {
-        let view = UILabel(text: "убедитесь, что они включены",
+        let view = UILabel(text: R.string.localizable.checkIfEnabled(),
                            font: UIFont(name: "KohinoorGujarati-Regular", size: 14)!,
                            textColor: .white.withAlphaComponent(0.5))
         view.textAlignment = .center

@@ -16,7 +16,7 @@ final class AboutScreenView: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         let font = UIFont(name: "KohinoorGujarati-Regular", size: 18)!
         view.textColor = .white
-        view.text = "WALLETY"
+        view.text = R.string.localizable.appName()
         return view
     }()
     
@@ -25,7 +25,7 @@ final class AboutScreenView: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         let font = UIFont(name: "KohinoorGujarati-Regular", size: 18)!
         view.textColor = .white
-        view.text = "Version: 1.0.0"
+        view.text = R.string.localizable.versionNumber("1.1.1")
         return view
     }()
     
@@ -34,7 +34,7 @@ final class AboutScreenView: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         let font = UIFont(name: "KohinoorGujarati-Regular", size: 16)!
         view.textColor = .white
-        view.text = "Удобное приложение для учета ваших финансов"
+        view.text = R.string.localizable.aboutAppDescription()
         view.numberOfLines = 2
         view.textAlignment = .center
         return view

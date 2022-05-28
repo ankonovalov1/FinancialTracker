@@ -20,7 +20,7 @@ final class CategoriesScreenVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = mainView
-        self.navigationItem.title = "Категории"
+        self.navigationItem.title = R.string.localizable.categories()
         setupCollectionView()
     }
     

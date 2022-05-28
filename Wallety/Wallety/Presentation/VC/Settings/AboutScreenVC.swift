@@ -18,13 +18,13 @@ final class AboutScreenVC: UIViewController {
     }
     
     deinit {
-        print("AboutScreenVC - was desposed")
+        print("AboutScreenVC - was disposed")
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = mainView
-        self.navigationItem.title = "О приложении"
+        self.navigationItem.title = R.string.localizable.aboutApp()
     }
     
 }

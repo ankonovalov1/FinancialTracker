@@ -14,7 +14,7 @@ final class StartBalanceView: UIView {
     
     lazy var mainLabel: UILabel = {
         let view = UILabel()
-        view.text  = "Установите свой текущий баланс"
+        view.text  = R.string.localizable.setCurrentBalance()
         view.textColor = .white
         let font = UIFont(name: "KohinoorGujarati-Regular", size: 24)!
         view.numberOfLines = 2
@@ -27,7 +27,7 @@ final class StartBalanceView: UIView {
     lazy var balanceTextField: WTextField = {
         let view = WTextField()
         view.attributedPlaceholder = NSAttributedString(
-            string: "Баланс",
+            string: R.string.localizable.balance(),
             attributes: [
                 NSAttributedString.Key.foregroundColor: UIColor(white: 1, alpha: 0.5),
                 NSAttributedString.Key.font: UIFont(name: "KohinoorGujarati-Regular", size: 14)!
@@ -46,7 +46,7 @@ final class StartBalanceView: UIView {
         let view = WButton(type: .system)
         view.backgroundColor = R.color.baseElementsBlue()
         let title = NSAttributedString(
-            string: "Установить",
+            string: R.string.localizable.setButton(),
             attributes: [
                 NSAttributedString.Key.foregroundColor: UIColor.white,
                 NSAttributedString.Key.font: UIFont(name: "KohinoorGujarati-Regular", size: 14)!
@@ -61,7 +61,7 @@ final class StartBalanceView: UIView {
     lazy var skipButton: UIButton = {
         let view = UIButton(type: .system)
         let title = NSAttributedString(
-            string: "Пропустить",
+            string: R.string.localizable.skip(),
             attributes: [
                 NSAttributedString.Key.foregroundColor: UIColor(white: 1, alpha: 0.5),
                 NSAttributedString.Key.font: UIFont(name: "KohinoorGujarati-Regular", size: 14)!

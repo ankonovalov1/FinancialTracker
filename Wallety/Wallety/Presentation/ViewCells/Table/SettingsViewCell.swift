@@ -68,7 +68,7 @@ final class SettingsViewCell: UITableViewCell {
         
         titleImageView.image = model.image
         cellType = model.cellType
-        titleLabel.attributedText = NSAttributedString(string: cellType.rawValue, attributes: [
+        titleLabel.attributedText = NSAttributedString(string: cellType.name, attributes: [
             NSAttributedString.Key.font : UIFont(name: "KohinoorGujarati-Regular", size: 12)!
         ])
         
