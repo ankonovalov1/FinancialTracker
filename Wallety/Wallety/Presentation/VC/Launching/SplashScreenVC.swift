@@ -5,13 +5,17 @@ final class SplashScreenVC: UIViewController {
     // MARK: Properties
     
     private let mainView = SplashScreenView()
-    private let navigator: NavigatorProtocol
+    private let viewModel: SplashScreenVM
     
     // MARK: - Lifecycle
     
-    init(navigator: NavigatorProtocol) {
-        self.navigator = navigator
+    init(viewModel: SplashScreenVM) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+    }
+    
+    deinit {
+        print("SplashScreenVC - was disposed")
     }
     
     required init?(coder: NSCoder) {
@@ -24,14 +28,8 @@ final class SplashScreenVC: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
-            if UserDefaults.standard.bool(forKey: StringKeys.skipAfterLaunch) {
-                self.navigator.navigate(to: .mainTabScreen)
-            }
-            else {
-                self.navigator.navigate(to: .setCurrency)
-            }
-        }
+        super.viewDidAppear(animated)
+        viewModel.viewDidAppear()
     }
-
+    
 }

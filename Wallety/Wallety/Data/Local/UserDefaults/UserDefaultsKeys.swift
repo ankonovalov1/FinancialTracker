@@ -1,5 +1,7 @@
 import Foundation
 
-struct StringKeys {
+struct UserDefaultsKeys {
+    
     static let skipAfterLaunch = "skipAfterLaunch"
+    
 }

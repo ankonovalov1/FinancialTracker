@@ -5,14 +5,17 @@ final class StartBalanceScreenVC: UIViewController {
     // MARK: Properties
     
     private let mainView = StartBalanceView()
-    private let viewModel = StartBalanceVM()
-    private let navigator: NavigatorProtocol
+    private let viewModel: StartBalanceVM
     
     // MARK: VC lifecycle
     
-    init(navigator: NavigatorProtocol) {
-        self.navigator = navigator
+    init(viewModel: StartBalanceVM) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+    }
+    
+    deinit {
+        print("StartBalanceScreenVC - was disposed")
     }
     
     required init?(coder: NSCoder) {
@@ -29,13 +32,11 @@ final class StartBalanceScreenVC: UIViewController {
     // MARK: @objc func
     
     @objc private func skipTapped() {
-        UserDefaults.standard.set(true, forKey: StringKeys.skipAfterLaunch)
-        navigator.navigate(to: .mainTabScreen)
+        viewModel.setBalanceSkipped()
     }
     
     @objc private func setBalanceTapped() {
-        UserDefaults.standard.set(true, forKey: StringKeys.skipAfterLaunch)
-        navigator.navigate(to: .mainTabScreen)
+        viewModel.setBalance()
     }
     
     // MARK: Private func

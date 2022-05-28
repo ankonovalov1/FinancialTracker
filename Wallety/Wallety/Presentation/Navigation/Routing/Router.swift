@@ -39,7 +39,9 @@ struct SplashScreenRouter: RouterProtocol {
         else { return UIViewController() }
         
         let navigator = Navigator(navigationController: navigationController, factory: factory)
-        return SplashScreenVC(navigator: navigator)
+        let userDefaults = UserDefaultsService()
+        let viewModel = SplashScreenVM(navigator: navigator, userDefaults: userDefaults)
+        return SplashScreenVC(viewModel: viewModel)
     }
     
 }
@@ -71,7 +73,9 @@ struct AfterLaunchScreenRouter: RouterProtocol {
         else { return UIViewController() }
         
         let navigator = Navigator(navigationController: navigationController, factory: factory)
-        return StartBalanceScreenVC(navigator: navigator)
+        let userDefaults = UserDefaultsService()
+        let viewModel = StartBalanceVM(navigator: navigator, userDefaults: userDefaults)
+        return StartBalanceScreenVC(viewModel: viewModel)
     }
     
 }
