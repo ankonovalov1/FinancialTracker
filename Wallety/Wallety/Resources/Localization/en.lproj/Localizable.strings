@@ -29,7 +29,7 @@
 
 "privacy policy" = "Privacy Policy";
 
-// MARK: - Month -
+// MARK: - Periods -
 
 "monthJanuary" = "January";
 "monthFebruary" = "February";
@@ -43,6 +43,10 @@
 "monthOctober" = "October";
 "monthNovember" = "November";
 "monthDecember" = "December";
+
+"today" = "Today";
+"week" = "Week";
+"month" = "Month";
 
 // MARK: - Statistic -
 
@@ -67,6 +71,7 @@
 "all notifications" = "All notifications";
 "no notifications" = "No notifications";
 "check if enabled" = "make sure they are enabled";
+"notification example" = "Description of notification. Some long text so that you can understand what this notification wants ..";
 
 // MARK: - SettingCellType -
 
@@ -75,3 +80,8 @@
 "notifications" = "Notifications";
 "categories" = "Categories";
 "app review" = "Review app";
+
+// MARK: - Main Screen -
+
+"current balance" = "Current balance";
+"income and expenses" = "Income and expenses";

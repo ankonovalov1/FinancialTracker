@@ -30,7 +30,7 @@
 
 "privacy policy" = "Политика конфиденциальности";
 
-// MARK: - Month -
+// MARK: - Periods -
 
 "monthJanuary" = "Январь";
 "monthFebruary" = "Февраль";
@@ -44,6 +44,10 @@
 "monthOctober" = "Октябрь";
 "monthNovember" = "Ноябрь";
 "monthDecember" = "Декабрь";
+
+"today" = "Сегодня";
+"week" = "Неделя";
+"month" = "Месяц";
 
 // MARK: - Statistic -
 
@@ -68,6 +72,7 @@
 "all notifications" = "Все нотификации";
 "no notifications" = "Нет нотификаций";
 "check if enabled" = "убедитесь, что они включены";
+"notification example" = "Описание нотификации. Какой-то длинный текст, чтобы можно было понять, чего эта нотификация хочет..";
 
 // MARK: - SettingCellType -
 
@@ -76,6 +81,12 @@
 "notifications" = "Нотификации";
 "categories" = "Категории";
 "app review" = "Оценить приложение";
+
+// MARK: - Main Screen -
+
+"current balance" = "Текущий баланс";
+"income and expenses" = "Доходы и расходы";
+
 
 
 
