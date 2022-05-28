@@ -130,5 +130,4 @@ extension StatisticScreenVC: UICollectionViewDelegate, UICollectionViewDataSourc
         cell.nameLabel.textColor = R.color.baseElementsBlue()
     }
     
-    
 }

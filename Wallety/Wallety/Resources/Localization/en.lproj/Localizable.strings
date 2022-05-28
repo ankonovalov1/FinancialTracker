@@ -1,0 +1,87 @@
+// MARK: - Splash screen -
+
+"hello" = "Hello!";
+"control income and spendings" = "Control your income and expenses in a few clicks";
+
+// MARK: - Start Currency -
+
+"choose currency for" = "Choose a currency to account your funds";
+"dollar" = "Dollar";
+"ruble" = "Ruble";
+"euro" = "Euro";
+"set button" = "Set";
+"change currency info" = "You can always change the currency in the application settings";
+
+// MARK: - StartBalanceView -
+
+"set current balance" = "Set your current balance";
+"balance" = "Balance";
+"skip" = "Skip";
+
+// MARK: - About App -
+
+"about app" = "About";
+"app name" = "WALLETY";
+"version number" = "Version: %@";
+"about app description" = "Convenient application for keeping track of your finances";
+
+// MARK: - Privacy Policy -
+
+"privacy policy" = "Privacy Policy";
+
+// MARK: - Periods -
+
+"monthJanuary" = "January";
+"monthFebruary" = "February";
+"monthMarch" = "March";
+"monthApril" = "April";
+"monthMay" = "May";
+"monthJune" = "June";
+"monthJuly" = "July";
+"monthAugust" = "August";
+"monthSeptember" = "September";
+"monthOctober" = "October";
+"monthNovember" = "November";
+"monthDecember" = "December";
+
+"today" = "Today";
+"week" = "Week";
+"month" = "Month";
+
+// MARK: - Statistic -
+
+"chart" = "Chart";
+"analysis" = "Analysis";
+"income" = "Income";
+"expenses" = "Expenses";
+"no Operations" = "No operations";
+"for this period" = "for this period";
+
+// MARK: - Profile -
+
+"email" = "Email";
+"debts" = "Debts";
+"investments" = "Investments";
+"button change" = "Change";
+"save" = "Save";
+
+// MARK: - Notifications -
+
+"recieve notifications" = "Recieve notifications";
+"all notifications" = "All notifications";
+"no notifications" = "No notifications";
+"check if enabled" = "make sure they are enabled";
+"notification example" = "Description of notification. Some long text so that you can understand what this notification wants ..";
+
+// MARK: - SettingCellType -
+
+"theme" = "Theme";
+"currency" = "Currency";
+"notifications" = "Notifications";
+"categories" = "Categories";
+"app review" = "Review app";
+
+// MARK: - Main Screen -
+
+"current balance" = "Current balance";
+"income and expenses" = "Income and expenses";

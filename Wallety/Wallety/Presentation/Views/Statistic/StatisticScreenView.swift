@@ -19,7 +19,7 @@ final class StatisticScreenView: UIView {
     }()
     
     lazy var switchViewSegment: UISegmentedControl = {
-        let view = UISegmentedControl(items: ["График", "Анализ"])
+        let view = UISegmentedControl(items: [R.string.localizable.chart(), R.string.localizable.analysis() ])
         view.translatesAutoresizingMaskIntoConstraints = false
         view.selectedSegmentIndex = 0
         view.selectedSegmentTintColor = R.color.baseElementsBlue()
@@ -61,13 +61,13 @@ final class StatisticScreenView: UIView {
     }()
     
     lazy var incomeInfoView: BalanceInfoView = {
-        let view = BalanceInfoView(title: "Доходы", value: "230,4 $", backgroundColor: R.color.baseElementsGreen()!)
+        let view = BalanceInfoView(title: R.string.localizable.income(), value: "230,4 $", backgroundColor: R.color.baseElementsGreen()!)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     lazy var spendingInfoView: BalanceInfoView = {
-        let view = BalanceInfoView(title: "Расходы", value: "38,2 $", backgroundColor: R.color.baseElementsRed()!)
+        let view = BalanceInfoView(title: R.string.localizable.expenses(), value: "38,2 $", backgroundColor: R.color.baseElementsRed()!)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -82,7 +82,7 @@ final class StatisticScreenView: UIView {
     }()
     
     lazy var noNotificationLabel: UILabel = {
-        let view = UILabel(text: "Нет операций",
+        let view = UILabel(text: R.string.localizable.noOperations(),
                            font: UIFont(name: "KohinoorGujarati-Regular", size: 26)!,
                            textColor: .white)
         view.textAlignment = .center
@@ -90,7 +90,7 @@ final class StatisticScreenView: UIView {
     }()
     
     lazy var tooltipLabel: UILabel = {
-        let view = UILabel(text: "за данный период",
+        let view = UILabel(text: R.string.localizable.forThisPeriod(),
                            font: UIFont(name: "KohinoorGujarati-Regular", size: 14)!,
                            textColor: .white.withAlphaComponent(0.5))
         view.textAlignment = .center

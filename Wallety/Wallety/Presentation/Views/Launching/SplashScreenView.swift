@@ -14,7 +14,7 @@ final class SplashScreenView: UIView {
     
     lazy var headerLabel: UILabel = {
         let view = UILabel()
-        view.text  = "Привет!"
+        view.text  = R.string.localizable.hello()
         view.textColor = .white
         let font = UIFont(name: "KohinoorGujarati-Bold", size: 34)!
         view.font = font
@@ -25,7 +25,7 @@ final class SplashScreenView: UIView {
     
     lazy var descriptionLabel: UILabel = {
         let view = UILabel()
-        view.text  = "Контроллируй свои доходы и расходы в несколько кликов"
+        view.text  = R.string.localizable.controlIncomeAndSpendings()
         view.textColor = .white
         let font = UIFont(name: "KohinoorGujarati-Regular", size: 18)!
         view.numberOfLines = 2
@@ -81,7 +81,8 @@ final class SplashScreenView: UIView {
         descriptionLabel.snp.makeConstraints { make in
             make.top.equalTo(headerLabel.snp.bottom).offset(16)
             make.centerX.equalTo(self)
-            make.width.equalTo(self)
+            make.left.equalTo(self).offset(35)
+            make.right.equalTo(self).offset(-35)
             make.height.equalTo(60)
         }
         

@@ -1,6 +1,14 @@
 import UIKit
 
 final class StartCurrencyView: UIView {
+    
+    // MARK: - Properties
+    
+    let currencies = [
+        R.string.localizable.dollar(),
+        R.string.localizable.ruble(),
+        R.string.localizable.euro()
+    ]
 
     // MARK: - Views
     
@@ -13,7 +21,7 @@ final class StartCurrencyView: UIView {
     
     lazy var mainLabel: UILabel = {
         let view = UILabel()
-        view.text  = "Выберите валюту для учета ваших средств"
+        view.text  = R.string.localizable.chooseCurrencyFor()
         view.textColor = .white
         let font = UIFont(name: "KohinoorGujarati-Regular", size: 24)!
         view.numberOfLines = 2
@@ -24,7 +32,7 @@ final class StartCurrencyView: UIView {
     }()
     
     lazy var currencySegment: UISegmentedControl = {
-        let view = UISegmentedControl(items: ["Доллар","Рубль","Евро"])
+        let view = UISegmentedControl(items: currencies)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = R.color.primaryBackground()
         view.selectedSegmentTintColor = R.color.baseElementsBlue()
@@ -41,7 +49,7 @@ final class StartCurrencyView: UIView {
         let view = WButton(type: .system)
         view.backgroundColor = R.color.baseElementsBlue()
         let title = NSAttributedString(
-            string: "Установить",
+            string: R.string.localizable.setButton(),
             attributes: [
                 NSAttributedString.Key.foregroundColor: UIColor.white,
                 NSAttributedString.Key.font: UIFont(name: "KohinoorGujarati-Regular", size: 14)!
@@ -55,7 +63,7 @@ final class StartCurrencyView: UIView {
     
     lazy var descriptionLabel: UILabel = {
         let view = UILabel()
-        view.text  = "Вы всегда сможете поменять валюту в настройках приложения"
+        view.text  = R.string.localizable.changeCurrencyInfo()
         view.textColor = .white.withAlphaComponent(0.5)
         let font = UIFont(name: "KohinoorGujarati-Regular", size: 14)!
         view.numberOfLines = 2

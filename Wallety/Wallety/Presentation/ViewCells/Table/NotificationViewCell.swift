@@ -16,7 +16,7 @@ final class NotificationViewCell: UITableViewCell {
     }()
     
     lazy var themeLabel: UILabel = {
-        let view = UILabel(text: "Тема",
+        let view = UILabel(text: R.string.localizable.theme(),
                            font: UIFont(name: "KohinoorGujarati-Bold", size: 10)!,
                            textColor: .white)
         view.textAlignment = .left
@@ -33,7 +33,7 @@ final class NotificationViewCell: UITableViewCell {
     
     lazy var notificationTextView: UITextView = {
         let view = UITextView()
-        view.text = "Описание нотификации. Какой-то длинный текст, чтобы можно было понять, чего эта нотификация хочет.."
+        view.text = R.string.localizable.notificationExample()
         view.font = UIFont(name: "KohinoorGujarati-Regular", size: 10)!
         view.textAlignment = .left
         view.isEditable = false

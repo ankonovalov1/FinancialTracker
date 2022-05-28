@@ -20,7 +20,7 @@ final class SettingsScreenVC: UIViewController {
     }
     
     deinit {
-        print("SettingsScreenVC - was desposed")
+        print("SettingsScreenVC - was disposed")
     }
 
     override func viewDidLoad() {
@@ -83,7 +83,7 @@ extension SettingsScreenVC: UITableViewDelegate, UITableViewDataSource {
                 self.navigationController?.pushViewController(AboutScreenVC(), animated: true)
             }
             else if cellType == .policy {
-                self.navigationController?.pushViewController(PrivacyPoliceVC(), animated: true)
+                self.navigationController?.pushViewController(PrivacyPolicyVC(), animated: true)
             }
             else if cellType == .mark {
                 guard let url = URL(string: "https://www.apple.com/app-store/")
