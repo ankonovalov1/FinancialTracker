@@ -16,7 +16,7 @@ final class ProfileScreenView: UIView {
     
     lazy var nicknameTextField: UITextField = {
         let view = UITextField()
-        let font = UIFont(name: "KohinoorGujarati-Regular", size: 14)!
+        let font = UIFont(name: "KohinoorGujarati-Regular", size: 18)!
         view.translatesAutoresizingMaskIntoConstraints = false
         view.text = "@user"
         view.font = font

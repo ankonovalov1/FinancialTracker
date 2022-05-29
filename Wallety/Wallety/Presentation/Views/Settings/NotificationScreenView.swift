@@ -38,37 +38,20 @@ final class NotificationScreenView: UIView {
         return view
     }()
     
-    lazy var emptyStack: UIStackView = {
-        let view = UIStackView(arrangedSubviews: [noNotificationLabel, tooltipLabel])
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.axis = .vertical
-        view.distribution = .fill
-        view.isHidden = true
-        return view
-    }()
-    
-    lazy var noNotificationLabel: UILabel = {
-        let view = UILabel(text: R.string.localizable.noNotifications(),
-                           font: UIFont(name: "KohinoorGujarati-Regular", size: 26)!,
-                           textColor: .white)
-        view.textAlignment = .center
-        return view
-    }()
-    
-    lazy var tooltipLabel: UILabel = {
-        let view = UILabel(text: R.string.localizable.checkIfEnabled(),
-                           font: UIFont(name: "KohinoorGujarati-Regular", size: 14)!,
-                           textColor: .white.withAlphaComponent(0.5))
-        view.textAlignment = .center
-        return view
-    }()
-    
     lazy var notificationTableView: UITableView = {
         let view = UITableView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = R.color.primaryBackground()
         view.showsVerticalScrollIndicator = false
         view.separatorStyle = .none
+        return view
+    }()
+    
+    lazy var emptyView: NoDataEmptyView = {
+        let view = NoDataEmptyView(title: R.string.localizable.noNotifications(),
+                                   description: R.string.localizable.checkIfEnabled())
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.isHidden = true
         return view
     }()
     
@@ -92,13 +75,13 @@ final class NotificationScreenView: UIView {
         switch state {
         case .hasData:
             notificationTableView.isHidden = false
-            emptyStack.isHidden = true
+            emptyView.isHidden = true
         case .loading:
             notificationTableView.isHidden = true
-            emptyStack.isHidden = true
+            emptyView.isHidden = true
         case .empty:
             notificationTableView.isHidden = true
-            emptyStack.isHidden = false
+            emptyView.isHidden = false
         }
         
     }
@@ -113,7 +96,7 @@ final class NotificationScreenView: UIView {
         [
             stackForLabelSwitcher,
             allNotificationLabel,
-            emptyStack,
+            emptyView,
             notificationTableView
         ].forEach {
             self.addSubview($0)
@@ -136,9 +119,8 @@ final class NotificationScreenView: UIView {
             make.left.equalTo(self).offset(35)
         }
         
-        emptyStack.snp.makeConstraints { make in
-            make.centerX.equalTo(self)
-            make.centerY.equalTo(self)
+        emptyView.snp.makeConstraints { make in
+            make.centerX.centerY.equalTo(self)
         }
         
         notificationTableView.snp.makeConstraints { make in

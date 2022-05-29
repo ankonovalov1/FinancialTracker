@@ -106,28 +106,11 @@ final class MainScreenView: UIView {
         return tableView
     }()
     
-    lazy var emptyStack: UIStackView = {
-        let view = UIStackView(arrangedSubviews: [noNotificationLabel, tooltipLabel])
+    lazy var emptyView: NoDataEmptyView = {
+        let view = NoDataEmptyView(title: R.string.localizable.noOperations(),
+                                   description: R.string.localizable.forThisPeriod())
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.axis = .vertical
-        view.distribution = .fill
         view.isHidden = true
-        return view
-    }()
-    
-    lazy var noNotificationLabel: UILabel = {
-        let view = UILabel(text: R.string.localizable.noOperations(),
-                           font: UIFont(name: "KohinoorGujarati-Regular", size: 26)!,
-                           textColor: .white)
-        view.textAlignment = .center
-        return view
-    }()
-    
-    lazy var tooltipLabel: UILabel = {
-        let view = UILabel(text: R.string.localizable.forThisPeriod(),
-                           font: UIFont(name: "KohinoorGujarati-Regular", size: 14)!,
-                           textColor: .white.withAlphaComponent(0.5))
-        view.textAlignment = .center
         return view
     }()
     
@@ -151,13 +134,13 @@ final class MainScreenView: UIView {
         switch state {
         case .hasData:
             infoTableView.isHidden = false
-            emptyStack.isHidden = true
+            emptyView.isHidden = true
         case .loading:
             infoTableView.isHidden = true
-            emptyStack.isHidden = true
+            emptyView.isHidden = true
         case .empty:
             infoTableView.isHidden = true
-            emptyStack.isHidden = false
+            emptyView.isHidden = false
         }
         
     }
@@ -179,7 +162,7 @@ final class MainScreenView: UIView {
             incomeSpendingLabel,
             dateButton,
             infoTableView,
-            emptyStack
+            emptyView
         ].forEach {
             self.addSubview($0)
         }
@@ -242,7 +225,7 @@ final class MainScreenView: UIView {
             make.right.equalTo(self.snp.right).offset(-30)
         }
         
-        emptyStack.snp.makeConstraints { make in
+        emptyView.snp.makeConstraints { make in
             make.top.equalTo(incomeSpendingLabel).offset(90)
             make.centerX.equalTo(self)
         }
