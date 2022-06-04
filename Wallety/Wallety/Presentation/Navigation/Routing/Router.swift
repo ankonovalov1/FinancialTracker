@@ -5,12 +5,28 @@ protocol RouterProtocol {
     func configure() -> UIViewController
 }
 
+extension RouterProtocol {
+    
+    func sceneDelegate() -> SceneDelegate {
+        return UIApplication.shared.connectedScenes.first?.delegate as! SceneDelegate
+    }
+    
+    func appDelegate() -> AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
+    
+}
+
 struct MainTabScreenRouter: RouterProtocol {
     
     func configure() -> UIViewController {
+        let container = appDelegate().persistentContainer
+        let balanceCDService = BalanceCDService(container: container)
+        let balanceVM = BalanceVM(balanceCDService: balanceCDService)
+        
         let vc = MainTabController()
         vc.setViewControllers([
-            MainScreenVC(),
+            MainScreenVC(balanceVM: balanceVM),
             StatisticScreenVC(),
             ProfileScreenVC(),
             UINavigationController(rootViewController:  SettingsScreenVC())
@@ -23,7 +39,10 @@ struct MainTabScreenRouter: RouterProtocol {
 struct MainScreenRouter: RouterProtocol {
     
     func configure() -> UIViewController {
-        return MainScreenVC()
+        let container = appDelegate().persistentContainer
+        let balanceCDService = BalanceCDService(container: container)
+        let balanceVM = BalanceVM(balanceCDService: balanceCDService)
+        return MainScreenVC(balanceVM: balanceVM)
     }
     
 }
@@ -76,7 +95,9 @@ struct AfterLaunchScreenRouter: RouterProtocol {
         
         let navigator = Navigator(navigationController: navigationController, factory: factory)
         let userDefaults = UserDefaultsService()
-        let viewModel = StartBalanceVM(navigator: navigator, userDefaults: userDefaults)
+        let container = appDelegate().persistentContainer
+        let  balanceCDService = BalanceCDService(container: container)
+        let viewModel = StartBalanceVM(navigator: navigator, userDefaults: userDefaults, balanceCDService: balanceCDService)
         return StartBalanceScreenVC(viewModel: viewModel)
     }
     
