@@ -13,7 +13,7 @@ struct HapticHandler {
         case selection
     }
     
-    func make(_ type: FeedbackType) {
+    static func make(_ type: FeedbackType) {
         switch type {
         case .success:
             let generator = UINotificationFeedbackGenerator()
