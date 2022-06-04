@@ -9,5 +9,6 @@ target 'Wallety' do
    pod 'R.swift'
    pod 'SwiftEntryKit', '2.0.0'
    pod 'Charts'
+   pod 'AppCenter'
 
 end
