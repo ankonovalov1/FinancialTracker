@@ -50,6 +50,10 @@ final class SettingsScreenVC: UIViewController {
         mainView.tableView.register(SettingsViewCell.self, forCellReuseIdentifier: SettingsViewCell.id)
         mainView.tableView.delegate = self
         mainView.tableView.dataSource = self
+        
+        mainView.tableView.separatorStyle = .singleLine
+        mainView.tableView.separatorColor = R.color.primaryBackground()
+        mainView.tableView.separatorInset = UIEdgeInsets(top: 0, left: 70, bottom: 0, right: 0)
     }
 
 }

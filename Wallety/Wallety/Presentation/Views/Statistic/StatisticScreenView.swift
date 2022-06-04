@@ -72,28 +72,11 @@ final class StatisticScreenView: UIView {
         return view
     }()
     
-    lazy var emptyStack: UIStackView = {
-        let view = UIStackView(arrangedSubviews: [noNotificationLabel, tooltipLabel])
+    lazy var emptyView: NoDataEmptyView = {
+        let view = NoDataEmptyView(title: R.string.localizable.noOperations(),
+                                   description: R.string.localizable.forThisPeriod())
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.axis = .vertical
-        view.distribution = .fill
         view.isHidden = true
-        return view
-    }()
-    
-    lazy var noNotificationLabel: UILabel = {
-        let view = UILabel(text: R.string.localizable.noOperations(),
-                           font: UIFont(name: "KohinoorGujarati-Regular", size: 26)!,
-                           textColor: .white)
-        view.textAlignment = .center
-        return view
-    }()
-    
-    lazy var tooltipLabel: UILabel = {
-        let view = UILabel(text: R.string.localizable.forThisPeriod(),
-                           font: UIFont(name: "KohinoorGujarati-Regular", size: 14)!,
-                           textColor: .white.withAlphaComponent(0.5))
-        view.textAlignment = .center
         return view
     }()
     
@@ -116,11 +99,11 @@ final class StatisticScreenView: UIView {
 
         switch state {
         case .hasData:
-            emptyStack.isHidden = true
+            emptyView.isHidden = true
         case .loading:
-            emptyStack.isHidden = true
+            emptyView.isHidden = true
         case .empty:
-            emptyStack.isHidden = false
+            emptyView.isHidden = false
         }
 
     }
@@ -143,7 +126,7 @@ final class StatisticScreenView: UIView {
             switchViewSegment,
             chartView,
             stackForInfoViews,
-            emptyStack
+            emptyView
         ].forEach {
             self.addSubview($0)
         }
@@ -181,7 +164,7 @@ final class StatisticScreenView: UIView {
             make.height.equalTo(55)
         }
         
-        emptyStack.snp.makeConstraints { make in
+        emptyView.snp.makeConstraints { make in
             make.centerX.centerY.equalTo(self)
         }
         
