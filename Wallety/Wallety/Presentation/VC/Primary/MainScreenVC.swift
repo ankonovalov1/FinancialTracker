@@ -7,10 +7,12 @@ final class MainScreenVC: UIViewController {
     
     let mainView = MainScreenView()
     let viewModel = MainScreenVM()
+    let balanceVM: BalanceVM
     
     // MARK: - Lifecycle
     
-    init() {
+    init(balanceVM: BalanceVM) {
+        self.balanceVM = balanceVM
         super.init(nibName: nil, bundle: nil)
         configureTabBar()
     }
@@ -24,6 +26,12 @@ final class MainScreenVC: UIViewController {
         self.view = mainView
         addTargets()
         configureDelegates()
+        balanceVM.getBalance()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        mainView.balanceValueLabel.text = balanceVM.currentBalance
     }
     
     // MARK: - @objc methods
