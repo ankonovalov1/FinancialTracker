@@ -34,6 +34,7 @@
 		12B468F1284B8F3D0023E2D2 /* CoreDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B468F0284B8F3D0023E2D2 /* CoreDataProtocol.swift */; };
 		12B4CACA283EA4F700D775B2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 12B4CACC283EA4F700D775B2 /* Localizable.strings */; };
 		12B4CACF283EA53400D775B2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 12B4CAD1283EA53400D775B2 /* Localizable.strings */; };
+		12B82E26284BE46300C54747 /* HapticHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B82E25284BE46300C54747 /* HapticHandler.swift */; };
 		12B86DC6280C1A940036FDD3 /* PopupFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B86DC5280C1A940036FDD3 /* PopupFactory.swift */; };
 		12B86DC8280C1D090036FDD3 /* StartCurrencyScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B86DC7280C1D090036FDD3 /* StartCurrencyScreenVC.swift */; };
 		12B86DCB280C1D700036FDD3 /* StartCurrencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B86DCA280C1D700036FDD3 /* StartCurrencyView.swift */; };
@@ -119,6 +120,7 @@
 		12B468F0284B8F3D0023E2D2 /* CoreDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProtocol.swift; sourceTree = "<group>"; };
 		12B4CACB283EA4F700D775B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		12B4CAD0283EA53400D775B2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		12B82E25284BE46300C54747 /* HapticHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticHandler.swift; sourceTree = "<group>"; };
 		12B86DC5280C1A940036FDD3 /* PopupFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupFactory.swift; sourceTree = "<group>"; };
 		12B86DC7280C1D090036FDD3 /* StartCurrencyScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCurrencyScreenVC.swift; sourceTree = "<group>"; };
 		12B86DCA280C1D700036FDD3 /* StartCurrencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCurrencyView.swift; sourceTree = "<group>"; };
@@ -516,6 +518,7 @@
 				12C1169828056DE900D6B8C0 /* ImagePickerHandler.swift */,
 				12C116A12806FC2C00D6B8C0 /* PopupHandler.swift */,
 				12FAEA79280ED93D007450C7 /* ContentLoader.swift */,
+				12B82E25284BE46300C54747 /* HapticHandler.swift */,
 			);
 			path = Handlers;
 			sourceTree = "<group>";
@@ -845,6 +848,7 @@
 				12C1169928056DE900D6B8C0 /* ImagePickerHandler.swift in Sources */,
 				12B86DCD280C534E0036FDD3 /* SettingsScreenVM.swift in Sources */,
 				12C1168028002B1900D6B8C0 /* TransactionVM.swift in Sources */,
+				12B82E26284BE46300C54747 /* HapticHandler.swift in Sources */,
 				12E3F952280EFF6A003CBF9F /* NotificationScreenVC.swift in Sources */,
 				1294BF7D284B8677004AFE0D /* StartCurrencyScreenVM.swift in Sources */,
 			);
