@@ -1,5 +1,13 @@
 PODS:
   - Alamofire (5.5.0)
+  - AppCenter (4.4.1):
+    - AppCenter/Analytics (= 4.4.1)
+    - AppCenter/Crashes (= 4.4.1)
+  - AppCenter/Analytics (4.4.1):
+    - AppCenter/Core
+  - AppCenter/Core (4.4.1)
+  - AppCenter/Crashes (4.4.1):
+    - AppCenter/Core
   - Charts (4.0.2):
     - Charts/Core (= 4.0.2)
   - Charts/Core (4.0.2):
@@ -14,6 +22,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 5.5)
+  - AppCenter
   - Charts
   - R.swift
   - SnapKit (~> 5.0.0)
@@ -23,6 +32,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - AppCenter
     - Charts
     - R.swift
     - R.swift.Library
@@ -33,6 +43,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  AppCenter: b0b6f1190215b5f983c42934db718f3b46fff3c0
   Charts: cfa4e911e6dc289582c2fe011a0e87c03d96727f
   R.swift: ec98ff71c4ab2f6fd01dd077e5afd15e63a4834c
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
@@ -41,6 +52,6 @@ SPEC CHECKSUMS:
   SwiftEntryKit: 61b5fa36f34a97dd8013e48a7345bc4c4720be9a
   Swinject: 97112918bd7e0785dc2df7036213f3c8cbba6586
 
-PODFILE CHECKSUM: 906972aeaf612ed0cc8c21c08984b0e1d84fc2f4
+PODFILE CHECKSUM: 18b18f373eb42f48735a18269198760625cf7a45
 
 COCOAPODS: 1.11.2

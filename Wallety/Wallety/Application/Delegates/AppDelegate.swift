@@ -1,11 +1,14 @@
 import UIKit
+import AppCenter
+import AppCenterCrashes
+import AppCenterAnalytics
 import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+        configureAppCenter()
         return true
     }
 
@@ -21,6 +24,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+    
+    // MARK: - AppCenter Configuration
+    
+    private func configureAppCenter() {
+        AppCenter.start(withAppSecret: "c347b784-97ed-482a-850a-7796c2dec333", services: [Crashes.self, Analytics.self])
     }
 
     // MARK: - Core Data stack
