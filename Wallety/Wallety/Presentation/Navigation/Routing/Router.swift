@@ -57,7 +57,9 @@ struct StartCurrencyScreenRouter: RouterProtocol {
         else { return UIViewController() }
         
         let navigator = Navigator(navigationController: navigationController, factory: factory)
-        return StartCurrencyScreenVC(navigator: navigator)
+        let userDefaults = UserDefaultsService()
+        let viewModel = StartCurrencyScreenVM(navigator: navigator, userDefaults: userDefaults)
+        return StartCurrencyScreenVC(viewModel: viewModel)
     }
     
 }

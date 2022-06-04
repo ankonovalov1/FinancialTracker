@@ -36,6 +36,7 @@ final class StartBalanceScreenVC: UIViewController {
     }
     
     @objc private func setBalanceTapped() {
+        viewModel.currentBalance = mainView.balanceTextField.text ?? ""
         viewModel.setBalance()
     }
     

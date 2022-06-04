@@ -10,6 +10,7 @@ final class StartBalanceVM {
             balanceChanged?(isBalanceEmpty)
         }
     }
+    var currentBalance: String = ""
     
     // MARK: Private properties
     
