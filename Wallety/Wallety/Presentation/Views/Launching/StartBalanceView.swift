@@ -96,6 +96,28 @@ final class StartBalanceView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Internal functions
+    
+    func updateHeight(height: CGFloat, toNormal: Bool) {
+        UIView.animate(withDuration: 0.3, delay: 0) {
+            self.walletImage.snp.updateConstraints { make in
+                make.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(30 - height)
+            }
+            
+            self.mainLabel.snp.updateConstraints { make in
+                make.top.equalTo(self.snp.centerY).offset(-(height))
+            }
+            
+            if toNormal {
+                self.frameLayer.frame.origin.y = (self.bounds.height/2) - 30
+            }
+            else {
+                self.frameLayer.frame.origin.y -= height
+            }
+            self.layoutIfNeeded()
+        }
+    }
+    
     // MARK: - Manage subviews
     
     private func addSubviews() {

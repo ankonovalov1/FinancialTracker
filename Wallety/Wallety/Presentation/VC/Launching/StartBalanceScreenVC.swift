@@ -26,7 +26,13 @@ final class StartBalanceScreenVC: UIViewController {
         super.viewDidLoad()
         self.view = mainView
         addTargets()
+        addObservers()
         configureSubviews()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        removeObservers()
     }
     
     // MARK: @objc func
@@ -40,11 +46,32 @@ final class StartBalanceScreenVC: UIViewController {
         viewModel.setBalance()
     }
     
-    // MARK: Private func
+    @objc private func keyboardWillShow(notification: NSNotification) {
+        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
+            return
+        }
+        if view.frame.origin.y == 0 {
+            mainView.updateHeight(height: keyboardSize.height, toNormal: false)
+        }
+    }
+    
+    @objc private func keyboardWillHide(notification: NSNotification) {
+        mainView.updateHeight(height: 0, toNormal: true)
+    }
+    // MARK: Private functions
     
     private func addTargets() {
         mainView.setButton.addTarget(self, action: #selector(setBalanceTapped), for: .touchUpInside)
         mainView.skipButton.addTarget(self, action: #selector(skipTapped), for: .touchUpInside)
+    }
+    
+    private func addObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: self.view.window)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: self.view.window)
+    }
+    
+    private func removeObservers() {
+        NotificationCenter.default.removeObserver(self)
     }
     
     private func configureSubviews() {
@@ -56,7 +83,7 @@ final class StartBalanceScreenVC: UIViewController {
         
         mainView.balanceTextField.delegate = self
     }
-
+    
 }
 
 extension StartBalanceScreenVC: UITextFieldDelegate {
