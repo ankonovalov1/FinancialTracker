@@ -49,11 +49,11 @@ final class StartBalanceVM {
     func createBalance(isEmpty: Bool) {
         let id = StaticResources.deviceUDID
         if isEmpty {
-            let model = BalanceMappingModel(id: id, ruble: 0, euro: 0, dollar: 0)
+            let model = BalanceMappingModel(id: id, value: 0)
             balanceCDService.addOrUpdate(model: model)
         } else {
-            let balance = NSDecimalNumber(string: currentBalance)
-            let model = BalanceMappingModel(id: id, ruble: balance, euro: balance, dollar: balance)
+            let balance = Double(currentBalance)
+            let model = BalanceMappingModel(id: id, value: balance ?? 0)
             balanceCDService.addOrUpdate(model: model)
         }
     }

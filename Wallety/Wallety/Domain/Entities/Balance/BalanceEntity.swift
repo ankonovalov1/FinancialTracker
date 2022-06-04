@@ -8,9 +8,7 @@ public class Balance: NSManagedObject {
         return NSFetchRequest<Balance>(entityName: "Balance")
     }
     
+    @NSManaged public var value: Double
     @NSManaged public var id: String?
-    @NSManaged public var ruble: NSDecimalNumber?
-    @NSManaged public var euro: NSDecimalNumber?
-    @NSManaged public var dollar: NSDecimalNumber?
     
 }

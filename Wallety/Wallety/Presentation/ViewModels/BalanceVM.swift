@@ -28,7 +28,7 @@ final class BalanceVM {
             currentBalance = "0"
             return
         }
-        currentBalance = balance.ruble?.stringValue ?? "0"
+        currentBalance = String(balance.value)
     }
     
 }

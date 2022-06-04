@@ -15,7 +15,7 @@
 		12482D8B27F5F14F00D292CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12482D8927F5F14F00D292CA /* LaunchScreen.storyboard */; };
 		12482D9427F5F62200D292CA /* SplashScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12482D9327F5F62200D292CA /* SplashScreenVC.swift */; };
 		12482D9A27F5FBFE00D292CA /* StartBalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12482D9927F5FBFE00D292CA /* StartBalanceView.swift */; };
-		12482D9D27F5FC2F00D292CA /* TestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12482D9C27F5FC2F00D292CA /* TestService.swift */; };
+		12482D9D27F5FC2F00D292CA /* RatesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12482D9C27F5FC2F00D292CA /* RatesService.swift */; };
 		12482DA027F5FC5500D292CA /* TestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12482D9F27F5FC5500D292CA /* TestInteractor.swift */; };
 		12482DA327F5FC9C00D292CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12482DA227F5FC9C00D292CA /* Images.xcassets */; };
 		12482DA527F5FCAF00D292CA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12482DA427F5FCAF00D292CA /* Colors.xcassets */; };
@@ -35,6 +35,8 @@
 		12B4CACA283EA4F700D775B2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 12B4CACC283EA4F700D775B2 /* Localizable.strings */; };
 		12B4CACF283EA53400D775B2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 12B4CAD1283EA53400D775B2 /* Localizable.strings */; };
 		12B82E26284BE46300C54747 /* HapticHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B82E25284BE46300C54747 /* HapticHandler.swift */; };
+		12B82E29284BF9DD00C54747 /* RatesRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B82E28284BF9DD00C54747 /* RatesRequestDTO.swift */; };
+		12B82E2B284C01D600C54747 /* RatesResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B82E2A284C01D600C54747 /* RatesResponseDTO.swift */; };
 		12B86DC6280C1A940036FDD3 /* PopupFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B86DC5280C1A940036FDD3 /* PopupFactory.swift */; };
 		12B86DC8280C1D090036FDD3 /* StartCurrencyScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B86DC7280C1D090036FDD3 /* StartCurrencyScreenVC.swift */; };
 		12B86DCB280C1D700036FDD3 /* StartCurrencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B86DCA280C1D700036FDD3 /* StartCurrencyView.swift */; };
@@ -101,7 +103,7 @@
 		12482D8C27F5F14F00D292CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12482D9327F5F62200D292CA /* SplashScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenVC.swift; sourceTree = "<group>"; };
 		12482D9927F5FBFE00D292CA /* StartBalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartBalanceView.swift; sourceTree = "<group>"; };
-		12482D9C27F5FC2F00D292CA /* TestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestService.swift; sourceTree = "<group>"; };
+		12482D9C27F5FC2F00D292CA /* RatesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesService.swift; sourceTree = "<group>"; };
 		12482D9F27F5FC5500D292CA /* TestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInteractor.swift; sourceTree = "<group>"; };
 		12482DA227F5FC9C00D292CA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		12482DA427F5FCAF00D292CA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -121,6 +123,8 @@
 		12B4CACB283EA4F700D775B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		12B4CAD0283EA53400D775B2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		12B82E25284BE46300C54747 /* HapticHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticHandler.swift; sourceTree = "<group>"; };
+		12B82E28284BF9DD00C54747 /* RatesRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesRequestDTO.swift; sourceTree = "<group>"; };
+		12B82E2A284C01D600C54747 /* RatesResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesResponseDTO.swift; sourceTree = "<group>"; };
 		12B86DC5280C1A940036FDD3 /* PopupFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupFactory.swift; sourceTree = "<group>"; };
 		12B86DC7280C1D090036FDD3 /* StartCurrencyScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCurrencyScreenVC.swift; sourceTree = "<group>"; };
 		12B86DCA280C1D700036FDD3 /* StartCurrencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCurrencyView.swift; sourceTree = "<group>"; };
@@ -377,7 +381,7 @@
 		1259748D284276DF001F1056 /* Remote */ = {
 			isa = PBXGroup;
 			children = (
-				12482D9C27F5FC2F00D292CA /* TestService.swift */,
+				12B82E27284BF9BB00C54747 /* Rates */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -422,6 +426,16 @@
 				12B4CAD1283EA53400D775B2 /* Localizable.strings */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		12B82E27284BF9BB00C54747 /* Rates */ = {
+			isa = PBXGroup;
+			children = (
+				12482D9C27F5FC2F00D292CA /* RatesService.swift */,
+				12B82E28284BF9DD00C54747 /* RatesRequestDTO.swift */,
+				12B82E2A284C01D600C54747 /* RatesResponseDTO.swift */,
+			);
+			path = Rates;
 			sourceTree = "<group>";
 		};
 		12B86DC4280C1A380036FDD3 /* Factories */ = {
@@ -783,6 +797,7 @@
 				12B86DD5280C75320036FDD3 /* AboutScreenView.swift in Sources */,
 				12C116A22806FC2C00D6B8C0 /* PopupHandler.swift in Sources */,
 				12B86DD3280C74C00036FDD3 /* AboutScreenVC.swift in Sources */,
+				12B82E2B284C01D600C54747 /* RatesResponseDTO.swift in Sources */,
 				12E3F960281035B7003CBF9F /* TitleViewCell.swift in Sources */,
 				12C1169E2805E01200D6B8C0 /* SettingsViewCell.swift in Sources */,
 				12E3F95C28102B7A003CBF9F /* CategoriesScreenView.swift in Sources */,
@@ -827,11 +842,12 @@
 				12482D9427F5F62200D292CA /* SplashScreenVC.swift in Sources */,
 				12C116892804286800D6B8C0 /* ProfileScreenView.swift in Sources */,
 				12C1169428043B0E00D6B8C0 /* Account.swift in Sources */,
+				12B82E29284BF9DD00C54747 /* RatesRequestDTO.swift in Sources */,
 				12C1168F28043A8000D6B8C0 /* ProfileEntity.swift in Sources */,
 				12E3F95A28102B24003CBF9F /* CategoriesScreenVC.swift in Sources */,
 				1259749228427B8D001F1056 /* UserDefaultsKeys.swift in Sources */,
 				1255FC4827F67AE0002029DE /* SplashScreenView.swift in Sources */,
-				12482D9D27F5FC2F00D292CA /* TestService.swift in Sources */,
+				12482D9D27F5FC2F00D292CA /* RatesService.swift in Sources */,
 				12F1D6E827F62EBE0003B10C /* WButton.swift in Sources */,
 				1259749428427C48001F1056 /* SplashScreenVM.swift in Sources */,
 				12B86DD1280C547D0036FDD3 /* SettingModel.swift in Sources */,
