@@ -52,9 +52,7 @@ final class BalanceCDService: CoreDataProtocol {
         }
         
         balance?.id = model.id
-        balance?.ruble = model.ruble
-        balance?.euro = model.euro
-        balance?.dollar = model.dollar
+        balance?.value = model.value
         
         save()
     }
