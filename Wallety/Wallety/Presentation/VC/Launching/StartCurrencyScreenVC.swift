@@ -4,13 +4,13 @@ final class StartCurrencyScreenVC: UIViewController {
     
     // MARK: - Properties
     
-    let mainView = StartCurrencyView()
-    let navigator: NavigatorProtocol
+    private let mainView = StartCurrencyView()
+    private let viewModel: StartCurrencyScreenVM
     
     // MARK: - Lifecycle
     
-    init(navigator: NavigatorProtocol) {
-        self.navigator = navigator
+    init(viewModel: StartCurrencyScreenVM) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -22,16 +22,17 @@ final class StartCurrencyScreenVC: UIViewController {
         super.viewDidLoad()
         self.view = mainView
         addTargets()
+        setCurrentSegment()
     }
     
     // MARK: - @objc
     
     @objc private func currencyChanged() {
-        // TODO: some logic when switch currency
+        setCurrentSegment()
     }
     
     @objc private func setCurrency() {
-        navigator.navigate(to: .setBalance)
+        viewModel.setCurrency()
     }
     
     // MARK: - Private
@@ -39,6 +40,14 @@ final class StartCurrencyScreenVC: UIViewController {
     private func addTargets() {
         mainView.currencySegment.addTarget(self, action: #selector(currencyChanged), for: .valueChanged)
         mainView.setButton.addTarget(self, action: #selector(setCurrency), for: .touchUpInside)
+    }
+    
+    private func setCurrentSegment() {
+        let index = mainView.currencySegment.selectedSegmentIndex
+        guard let title = mainView.currencySegment.titleForSegment(at: index) else {
+            return
+        }
+        viewModel.currentSegmentTitle = title
     }
     
 }
