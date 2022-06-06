@@ -9,10 +9,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         configureAppCenter()
-        let service = RatesService()
-        service.get(request: .init(base: "USD")) { _ in
-            
-        }
         return true
     }
 
