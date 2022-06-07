@@ -97,7 +97,9 @@ struct AfterLaunchScreenRouter: RouterProtocol {
         let userDefaults = UserDefaultsService()
         let container = appDelegate().persistentContainer
         let  balanceCDService = BalanceCDService(container: container)
-        let viewModel = StartBalanceVM(navigator: navigator, userDefaults: userDefaults, balanceCDService: balanceCDService)
+        let validator = BalanceValidator()
+        let viewModel = StartBalanceVM(navigator: navigator, userDefaults: userDefaults,
+                                       balanceCDService: balanceCDService, validator: validator)
         return StartBalanceScreenVC(viewModel: viewModel)
     }
     

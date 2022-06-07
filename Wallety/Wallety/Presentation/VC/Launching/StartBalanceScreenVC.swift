@@ -94,59 +94,7 @@ extension StartBalanceScreenVC: UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let isAllowed = checkAllowedSymbols(value: string)
-        let isCorrect = checkNumberCorrectness(fullValue: textField.text, value: string)
-        let isMax = checkMaxOf(fullValue: textField.text, value: string)
-        return isAllowed && isCorrect && isMax
-    }
-    
-    private func checkAllowedSymbols(value: String) -> Bool {
-        let allowedCharacters = CharacterSet(charactersIn: "0123456789.")
-        let characterSet = CharacterSet(charactersIn: value)
-        return allowedCharacters.isSuperset(of: characterSet)
-    }
-    
-    private func checkMaxOf(fullValue: String?, value: String, with limit: Int = 15) -> Bool {
-        if let fullValue = fullValue {
-            if fullValue.count == 14 && value == "." {
-                return false
-            }
-            if fullValue.count == 15 && value != "" {
-                return false
-            }
-        }
-        return true
-    }
-    
-    private func checkNumberCorrectness(fullValue: String?, value: String) -> Bool {
-        if let fullValue = fullValue {
-            if fullValue.isEmpty && value == "." {
-                return false
-            }
-            if fullValue == "0" && value != "." {
-                if value == "" {
-                    return true
-                }
-                return false
-            }
-            if fullValue.contains(".") && value == "." {
-                return false
-            }
-            if fullValue.contains(".") && value != "" {
-                if let range = fullValue.range(of: ".") {
-                    let valueInRange = fullValue[range.upperBound...]
-                    if valueInRange.count > 1 {
-                        return false
-                    }
-                }
-            }
-        } else {
-            if value != "." {
-                return false
-            }
-        }
-        return true
+        return viewModel.validate(fullValue: textField.text, value: string)
     }
     
 }
-
