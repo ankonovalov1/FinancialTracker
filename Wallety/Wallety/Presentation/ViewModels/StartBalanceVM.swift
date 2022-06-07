@@ -17,15 +17,20 @@ final class StartBalanceVM {
     private let navigator: NavigatorProtocol
     private let userDefaults: UserDefaultsProtocol
     private let balanceCDService: CoreDataProtocol
+    private let validator: ValidationProtocol
     
     // MARK: Lifecycle
     
     init(navigator: NavigatorProtocol,
          userDefaults: UserDefaultsProtocol,
-         balanceCDService: CoreDataProtocol) {
+         balanceCDService: CoreDataProtocol,
+         validator: ValidationProtocol) {
         self.navigator = navigator
         self.userDefaults = userDefaults
         self.balanceCDService = balanceCDService
+        self.validator = validator
+        
+        self.validator.parameters = BalanceValidationParams.allCases
     }
     
     deinit {
@@ -56,6 +61,11 @@ final class StartBalanceVM {
             let model = BalanceMappingModel(id: id, value: balance ?? 0)
             balanceCDService.addOrUpdate(model: model)
         }
+    }
+    
+    func validate(fullValue: String?, value: String) -> Bool {
+        let model = (full: fullValue, new: value)
+        return validator.validate(value: model)
     }
     
 }
