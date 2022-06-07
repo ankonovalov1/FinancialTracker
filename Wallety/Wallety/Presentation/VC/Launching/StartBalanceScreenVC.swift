@@ -93,5 +93,8 @@ extension StartBalanceScreenVC: UITextFieldDelegate {
         viewModel.isBalanceEmpty = isEmpty
     }
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return viewModel.validate(fullValue: textField.text, value: string)
+    }
+    
 }
-
