@@ -3,8 +3,12 @@ import Foundation
 final class BalanceVM {
     
     // MARK: Internal properties
-    
-    var currentBalance: String = ""
+    var numberBalance: Double = 0
+    var currentBalance: String {
+        get {
+            numberBalance.formatWith() ?? "0"
+        }
+    }
     
     // MARK: Private properties
     
@@ -25,10 +29,16 @@ final class BalanceVM {
             let balances = balanceCDService.getAll() as? [Balance],
             let balance = balances.first
         else {
-            currentBalance = "0"
+            numberBalance = 0
             return
         }
-        currentBalance = String(balance.value)
+        numberBalance = balance.value
+    }
+    
+    func setBalance() {
+        let udid = StaticResources.deviceUDID
+        let model = BalanceMappingModel(id: udid, value: 150)
+        balanceCDService.addOrUpdate(model: model)
     }
     
 }

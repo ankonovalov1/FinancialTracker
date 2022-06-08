@@ -42,6 +42,10 @@ final class MainScreenVC: UIViewController {
         handler.show(factory: .chooseLanguage)
     }
     
+    @objc private func increaseTapped() {
+        balanceVM.setBalance()
+    }
+    
     // MARK: - Private
     
     private func configureTabBar() {
@@ -50,7 +54,7 @@ final class MainScreenVC: UIViewController {
     }
     
     private func addTargets() {
-        mainView.increaseBalanceButton.addTarget(self, action: #selector(switchState), for: .touchUpInside)
+        mainView.increaseBalanceButton.addTarget(self, action: #selector(increaseTapped), for: .touchUpInside)
     }
     
     private func configureDelegates() {

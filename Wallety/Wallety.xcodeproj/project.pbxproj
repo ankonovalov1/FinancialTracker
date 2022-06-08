@@ -69,6 +69,10 @@
 		12C116A52806FF2F00D6B8C0 /* ChoicePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C116A42806FF2F00D6B8C0 /* ChoicePopup.swift */; };
 		12DAA532284FD1330093F9FD /* BalanceValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DAA531284FD1330093F9FD /* BalanceValidator.swift */; };
 		12DAA534284FD27E0093F9FD /* BalanceValidationParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DAA533284FD27E0093F9FD /* BalanceValidationParams.swift */; };
+		12DAA536284FEB7C0093F9FD /* Double + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DAA535284FEB7C0093F9FD /* Double + Extensions.swift */; };
+		12DAA539284FF39F0093F9FD /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DAA538284FF39F0093F9FD /* Currency.swift */; };
+		12DAA53C284FF4670093F9FD /* CurrencyCDService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DAA53B284FF4670093F9FD /* CurrencyCDService.swift */; };
+		12DAA53E284FF4DE0093F9FD /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DAA53D284FF4DE0093F9FD /* CurrencyModel.swift */; };
 		12E3F952280EFF6A003CBF9F /* NotificationScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E3F951280EFF6A003CBF9F /* NotificationScreenVC.swift */; };
 		12E3F954280EFF9B003CBF9F /* NotificationScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E3F953280EFF9B003CBF9F /* NotificationScreenView.swift */; };
 		12E3F956280F0CAE003CBF9F /* NotificationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E3F955280F0CAE003CBF9F /* NotificationViewCell.swift */; };
@@ -159,6 +163,10 @@
 		12C116A42806FF2F00D6B8C0 /* ChoicePopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicePopup.swift; sourceTree = "<group>"; };
 		12DAA531284FD1330093F9FD /* BalanceValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceValidator.swift; sourceTree = "<group>"; };
 		12DAA533284FD27E0093F9FD /* BalanceValidationParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceValidationParams.swift; sourceTree = "<group>"; };
+		12DAA535284FEB7C0093F9FD /* Double + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double + Extensions.swift"; sourceTree = "<group>"; };
+		12DAA538284FF39F0093F9FD /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		12DAA53B284FF4670093F9FD /* CurrencyCDService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCDService.swift; sourceTree = "<group>"; };
+		12DAA53D284FF4DE0093F9FD /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
 		12E3F951280EFF6A003CBF9F /* NotificationScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationScreenVC.swift; sourceTree = "<group>"; };
 		12E3F953280EFF9B003CBF9F /* NotificationScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationScreenView.swift; sourceTree = "<group>"; };
 		12E3F955280F0CAE003CBF9F /* NotificationViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewCell.swift; sourceTree = "<group>"; };
@@ -411,6 +419,7 @@
 		12B468EF284B8F1A0023E2D2 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				12DAA53A284FF4450093F9FD /* Currency */,
 				12E4D9BA284B9F4E00CF6FC9 /* Balance */,
 			);
 			path = CoreData;
@@ -474,6 +483,7 @@
 			isa = PBXGroup;
 			children = (
 				12C116772800018000D6B8C0 /* UILabel + Extensions.swift */,
+				12DAA535284FEB7C0093F9FD /* Double + Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -515,6 +525,7 @@
 		12C1168D28043A4200D6B8C0 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				12DAA537284FF2870093F9FD /* Currency */,
 				12B468F2284B94BA0023E2D2 /* Balance */,
 				12C1168E28043A8000D6B8C0 /* ProfileEntity.swift */,
 			);
@@ -577,6 +588,23 @@
 				12DAA533284FD27E0093F9FD /* BalanceValidationParams.swift */,
 			);
 			path = Balance;
+			sourceTree = "<group>";
+		};
+		12DAA537284FF2870093F9FD /* Currency */ = {
+			isa = PBXGroup;
+			children = (
+				12DAA538284FF39F0093F9FD /* Currency.swift */,
+			);
+			path = Currency;
+			sourceTree = "<group>";
+		};
+		12DAA53A284FF4450093F9FD /* Currency */ = {
+			isa = PBXGroup;
+			children = (
+				12DAA53B284FF4670093F9FD /* CurrencyCDService.swift */,
+				12DAA53D284FF4DE0093F9FD /* CurrencyModel.swift */,
+			);
+			path = Currency;
 			sourceTree = "<group>";
 		};
 		12E3F95D28103586003CBF9F /* Table */ = {
@@ -825,6 +853,7 @@
 				12E3F95C28102B7A003CBF9F /* CategoriesScreenView.swift in Sources */,
 				12C116862800617700D6B8C0 /* SettingsScreenVC.swift in Sources */,
 				12C1167527FFFED600D6B8C0 /* BalanceInfoView.swift in Sources */,
+				12DAA53E284FF4DE0093F9FD /* CurrencyModel.swift in Sources */,
 				12482D7C27F5F14E00D292CA /* AppDelegate.swift in Sources */,
 				12C116A02806AC2600D6B8C0 /* MainTabController.swift in Sources */,
 				12E4D9BC284B9F9200CF6FC9 /* BalanceCDService.swift in Sources */,
@@ -842,11 +871,13 @@
 				1255FC3B27F6683A002029DE /* Navigator.swift in Sources */,
 				12B86DD9280C821D0036FDD3 /* PrivacyPolicyView.swift in Sources */,
 				1259749028427721001F1056 /* UserDefaultsService.swift in Sources */,
+				12DAA536284FEB7C0093F9FD /* Double + Extensions.swift in Sources */,
 				12B86DCF280C53F40036FDD3 /* SettingVM.swift in Sources */,
 				12482DA027F5FC5500D292CA /* TestInteractor.swift in Sources */,
 				12B86DD7280C81D50036FDD3 /* PrivacyPolicyVC.swift in Sources */,
 				12E3F954280EFF9B003CBF9F /* NotificationScreenView.swift in Sources */,
 				12C116A52806FF2F00D6B8C0 /* ChoicePopup.swift in Sources */,
+				12DAA53C284FF4670093F9FD /* CurrencyCDService.swift in Sources */,
 				1255FC4127F67013002029DE /* RouterFactory.swift in Sources */,
 				12B468F1284B8F3D0023E2D2 /* CoreDataProtocol.swift in Sources */,
 				12C1167E28002AE900D6B8C0 /* MainScreenVM.swift in Sources */,
@@ -874,6 +905,7 @@
 				12F1D6E827F62EBE0003B10C /* WButton.swift in Sources */,
 				1259749428427C48001F1056 /* SplashScreenVM.swift in Sources */,
 				12B86DD1280C547D0036FDD3 /* SettingModel.swift in Sources */,
+				12DAA539284FF39F0093F9FD /* Currency.swift in Sources */,
 				12E3F96628109F36003CBF9F /* StatisticScreenView.swift in Sources */,
 				12B86DCB280C1D700036FDD3 /* StartCurrencyView.swift in Sources */,
 				12F1D6E327F61A6C0003B10C /* WTextField.swift in Sources */,
