@@ -26,7 +26,7 @@ final class StatisticScreenView: UIView {
         view.backgroundColor = R.color.secondaryBackground()
         view.setTitleTextAttributes(   [
             NSAttributedString.Key.foregroundColor: UIColor.white,
-            NSAttributedString.Key.font: UIFont(name: "KohinoorGujarati-Regular", size: 12)!
+            NSAttributedString.Key.font: CustomFonts.light(12).roboto
         ], for: .normal)
         return view
     }()
@@ -35,10 +35,10 @@ final class StatisticScreenView: UIView {
         let chart = LineChartView()
         chart.xAxis.labelPosition = .bottom
         chart.xAxis.labelTextColor = .white
-        chart.xAxis.labelFont = UIFont(name: "KohinoorGujarati-Regular", size: 8)!
+        chart.xAxis.labelFont = CustomFonts.light(8).roboto
         chart.rightAxis.enabled = false
         chart.leftAxis.labelTextColor = .white
-        chart.leftAxis.labelFont = UIFont(name: "KohinoorGujarati-Regular", size: 8)!
+        chart.leftAxis.labelFont = CustomFonts.light(8).roboto
         chart.xAxis.gridColor = R.color.secondaryBackground()!
         chart.xAxis.axisLineColor = R.color.secondaryBackground()!
         chart.leftAxis.gridColor = R.color.secondaryBackground()!

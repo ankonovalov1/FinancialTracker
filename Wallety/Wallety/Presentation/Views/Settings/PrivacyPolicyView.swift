@@ -9,7 +9,7 @@ final class PrivacyPolicyView: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.textAlignment = .left
         view.textColor = .white
-        view.font = UIFont(name: "KohinoorGujarati-Regular", size: 12)!
+        view.font = CustomFonts.light(12).roboto
         view.isEditable = false
         view.showsVerticalScrollIndicator = false
         view.backgroundColor = .clear

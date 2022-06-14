@@ -22,7 +22,8 @@ struct MainTabScreenRouter: RouterProtocol {
     func configure() -> UIViewController {
         let container = appDelegate().persistentContainer
         let balanceCDService = BalanceCDService(container: container)
-        let balanceVM = BalanceVM(balanceCDService: balanceCDService)
+        let currencyCDService = CurrencyCDService(container: container)
+        let balanceVM = BalanceVM(balanceCDService: balanceCDService, currencyCDService: currencyCDService)
         
         let vc = MainTabController()
         vc.setViewControllers([
@@ -41,7 +42,8 @@ struct MainScreenRouter: RouterProtocol {
     func configure() -> UIViewController {
         let container = appDelegate().persistentContainer
         let balanceCDService = BalanceCDService(container: container)
-        let balanceVM = BalanceVM(balanceCDService: balanceCDService)
+        let currencyCDService = CurrencyCDService(container: container)
+        let balanceVM = BalanceVM(balanceCDService: balanceCDService, currencyCDService: currencyCDService)
         return MainScreenVC(balanceVM: balanceVM)
     }
     
@@ -52,9 +54,8 @@ struct SplashScreenRouter: RouterProtocol {
     func configure() -> UIViewController {
         
         guard
-            let delegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
-            let navigationController = delegate.navigationController,
-            let factory = delegate.routerFactory
+            let navigationController = sceneDelegate().navigationController,
+            let factory = sceneDelegate().routerFactory
         else { return UIViewController() }
         
         let navigator = Navigator(navigationController: navigationController, factory: factory)
@@ -70,14 +71,13 @@ struct StartCurrencyScreenRouter: RouterProtocol {
     func configure() -> UIViewController {
         
         guard
-            let delegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
-            let navigationController = delegate.navigationController,
-            let factory = delegate.routerFactory
+            let navigationController = sceneDelegate().navigationController,
+            let factory = sceneDelegate().routerFactory
         else { return UIViewController() }
         
         let navigator = Navigator(navigationController: navigationController, factory: factory)
-        let userDefaults = UserDefaultsService()
-        let viewModel = StartCurrencyScreenVM(navigator: navigator, userDefaults: userDefaults)
+        let currencyCDService = CurrencyCDService(container: appDelegate().persistentContainer)
+        let viewModel = StartCurrencyScreenVM(navigator: navigator, currencyCDService: currencyCDService)
         return StartCurrencyScreenVC(viewModel: viewModel)
     }
     
@@ -88,9 +88,8 @@ struct AfterLaunchScreenRouter: RouterProtocol {
     func configure() -> UIViewController {
         
         guard
-            let delegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
-            let navigationController = delegate.navigationController,
-            let factory = delegate.routerFactory
+            let navigationController = sceneDelegate().navigationController,
+            let factory = sceneDelegate().routerFactory
         else { return UIViewController() }
         
         let navigator = Navigator(navigationController: navigationController, factory: factory)

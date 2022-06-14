@@ -17,7 +17,7 @@ final class NotificationViewCell: UITableViewCell {
     
     lazy var themeLabel: UILabel = {
         let view = UILabel(text: R.string.localizable.theme(),
-                           font: UIFont(name: "KohinoorGujarati-Bold", size: 10)!,
+                           font: CustomFonts.light(10).roboto,
                            textColor: .white)
         view.textAlignment = .left
         return view
@@ -25,7 +25,7 @@ final class NotificationViewCell: UITableViewCell {
     
     lazy var dateLabel: UILabel = {
         let view = UILabel(text: "12/12/2022",
-                           font: UIFont(name: "KohinoorGujarati-Regular", size: 10)!,
+                           font: CustomFonts.light(10).roboto,
                            textColor: .white)
         view.textAlignment = .right
         return view
@@ -34,7 +34,7 @@ final class NotificationViewCell: UITableViewCell {
     lazy var notificationTextView: UITextView = {
         let view = UITextView()
         view.text = R.string.localizable.notificationExample()
-        view.font = UIFont(name: "KohinoorGujarati-Regular", size: 10)!
+        view.font = CustomFonts.light(10).roboto
         view.textAlignment = .left
         view.isEditable = false
         view.backgroundColor = .clear

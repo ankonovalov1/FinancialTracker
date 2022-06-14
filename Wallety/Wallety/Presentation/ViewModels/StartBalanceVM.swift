@@ -52,13 +52,12 @@ final class StartBalanceVM {
     }
     
     func createBalance(isEmpty: Bool) {
-        let id = StaticResources.deviceUDID
         if isEmpty {
-            let model = BalanceMappingModel(id: id, value: 0)
+            let model = BalanceMappingModel(value: 0)
             balanceCDService.addOrUpdate(model: model)
         } else {
             let balance = Double(currentBalance)
-            let model = BalanceMappingModel(id: id, value: balance ?? 0)
+            let model = BalanceMappingModel(value: balance ?? 0)
             balanceCDService.addOrUpdate(model: model)
         }
     }

@@ -4,7 +4,7 @@ final class BalanceInfoView: UIView {
 
     lazy var titleLabel: UILabel = {
         let label = UILabel()
-        let font = UIFont(name: "KohinoorGujarati-Regular", size: 10)!
+        let font = CustomFonts.light(10).roboto
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.font = font
@@ -14,7 +14,7 @@ final class BalanceInfoView: UIView {
     
     lazy var valueLabel: UILabel = {
         let label = UILabel()
-        let font = UIFont(name: "KohinoorGujarati-Regular", size: 16)!
+        let font = CustomFonts.light(16).roboto
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.font = font

@@ -16,7 +16,7 @@ final class SplashScreenView: UIView {
         let view = UILabel()
         view.text  = R.string.localizable.hello()
         view.textColor = .white
-        let font = UIFont(name: "KohinoorGujarati-Bold", size: 34)!
+        let font = CustomFonts.bold(34).roboto
         view.font = font
         view.textAlignment = .center
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -27,7 +27,7 @@ final class SplashScreenView: UIView {
         let view = UILabel()
         view.text  = R.string.localizable.controlIncomeAndSpendings()
         view.textColor = .white
-        let font = UIFont(name: "KohinoorGujarati-Regular", size: 18)!
+        let font = CustomFonts.light(18).roboto
         view.numberOfLines = 2
         view.lineBreakMode = .byWordWrapping
         view.font = font

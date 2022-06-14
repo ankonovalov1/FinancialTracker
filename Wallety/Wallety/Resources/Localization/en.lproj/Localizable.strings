@@ -50,6 +50,7 @@
 
 // MARK: - Statistic -
 
+"statistic" = "Analytic";
 "chart" = "Chart";
 "analysis" = "Analysis";
 "income" = "Income";
@@ -59,6 +60,7 @@
 
 // MARK: - Profile -
 
+"profile" = "Profile";
 "email" = "Email";
 "debts" = "Debts";
 "investments" = "Investments";
@@ -75,6 +77,7 @@
 
 // MARK: - SettingCellType -
 
+"settings" = "Settings";
 "theme" = "Theme";
 "currency" = "Currency";
 "notifications" = "Notifications";
@@ -84,4 +87,5 @@
 // MARK: - Main Screen -
 
 "current balance" = "Current balance";
+"current balance capital" = "CURRENT BALANCE";
 "income and expenses" = "Income and expenses";

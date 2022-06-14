@@ -15,7 +15,7 @@ final class ChoicePopup: UIView {
     lazy var mainTitleLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        let font = UIFont(name: "KohinoorGujarati-Regular", size: 12)!
+        let font = CustomFonts.light(12).roboto
         view.text = "Выберите тему:"
         view.textColor = .white
         view.font = font
@@ -43,7 +43,7 @@ final class ChoicePopup: UIView {
     lazy var okButton: UIButton = {
         let view = UIButton(type: .system)
         let title = NSAttributedString(string: "Выбрать", attributes: [
-            NSAttributedString.Key.font : UIFont(name: "KohinoorGujarati-Regular", size: 10)!
+            NSAttributedString.Key.font : CustomFonts.light(10).roboto
         ])
         view.setAttributedTitle(title, for: .normal)
         view.setTitleColor(UIColor.white, for: .normal)
@@ -55,7 +55,7 @@ final class ChoicePopup: UIView {
     lazy var cancelButton: UIButton = {
         let view = UIButton(type: .system)
         let title = NSAttributedString(string: "Отменить", attributes: [
-            NSAttributedString.Key.font : UIFont(name: "KohinoorGujarati-Regular", size: 10)!
+            NSAttributedString.Key.font : CustomFonts.light(10).roboto
         ])
         view.setAttributedTitle(title, for: .normal)
         view.setTitleColor(UIColor.white, for: .normal)

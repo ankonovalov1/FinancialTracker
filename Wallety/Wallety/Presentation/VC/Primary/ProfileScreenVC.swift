@@ -12,8 +12,7 @@ final class ProfileScreenVC: UIViewController {
     
     init() {
         super.init(nibName: nil, bundle: nil)
-        self.tabBarItem.image = UIImage(resource: R.image.profileTabWhite)
-        self.tabBarItem.selectedImage = UIImage(resource: R.image.profileTabBlue)
+        setupTabBar()
         imagePicker.presenter = self
         setDelegates()
         setTargets()
@@ -38,6 +37,14 @@ final class ProfileScreenVC: UIViewController {
     }
     
     // MARK: - Private
+    
+    private func setupTabBar() {
+        self.tabBarItem.image = UIImage(resource: R.image.profileTabWhite)
+        self.tabBarItem.selectedImage = UIImage(resource: R.image.profileTabBlue)
+        self.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.font: CustomFonts.light(10).roboto, NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
+        self.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: R.color.baseElementsBlue()!], for: .highlighted)
+        title = R.string.localizable.profile()
+    }
     
     private func setDelegates() {
         mainView.emailTextField.delegate = self

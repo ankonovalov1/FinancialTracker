@@ -51,6 +51,7 @@
 
 // MARK: - Statistic -
 
+"statistic" = "Аналитика";
 "chart" = "График";
 "analysis" = "Анализ";
 "income" = "Доходы";
@@ -60,6 +61,7 @@
 
 // MARK: - Profile -
 
+"profile" = "Профиль";
 "email" = "Email";
 "debts" = "Долги";
 "investments" = "Инвестиции";
@@ -76,6 +78,7 @@
 
 // MARK: - SettingCellType -
 
+"settings" = "Настройки";
 "theme" = "Тема";
 "currency" = "Валюта";
 "notifications" = "Нотификации";
@@ -85,6 +88,7 @@
 // MARK: - Main Screen -
 
 "current balance" = "Текущий баланс";
+"current balance capital" = "ТЕКУЩИЙ БАЛАНС";
 "income and expenses" = "Доходы и расходы";
 
 

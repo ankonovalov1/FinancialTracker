@@ -45,8 +45,11 @@ final class StatisticScreenVC: UIViewController {
     // MARK: - Private
     
     private func setupTabBar() {
+        title = R.string.localizable.statistic()
         self.tabBarItem.image = UIImage(resource: R.image.chartTabWhite)
         self.tabBarItem.selectedImage = UIImage(resource: R.image.chartTabBlue)
+        self.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.font: CustomFonts.light(10).roboto, NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
+        self.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: R.color.baseElementsBlue()!], for: .highlighted)
     }
     
     private func setupCollectionView() {
@@ -120,7 +123,7 @@ extension StatisticScreenVC: UICollectionViewDelegate, UICollectionViewDataSourc
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TitleViewCell.id, for: indexPath) as? TitleViewCell else { return UICollectionViewCell() }
         cell.manageView()
-        cell.nameLabel.font = UIFont(name: "KohinoorGujarati-Regular", size: 14)
+        cell.nameLabel.font = CustomFonts.light(14).roboto
         cell.nameLabel.text = array[indexPath.row]
         return cell
     }

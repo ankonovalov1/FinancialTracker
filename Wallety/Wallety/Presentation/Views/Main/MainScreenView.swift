@@ -6,8 +6,8 @@ final class MainScreenView: UIView {
     // MARK: - Views
     
     lazy var currentBalanceLabel: UILabel = {
-        let label = UILabel(text: R.string.localizable.currentBalance(),
-                            font: UIFont(name: "KohinoorGujarati-Regular", size: 14)!,
+        let label = UILabel(text: R.string.localizable.currentBalanceCapital(),
+                            font: CustomFonts.light(14).roboto,
                             textColor: .white)
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -15,7 +15,7 @@ final class MainScreenView: UIView {
     }()
     
     lazy var balanceValueLabel: UILabel = {
-        let label = UILabel(text: "$3,293.46", font: UIFont(name: "KohinoorGujarati-Regular", size: 40)!, textColor: .white)
+        let label = UILabel(text: "", font: CustomFonts.medium(40).roboto, textColor: .white)
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -80,7 +80,7 @@ final class MainScreenView: UIView {
     
     lazy var incomeSpendingLabel: UILabel = {
         let label = UILabel()
-        let font = UIFont(name: "KohinoorGujarati-Regular", size: 14)!
+        let font = CustomFonts.light(14).roboto
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = R.string.localizable.incomeAndExpenses()
         label.textColor = .white

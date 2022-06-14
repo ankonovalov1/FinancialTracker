@@ -4,18 +4,18 @@ final class StartCurrencyScreenVM {
     
     // MARK: Internal properties
     
-    var currentSegmentTitle: String = ""
+    var currency: CurrencyModel?
     
     // MARK: Private properties
     
     private let navigator: NavigatorProtocol
-    private let userDefaults: UserDefaultsProtocol
+    private let currencyCDService: CoreDataProtocol
     
     // MARK: Lifecycle
     
-    init(navigator: NavigatorProtocol, userDefaults: UserDefaultsProtocol) {
+    init(navigator: NavigatorProtocol, currencyCDService: CoreDataProtocol) {
         self.navigator = navigator
-        self.userDefaults = userDefaults
+        self.currencyCDService = currencyCDService
     }
     
     deinit {
@@ -25,7 +25,13 @@ final class StartCurrencyScreenVM {
     // MARK: Internal func
     
     func setCurrency() {
-        userDefaults.set(object: currentSegmentTitle, for: UserDefaultsKeys.appCurrency)
+        guard let currency = currency else {
+            return
+        }
+        currencyCDService.addOrUpdate(model: currency)
+    }
+    
+    func showSetBalanceScreen() {
         navigator.navigate(to: .setBalance)
     }
     

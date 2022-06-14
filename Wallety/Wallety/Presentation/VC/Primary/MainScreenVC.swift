@@ -26,12 +26,8 @@ final class MainScreenVC: UIViewController {
         self.view = mainView
         addTargets()
         configureDelegates()
-        balanceVM.getBalance()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        mainView.balanceValueLabel.text = balanceVM.currentBalance
+        configureCallbacks()
+        balanceVM.viewDidLoad()
     }
     
     // MARK: - @objc methods
@@ -49,8 +45,11 @@ final class MainScreenVC: UIViewController {
     // MARK: - Private
     
     private func configureTabBar() {
+        title = R.string.localizable.balance()
         self.tabBarItem.image = UIImage(resource: R.image.walletTabWhite)
         self.tabBarItem.selectedImage = UIImage(resource: R.image.walletTabBlue)
+        self.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.font: CustomFonts.light(10).roboto, NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
+        self.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: R.color.baseElementsBlue()!], for: .highlighted)
     }
     
     private func addTargets() {
@@ -60,6 +59,12 @@ final class MainScreenVC: UIViewController {
     private func configureDelegates() {
         mainView.infoTableView.delegate = self
         mainView.infoTableView.dataSource = self
+    }
+    
+    private func configureCallbacks() {
+        balanceVM.balanceChanged = { [weak self] balance in
+            self?.mainView.balanceValueLabel.text = balance
+        }
     }
     
 }

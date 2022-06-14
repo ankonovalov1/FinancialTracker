@@ -10,7 +10,7 @@ final class TitleViewCell: UICollectionViewCell {
     
     lazy var nameLabel: UILabel = {
         let view = UILabel(text: "Ho-",
-                           font: UIFont(name: "KohinoorGujarati-Regular", size: 10)!,
+                           font: CustomFonts.light(10).roboto,
                            textColor: .white)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.textAlignment = .center

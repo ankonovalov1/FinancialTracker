@@ -31,15 +31,16 @@ final class StartCurrencyScreenVC: UIViewController {
         setCurrentSegment()
     }
     
-    @objc private func setCurrency() {
+    @objc private func setCurrencyTapped() {
         viewModel.setCurrency()
+        viewModel.showSetBalanceScreen()
     }
     
     // MARK: - Private
     
     private func addTargets() {
         mainView.currencySegment.addTarget(self, action: #selector(currencyChanged), for: .valueChanged)
-        mainView.setButton.addTarget(self, action: #selector(setCurrency), for: .touchUpInside)
+        mainView.setButton.addTarget(self, action: #selector(setCurrencyTapped), for: .touchUpInside)
     }
     
     private func setCurrentSegment() {
@@ -47,7 +48,16 @@ final class StartCurrencyScreenVC: UIViewController {
         guard let title = mainView.currencySegment.titleForSegment(at: index) else {
             return
         }
-        viewModel.currentSegmentTitle = title
+        switch title {
+        case R.string.localizable.ruble():
+            viewModel.currency = .init(type: .ruble)
+        case R.string.localizable.euro():
+            viewModel.currency = .init(type: .euro)
+        case R.string.localizable.dollar():
+            viewModel.currency = .init(type: .dollar)
+        default:
+            viewModel.currency = .init(type: .dollar)
+        }
     }
     
 }

@@ -14,7 +14,8 @@ final class AboutScreenView: UIView {
     lazy var appNameLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        let font = UIFont(name: "KohinoorGujarati-Regular", size: 18)!
+        let font = CustomFonts.medium(18).roboto
+        view.font = font
         view.textColor = .white
         view.text = R.string.localizable.appName()
         return view
@@ -23,7 +24,8 @@ final class AboutScreenView: UIView {
     lazy var appVersionLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        let font = UIFont(name: "KohinoorGujarati-Regular", size: 18)!
+        let font = CustomFonts.regular(18).roboto
+        view.font = font
         view.textColor = .white
         view.text = R.string.localizable.versionNumber("1.1.1")
         return view
@@ -32,7 +34,8 @@ final class AboutScreenView: UIView {
     lazy var descriptionLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        let font = UIFont(name: "KohinoorGujarati-Regular", size: 16)!
+        let font = CustomFonts.regular(16).roboto
+        view.font = font
         view.textColor = .white
         view.text = R.string.localizable.aboutAppDescription()
         view.numberOfLines = 2
@@ -51,6 +54,12 @@ final class AboutScreenView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Internal
+    
+    func set(version: String) {
+        appVersionLabel.text = R.string.localizable.versionNumber(version)
     }
     
     // MARK: - Manage views

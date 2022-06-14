@@ -42,8 +42,11 @@ final class SettingsScreenVC: UIViewController {
     // MARK: - Private
     
     private func configureTabBar() {
+        title = R.string.localizable.settings()
         self.tabBarItem.image = UIImage(resource: R.image.settingsTabWhite)
         self.tabBarItem.selectedImage = UIImage(resource: R.image.settingsTabBlue)
+        self.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.font: CustomFonts.light(10).roboto, NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
+        self.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: R.color.baseElementsBlue()!], for: .highlighted)
     }
     
     private func configureTableView() {

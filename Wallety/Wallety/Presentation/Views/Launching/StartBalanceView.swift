@@ -16,7 +16,7 @@ final class StartBalanceView: UIView {
         let view = UILabel()
         view.text  = R.string.localizable.setCurrentBalance()
         view.textColor = .white
-        let font = UIFont(name: "KohinoorGujarati-Regular", size: 24)!
+        let font = CustomFonts.light(24).roboto
         view.numberOfLines = 2
         view.font = font
         view.textAlignment = .center
@@ -30,7 +30,7 @@ final class StartBalanceView: UIView {
             string: R.string.localizable.balance(),
             attributes: [
                 NSAttributedString.Key.foregroundColor: UIColor(white: 1, alpha: 0.5),
-                NSAttributedString.Key.font: UIFont(name: "KohinoorGujarati-Regular", size: 14)!
+                NSAttributedString.Key.font: CustomFonts.light(14).roboto
             ]
         )
         view.textColor = .white
@@ -49,7 +49,7 @@ final class StartBalanceView: UIView {
             string: R.string.localizable.setButton(),
             attributes: [
                 NSAttributedString.Key.foregroundColor: UIColor.white,
-                NSAttributedString.Key.font: UIFont(name: "KohinoorGujarati-Regular", size: 14)!
+                NSAttributedString.Key.font: CustomFonts.light(14).roboto
             ]
         )
         view.setAttributedTitle(title, for: .normal)
@@ -64,7 +64,7 @@ final class StartBalanceView: UIView {
             string: R.string.localizable.skip(),
             attributes: [
                 NSAttributedString.Key.foregroundColor: UIColor(white: 1, alpha: 0.5),
-                NSAttributedString.Key.font: UIFont(name: "KohinoorGujarati-Regular", size: 14)!
+                NSAttributedString.Key.font: CustomFonts.light(14).roboto
             ]
         )
         view.setAttributedTitle(title, for: .normal)

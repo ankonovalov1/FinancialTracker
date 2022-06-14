@@ -23,7 +23,7 @@ final class StartCurrencyView: UIView {
         let view = UILabel()
         view.text  = R.string.localizable.chooseCurrencyFor()
         view.textColor = .white
-        let font = UIFont(name: "KohinoorGujarati-Regular", size: 24)!
+        let font = CustomFonts.light(24).roboto
         view.numberOfLines = 2
         view.font = font
         view.textAlignment = .center
@@ -39,7 +39,7 @@ final class StartCurrencyView: UIView {
         view.selectedSegmentIndex = 1
         view.setTitleTextAttributes(   [
             NSAttributedString.Key.foregroundColor: UIColor.white,
-            NSAttributedString.Key.font: UIFont(name: "KohinoorGujarati-Regular", size: 12)!
+            NSAttributedString.Key.font: CustomFonts.light(12).roboto
         ], for: .normal)
         
         return view
@@ -52,7 +52,7 @@ final class StartCurrencyView: UIView {
             string: R.string.localizable.setButton(),
             attributes: [
                 NSAttributedString.Key.foregroundColor: UIColor.white,
-                NSAttributedString.Key.font: UIFont(name: "KohinoorGujarati-Regular", size: 14)!
+                NSAttributedString.Key.font: CustomFonts.light(14).roboto
             ]
         )
         view.setAttributedTitle(title, for: .normal)
@@ -65,7 +65,7 @@ final class StartCurrencyView: UIView {
         let view = UILabel()
         view.text  = R.string.localizable.changeCurrencyInfo()
         view.textColor = .white.withAlphaComponent(0.5)
-        let font = UIFont(name: "KohinoorGujarati-Regular", size: 14)!
+        let font = CustomFonts.light(14).roboto
         view.numberOfLines = 2
         view.font = font
         view.textAlignment = .center

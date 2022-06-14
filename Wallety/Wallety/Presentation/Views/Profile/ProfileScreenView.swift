@@ -16,7 +16,7 @@ final class ProfileScreenView: UIView {
     
     lazy var nicknameTextField: UITextField = {
         let view = UITextField()
-        let font = UIFont(name: "KohinoorGujarati-Regular", size: 18)!
+        let font = CustomFonts.light(18).roboto
         view.translatesAutoresizingMaskIntoConstraints = false
         view.text = "@user"
         view.font = font
@@ -46,7 +46,7 @@ final class ProfileScreenView: UIView {
     
     lazy var emailLabel: UILabel = {
         let view = UILabel()
-        let font = UIFont(name: "KohinoorGujarati-Regular", size: 14)!
+        let font = CustomFonts.light(14).roboto
         view.translatesAutoresizingMaskIntoConstraints = false
         view.text = R.string.localizable.email()
         view.font = font
@@ -56,7 +56,7 @@ final class ProfileScreenView: UIView {
     
     lazy var emailTextField: UITextField = {
         let view = UITextField()
-        let font = UIFont(name: "KohinoorGujarati-Regular", size: 14)!
+        let font = CustomFonts.light(14).roboto
         view.translatesAutoresizingMaskIntoConstraints = false
         view.text = R.string.localizable.email()
         view.font = font
@@ -78,7 +78,7 @@ final class ProfileScreenView: UIView {
     
     lazy var balanceLabel: UILabel = {
         let view = UILabel()
-        let font = UIFont(name: "KohinoorGujarati-Regular", size: 14)!
+        let font = CustomFonts.light(14).roboto
         view.translatesAutoresizingMaskIntoConstraints = false
         view.text = R.string.localizable.balance()
         view.font = font
@@ -88,7 +88,7 @@ final class ProfileScreenView: UIView {
     
     lazy var balanceValueLabel: UILabel = {
         let view = UILabel()
-        let font = UIFont(name: "KohinoorGujarati-Regular", size: 14)!
+        let font = CustomFonts.light(14).roboto
         view.translatesAutoresizingMaskIntoConstraints = false
         view.text = R.string.localizable.balance()
         view.font = font
@@ -108,7 +108,7 @@ final class ProfileScreenView: UIView {
     
     lazy var dutyLabel: UILabel = {
         let view = UILabel()
-        let font = UIFont(name: "KohinoorGujarati-Regular", size: 14)!
+        let font = CustomFonts.light(14).roboto
         view.translatesAutoresizingMaskIntoConstraints = false
         view.text = R.string.localizable.debts()
         view.font = font
@@ -118,7 +118,7 @@ final class ProfileScreenView: UIView {
     
     lazy var dutyValueLabel: UILabel = {
         let view = UILabel()
-        let font = UIFont(name: "KohinoorGujarati-Regular", size: 14)!
+        let font = CustomFonts.light(14).roboto
         view.translatesAutoresizingMaskIntoConstraints = false
         view.text = R.string.localizable.debts()
         view.font = font
@@ -138,7 +138,7 @@ final class ProfileScreenView: UIView {
     
     lazy var investmentLabel: UILabel = {
         let view = UILabel()
-        let font = UIFont(name: "KohinoorGujarati-Regular", size: 14)!
+        let font = CustomFonts.light(14).roboto
         view.translatesAutoresizingMaskIntoConstraints = false
         view.text = R.string.localizable.investments()
         view.font = font
@@ -148,7 +148,7 @@ final class ProfileScreenView: UIView {
     
     lazy var investmentValueLabel: UILabel = {
         let view = UILabel()
-        let font = UIFont(name: "KohinoorGujarati-Regular", size: 14)!
+        let font = CustomFonts.light(14).roboto
         view.translatesAutoresizingMaskIntoConstraints = false
         view.text = R.string.localizable.investments()
         view.font = font
@@ -165,7 +165,7 @@ final class ProfileScreenView: UIView {
             string:  R.string.localizable.buttonChange(),
             attributes: [
                 NSAttributedString.Key.foregroundColor: UIColor.white,
-                NSAttributedString.Key.font: UIFont(name: "KohinoorGujarati-Regular", size: 14)!
+                NSAttributedString.Key.font: CustomFonts.light(14).roboto
             ]
         )
         view.setAttributedTitle(title, for: .normal)
@@ -200,7 +200,7 @@ final class ProfileScreenView: UIView {
                 string: R.string.localizable.save(),
                 attributes: [
                     NSAttributedString.Key.foregroundColor: UIColor.white,
-                    NSAttributedString.Key.font: UIFont(name: "KohinoorGujarati-Regular", size: 14)!
+                    NSAttributedString.Key.font: CustomFonts.light(14).roboto
                 ]
             )
         }
@@ -209,7 +209,7 @@ final class ProfileScreenView: UIView {
                 string:  R.string.localizable.buttonChange(),
                 attributes: [
                     NSAttributedString.Key.foregroundColor: UIColor.white,
-                    NSAttributedString.Key.font: UIFont(name: "KohinoorGujarati-Regular", size: 14)!
+                    NSAttributedString.Key.font: CustomFonts.light(14).roboto
                 ]
             )
         }

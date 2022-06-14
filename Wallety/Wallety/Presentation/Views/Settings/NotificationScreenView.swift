@@ -14,7 +14,7 @@ final class NotificationScreenView: UIView {
     
     lazy var onOffLabel: UILabel = {
         let view = UILabel(text: R.string.localizable.recieveNotifications(),
-                           font: UIFont(name: "KohinoorGujarati-Regular", size: 16)!,
+                           font: CustomFonts.light(16).roboto,
                            textColor: .white)
         view.textAlignment = .left
         return view
@@ -31,7 +31,7 @@ final class NotificationScreenView: UIView {
     
     lazy var allNotificationLabel: UILabel = {
         let view = UILabel(text: R.string.localizable.allNotifications(),
-                           font: UIFont(name: "KohinoorGujarati-Regular", size: 16)!,
+                           font: CustomFonts.light(16).roboto,
                            textColor: .white)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.textAlignment = .left

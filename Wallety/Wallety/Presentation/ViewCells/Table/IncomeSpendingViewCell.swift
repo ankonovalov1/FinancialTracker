@@ -9,19 +9,19 @@ final class IncomeSpendingViewCell: UITableViewCell {
     // MARK: - Views
     
     lazy var typeLabel: UILabel = {
-        let label = UILabel(text: "1", font: UIFont(name: "KohinoorGujarati-Regular", size: 8)!, textColor: .white)
+        let label = UILabel(text: "1", font: CustomFonts.light(8).roboto, textColor: .white)
         label.textAlignment = .center
         return label
     }()
     
     lazy var valueLabel: UILabel = {
-        let label = UILabel(text: "1", font: UIFont(name: "KohinoorGujarati-Regular", size: 14)!, textColor: .white)
+        let label = UILabel(text: "1", font: CustomFonts.light(14).roboto, textColor: .white)
         label.textAlignment = .center
         return label
     }()
     
     lazy var dateLabel: UILabel = {
-        let label = UILabel(text: "1", font: UIFont(name: "KohinoorGujarati-Regular", size: 8)!, textColor: .white)
+        let label = UILabel(text: "1", font: CustomFonts.light(8).roboto, textColor: .white)
         label.textAlignment = .center
         return label
     }()

@@ -25,7 +25,7 @@ final class NoDataEmptyView: UIView {
     
     lazy var titleLabel: UILabel = {
         let view = UILabel(text: R.string.localizable.noOperations(),
-                           font: UIFont(name: "KohinoorGujarati-Regular", size: 26)!,
+                           font: CustomFonts.light(26).roboto,
                            textColor: .white)
         view.textAlignment = .center
         return view
@@ -33,7 +33,7 @@ final class NoDataEmptyView: UIView {
     
     lazy var descriptionLabel: UILabel = {
         let view = UILabel(text: R.string.localizable.forThisPeriod(),
-                           font: UIFont(name: "KohinoorGujarati-Regular", size: 14)!,
+                           font: CustomFonts.light(14).roboto,
                            textColor: .white.withAlphaComponent(0.5))
         view.textAlignment = .center
         return view
