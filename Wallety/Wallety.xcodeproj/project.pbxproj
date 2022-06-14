@@ -23,6 +23,10 @@
 		12507DC528591EFC009C38DC /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12507DC428591EFC009C38DC /* Roboto-Light.ttf */; };
 		12507DC728591F06009C38DC /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12507DC628591F06009C38DC /* Roboto-Medium.ttf */; };
 		12507DC928591F12009C38DC /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12507DC828591F12009C38DC /* Roboto-Regular.ttf */; };
+		12507DCD285927FC009C38DC /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12507DCB285927FC009C38DC /* Transaction.swift */; };
+		12507DD1285928DC009C38DC /* TransactionCDService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12507DD0285928DC009C38DC /* TransactionCDService.swift */; };
+		12507DD328592987009C38DC /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12507DD228592987009C38DC /* TransactionModel.swift */; };
+		12507DD728592AD2009C38DC /* TransactionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12507DD628592AD2009C38DC /* TransactionType.swift */; };
 		1255FC3B27F6683A002029DE /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255FC3A27F6683A002029DE /* Navigator.swift */; };
 		1255FC3E27F66AF6002029DE /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255FC3D27F66AF6002029DE /* Destination.swift */; };
 		1255FC4127F67013002029DE /* RouterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255FC4027F67013002029DE /* RouterFactory.swift */; };
@@ -114,7 +118,7 @@
 		12E3F960281035B7003CBF9F /* TitleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E3F95F281035B7003CBF9F /* TitleViewCell.swift */; };
 		12E3F963281057ED003CBF9F /* LeftAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E3F962281057ED003CBF9F /* LeftAlignedCollectionViewFlowLayout.swift */; };
 		12E3F96628109F36003CBF9F /* StatisticScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E3F96528109F36003CBF9F /* StatisticScreenView.swift */; };
-		12E4D9B9284B95C300CF6FC9 /* BalanceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E4D9B8284B95C300CF6FC9 /* BalanceEntity.swift */; };
+		12E4D9B9284B95C300CF6FC9 /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E4D9B8284B95C300CF6FC9 /* Balance.swift */; };
 		12E4D9BC284B9F9200CF6FC9 /* BalanceCDService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E4D9BB284B9F9200CF6FC9 /* BalanceCDService.swift */; };
 		12E4D9BE284BA3C100CF6FC9 /* NSMappingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E4D9BD284BA3C100CF6FC9 /* NSMappingModel.swift */; };
 		12E4D9C0284BA44B00CF6FC9 /* BalanceMappingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E4D9BF284BA44B00CF6FC9 /* BalanceMappingModel.swift */; };
@@ -149,6 +153,10 @@
 		12507DC428591EFC009C38DC /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		12507DC628591F06009C38DC /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		12507DC828591F12009C38DC /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		12507DCB285927FC009C38DC /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		12507DD0285928DC009C38DC /* TransactionCDService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCDService.swift; sourceTree = "<group>"; };
+		12507DD228592987009C38DC /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
+		12507DD628592AD2009C38DC /* TransactionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionType.swift; sourceTree = "<group>"; };
 		1255FC3A27F6683A002029DE /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		1255FC3D27F66AF6002029DE /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		1255FC4027F67013002029DE /* RouterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterFactory.swift; sourceTree = "<group>"; };
@@ -240,7 +248,7 @@
 		12E3F95F281035B7003CBF9F /* TitleViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewCell.swift; sourceTree = "<group>"; };
 		12E3F962281057ED003CBF9F /* LeftAlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftAlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		12E3F96528109F36003CBF9F /* StatisticScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticScreenView.swift; sourceTree = "<group>"; };
-		12E4D9B8284B95C300CF6FC9 /* BalanceEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceEntity.swift; sourceTree = "<group>"; };
+		12E4D9B8284B95C300CF6FC9 /* Balance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Balance.swift; sourceTree = "<group>"; };
 		12E4D9BB284B9F9200CF6FC9 /* BalanceCDService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceCDService.swift; sourceTree = "<group>"; };
 		12E4D9BD284BA3C100CF6FC9 /* NSMappingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMappingModel.swift; sourceTree = "<group>"; };
 		12E4D9BF284BA44B00CF6FC9 /* BalanceMappingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceMappingModel.swift; sourceTree = "<group>"; };
@@ -397,8 +405,9 @@
 		12482D9E27F5FC3F00D292CA /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				12507DD528592AAC009C38DC /* Protocols */,
+				12507DD428592A4F009C38DC /* Models */,
 				12DAA52F284FD10A0093F9FD /* Validation */,
-				12B468F0284B8F3D0023E2D2 /* CoreDataProtocol.swift */,
 				12C1168D28043A4200D6B8C0 /* Entities */,
 				12C1168C28043A3800D6B8C0 /* Interactors */,
 				12E4D9BD284BA3C100CF6FC9 /* NSMappingModel.swift */,
@@ -429,6 +438,39 @@
 				12507DC228591EBF009C38DC /* Roboto-Bold.ttf */,
 			);
 			path = Roboto;
+			sourceTree = "<group>";
+		};
+		12507DCA285927C9009C38DC /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				12507DCB285927FC009C38DC /* Transaction.swift */,
+			);
+			path = Transaction;
+			sourceTree = "<group>";
+		};
+		12507DCF285928BE009C38DC /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				12507DD0285928DC009C38DC /* TransactionCDService.swift */,
+				12507DD228592987009C38DC /* TransactionModel.swift */,
+			);
+			path = Transaction;
+			sourceTree = "<group>";
+		};
+		12507DD428592A4F009C38DC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				12507DD628592AD2009C38DC /* TransactionType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		12507DD528592AAC009C38DC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				12B468F0284B8F3D0023E2D2 /* CoreDataProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		1255FC3927F6681B002029DE /* Navigation */ = {
@@ -495,6 +537,7 @@
 		12B468EF284B8F1A0023E2D2 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				12507DCF285928BE009C38DC /* Transaction */,
 				12DAA53A284FF4450093F9FD /* Currency */,
 				12E4D9BA284B9F4E00CF6FC9 /* Balance */,
 			);
@@ -504,7 +547,7 @@
 		12B468F2284B94BA0023E2D2 /* Balance */ = {
 			isa = PBXGroup;
 			children = (
-				12E4D9B8284B95C300CF6FC9 /* BalanceEntity.swift */,
+				12E4D9B8284B95C300CF6FC9 /* Balance.swift */,
 			);
 			path = Balance;
 			sourceTree = "<group>";
@@ -661,6 +704,7 @@
 		12C1168D28043A4200D6B8C0 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				12507DCA285927C9009C38DC /* Transaction */,
 				12DAA537284FF2870093F9FD /* Currency */,
 				12B468F2284B94BA0023E2D2 /* Balance */,
 				12C1168E28043A8000D6B8C0 /* ProfileEntity.swift */,
@@ -1020,11 +1064,13 @@
 				12E3F95C28102B7A003CBF9F /* CategoriesScreenView.swift in Sources */,
 				12C116862800617700D6B8C0 /* SettingsScreenVC.swift in Sources */,
 				12C1167527FFFED600D6B8C0 /* BalanceInfoView.swift in Sources */,
+				12507DCD285927FC009C38DC /* Transaction.swift in Sources */,
+				12507DD728592AD2009C38DC /* TransactionType.swift in Sources */,
 				12DAA53E284FF4DE0093F9FD /* CurrencyModel.swift in Sources */,
 				12482D7C27F5F14E00D292CA /* AppDelegate.swift in Sources */,
 				12C116A02806AC2600D6B8C0 /* MainTabController.swift in Sources */,
 				12E4D9BC284B9F9200CF6FC9 /* BalanceCDService.swift in Sources */,
-				12E4D9B9284B95C300CF6FC9 /* BalanceEntity.swift in Sources */,
+				12E4D9B9284B95C300CF6FC9 /* Balance.swift in Sources */,
 				12C1169C2805D53600D6B8C0 /* SettingsScreenView.swift in Sources */,
 				12C1167B280019DD00D6B8C0 /* IncomeSpendingViewCell.swift in Sources */,
 				12E4D9BE284BA3C100CF6FC9 /* NSMappingModel.swift in Sources */,
@@ -1069,6 +1115,7 @@
 				12E3F95A28102B24003CBF9F /* CategoriesScreenVC.swift in Sources */,
 				1259749228427B8D001F1056 /* UserDefaultsKeys.swift in Sources */,
 				1255FC4827F67AE0002029DE /* SplashScreenView.swift in Sources */,
+				12507DD328592987009C38DC /* TransactionModel.swift in Sources */,
 				12482D9D27F5FC2F00D292CA /* RatesService.swift in Sources */,
 				12F1D6E827F62EBE0003B10C /* WButton.swift in Sources */,
 				1259749428427C48001F1056 /* SplashScreenVM.swift in Sources */,
@@ -1077,6 +1124,7 @@
 				12E3F96628109F36003CBF9F /* StatisticScreenView.swift in Sources */,
 				12B86DCB280C1D700036FDD3 /* StartCurrencyView.swift in Sources */,
 				12F1D6E327F61A6C0003B10C /* WTextField.swift in Sources */,
+				12507DD1285928DC009C38DC /* TransactionCDService.swift in Sources */,
 				12F1D6E627F62B670003B10C /* StartBalanceVM.swift in Sources */,
 				1259748B28417986001F1056 /* Dates.swift in Sources */,
 				12482D9A27F5FBFE00D292CA /* StartBalanceView.swift in Sources */,
