@@ -10,6 +10,7 @@ protocol CoreDataProtocol {
     func getWith(predicate: String) -> [NSManagedObject]?
     func addOrUpdate(model: NSMappingModel)
     func delete(model: NSMappingModel)
+    func deleteAll()
 }
 
 extension CoreDataProtocol {

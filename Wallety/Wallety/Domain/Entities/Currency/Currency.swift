@@ -8,8 +8,8 @@ public class Currency: NSManagedObject {
         return NSFetchRequest<Currency>(entityName: "Currency")
     }
 
-    @NSManaged public var id: String?
-    @NSManaged public var name: String?
-    @NSManaged public var locale: String?
+    @NSManaged public var id: String
+    @NSManaged public var name: String
+    @NSManaged public var locale: String
     
 }

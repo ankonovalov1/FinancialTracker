@@ -9,6 +9,6 @@ public class Balance: NSManagedObject {
     }
     
     @NSManaged public var value: Double
-    @NSManaged public var id: String?
+    @NSManaged public var id: String
     
 }

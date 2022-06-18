@@ -4,7 +4,7 @@ final class BalanceInfoView: UIView {
 
     lazy var titleLabel: UILabel = {
         let label = UILabel()
-        let font = CustomFonts.light(10).roboto
+        let font = CustomFonts.regular(10).roboto
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.font = font
@@ -14,7 +14,7 @@ final class BalanceInfoView: UIView {
     
     lazy var valueLabel: UILabel = {
         let label = UILabel()
-        let font = CustomFonts.light(16).roboto
+        let font = CustomFonts.medium(18).roboto
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.font = font
@@ -28,12 +28,17 @@ final class BalanceInfoView: UIView {
         self.backgroundColor = backgroundColor
         titleLabel.text = title
         valueLabel.text = value
+        manageView()
         addSubviews()
         addConstraints()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func manageView() {
+        layer.defaultShadow()
     }
     
     private func addSubviews() {

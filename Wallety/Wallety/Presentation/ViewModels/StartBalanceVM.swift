@@ -53,11 +53,11 @@ final class StartBalanceVM {
     
     func createBalance(isEmpty: Bool) {
         if isEmpty {
-            let model = BalanceMappingModel(value: 0)
+            let model = BalanceModel(value: 0)
             balanceCDService.addOrUpdate(model: model)
         } else {
             let balance = Double(currentBalance)
-            let model = BalanceMappingModel(value: balance ?? 0)
+            let model = BalanceModel(value: balance ?? 0)
             balanceCDService.addOrUpdate(model: model)
         }
     }

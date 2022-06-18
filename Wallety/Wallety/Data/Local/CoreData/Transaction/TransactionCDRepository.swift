@@ -1,7 +1,7 @@
 import Foundation
 import CoreData
 
-final class TransactionCDService: CoreDataProtocol {
+final class TransactionCDRepository: CoreDataProtocol {
 
     // MARK: - Internal properties
     
@@ -20,7 +20,7 @@ final class TransactionCDService: CoreDataProtocol {
     }
     
     deinit {
-        print("CurrencyCDService - was disposed")
+        print("CurrencyCDRepository - was disposed")
     }
     
     // MARK: - Internal fuctions
@@ -37,26 +37,26 @@ final class TransactionCDService: CoreDataProtocol {
     }
     
     func addOrUpdate(model: NSMappingModel) {
-        var currency: Transaction?
+        var transaction: Transaction?
         guard
             let model = model as? TransactionModel,
-            let currencies = getWith(predicate: model.id) as? [Transaction]
+            let transactions = getWith(predicate: model.id) as? [Transaction]
         else {
             return
         }
         
-        if currencies.isEmpty {
-            currency = Transaction(context: context)
+        if transactions.isEmpty {
+            transaction = Transaction(context: context)
         } else {
-            currency = currencies.first
+            transaction = transactions.first
         }
         
-        currency?.id = model.id
-        currency?.date = model.date
-        currency?.currency = model.currency
-        currency?.value = model.value
-        currency?.category = model.category
-        currency?.type = model.type.rawValue
+        transaction?.id = model.id
+        transaction?.date = model.date
+        transaction?.currency = model.currency
+        transaction?.value = model.value
+        transaction?.category = model.category
+        transaction?.type = model.type.rawValue
         
         save()
     }
@@ -69,6 +69,16 @@ final class TransactionCDService: CoreDataProtocol {
             return
         }
         managedObjects.forEach {
+            context.delete($0)
+        }
+        save()
+    }
+    
+    func deleteAll() {
+        guard let transactions = getAll() else {
+            return
+        }
+        transactions.forEach {
             context.delete($0)
         }
         save()

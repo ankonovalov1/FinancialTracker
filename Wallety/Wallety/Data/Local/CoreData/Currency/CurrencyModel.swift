@@ -34,15 +34,10 @@ struct CurrencyModel: NSMappingModel {
         }
     }
     
-    init(model: NSManagedObject) {
-        guard let model = model as? Currency,
-              let id = model.id,
-              let name = model.name,
-              let locale = model.locale else {
-            self.init(type: .dollar)
-            return
-        }
-        self.init(id: id, name: name, locale: locale)
+    init(model: Currency) {
+        self.init(id: model.id,
+                  name: model.name,
+                  locale: model.locale)
     }
     
 }

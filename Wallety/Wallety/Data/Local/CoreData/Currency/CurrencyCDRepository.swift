@@ -1,7 +1,7 @@
 import Foundation
 import CoreData
 
-final class BalanceCDService: CoreDataProtocol {
+final class CurrencyCDRepository: CoreDataProtocol {
     
     // MARK: - Internal properties
     
@@ -20,46 +20,47 @@ final class BalanceCDService: CoreDataProtocol {
     }
     
     deinit {
-        print("BalanceCDService - was disposed")
+        print("CurrencyCDRepository - was disposed")
     }
     
     // MARK: - Internal fuctions
     
     func getAll() -> [NSManagedObject]? {
-        let fetchRequest = Balance.fetchRequest()
+        let fetchRequest = Currency.fetchRequest()
         return try? context.fetch(fetchRequest)
     }
     
     func getWith(predicate: String) -> [NSManagedObject]? {
-        let fetchRequest = Balance.fetchRequest()
+        let fetchRequest = Currency.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "id = %@", predicate)
         return try? context.fetch(fetchRequest)
     }
     
     func addOrUpdate(model: NSMappingModel) {
-        var balance: Balance?
+        var currency: Currency?
         guard
-            let model = model as? BalanceMappingModel,
-            let balances = getWith(predicate: model.id) as? [Balance]
+            let model = model as? CurrencyModel,
+            let currencies = getWith(predicate: model.id) as? [Currency]
         else {
             return
         }
         
-        if balances.isEmpty {
-            balance = Balance(context: context)
+        if currencies.isEmpty {
+            currency = Currency(context: context)
         } else {
-            balance = balances.first
+            currency = currencies.first
         }
         
-        balance?.id = model.id
-        balance?.value = model.value
+        currency?.id = model.id
+        currency?.name = model.name
+        currency?.locale = model.locale
         
         save()
     }
     
     func delete(model: NSMappingModel) {
         guard
-            let model = model as? BalanceMappingModel,
+            let model = model as? CurrencyModel,
             let managedObjects = getWith(predicate: model.id)
         else {
             return
@@ -70,4 +71,15 @@ final class BalanceCDService: CoreDataProtocol {
         save()
     }
     
+    func deleteAll() {
+        guard let currencies = getAll() else {
+            return
+        }
+        currencies.forEach {
+            context.delete($0)
+        }
+        save()
+    }
+    
 }
+

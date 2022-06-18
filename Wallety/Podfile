@@ -10,5 +10,6 @@ target 'Wallety' do
    pod 'SwiftEntryKit', '2.0.0'
    pod 'Charts'
    pod 'AppCenter'
+   pod 'Fastis', '~> 1.0.0'
 
 end

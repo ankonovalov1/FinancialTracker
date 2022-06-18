@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Balance" representedClassName="Balance" syncable="YES">
-        <attribute name="id" optional="YES" attributeType="String"/>
-        <attribute name="value" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="value" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
     </entity>
     <entity name="Currency" representedClassName="Currency" syncable="YES">
-        <attribute name="id" optional="YES" attributeType="String"/>
-        <attribute name="locale" optional="YES" attributeType="String"/>
-        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="locale" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
     </entity>
     <entity name="Transaction" representedClassName="Transaction" syncable="YES">
-        <attribute name="category" optional="YES" attributeType="String"/>
-        <attribute name="currency" optional="YES" attributeType="String"/>
-        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="id" optional="YES" attributeType="String"/>
-        <attribute name="type" optional="YES" attributeType="String"/>
-        <attribute name="value" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="category" attributeType="String"/>
+        <attribute name="currency" attributeType="String"/>
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="type" attributeType="String"/>
+        <attribute name="value" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
     </entity>
     <elements>
         <element name="Balance" positionX="-63" positionY="-18" width="128" height="59"/>

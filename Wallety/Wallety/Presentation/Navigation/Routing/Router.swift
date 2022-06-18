@@ -21,8 +21,8 @@ struct MainTabScreenRouter: RouterProtocol {
     
     func configure() -> UIViewController {
         let container = appDelegate().persistentContainer
-        let balanceCDService = BalanceCDService(container: container)
-        let currencyCDService = CurrencyCDService(container: container)
+        let balanceCDService = BalanceCDRepository(container: container)
+        let currencyCDService = CurrencyCDRepository(container: container)
         let balanceVM = BalanceVM(balanceCDService: balanceCDService, currencyCDService: currencyCDService)
         
         let vc = MainTabController()
@@ -41,8 +41,8 @@ struct MainScreenRouter: RouterProtocol {
     
     func configure() -> UIViewController {
         let container = appDelegate().persistentContainer
-        let balanceCDService = BalanceCDService(container: container)
-        let currencyCDService = CurrencyCDService(container: container)
+        let balanceCDService = BalanceCDRepository(container: container)
+        let currencyCDService = CurrencyCDRepository(container: container)
         let balanceVM = BalanceVM(balanceCDService: balanceCDService, currencyCDService: currencyCDService)
         return MainScreenVC(balanceVM: balanceVM)
     }
@@ -76,7 +76,7 @@ struct StartCurrencyScreenRouter: RouterProtocol {
         else { return UIViewController() }
         
         let navigator = Navigator(navigationController: navigationController, factory: factory)
-        let currencyCDService = CurrencyCDService(container: appDelegate().persistentContainer)
+        let currencyCDService = CurrencyCDRepository(container: appDelegate().persistentContainer)
         let viewModel = StartCurrencyScreenVM(navigator: navigator, currencyCDService: currencyCDService)
         return StartCurrencyScreenVC(viewModel: viewModel)
     }
@@ -95,7 +95,7 @@ struct AfterLaunchScreenRouter: RouterProtocol {
         let navigator = Navigator(navigationController: navigationController, factory: factory)
         let userDefaults = UserDefaultsService()
         let container = appDelegate().persistentContainer
-        let  balanceCDService = BalanceCDService(container: container)
+        let  balanceCDService = BalanceCDRepository(container: container)
         let validator = BalanceValidator()
         let viewModel = StartBalanceVM(navigator: navigator, userDefaults: userDefaults,
                                        balanceCDService: balanceCDService, validator: validator)

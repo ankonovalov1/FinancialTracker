@@ -35,6 +35,7 @@ final class MainScreenView: UIView {
         button.backgroundColor = R.color.secondaryBackground()
         button.layer.cornerRadius = 12
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.layer.defaultShadow()
         return button
     }()
     
@@ -44,6 +45,7 @@ final class MainScreenView: UIView {
         button.backgroundColor = R.color.secondaryBackground()
         button.layer.cornerRadius = 12
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.layer.defaultShadow()
         return button
     }()
     

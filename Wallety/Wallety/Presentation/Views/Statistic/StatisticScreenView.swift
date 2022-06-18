@@ -28,6 +28,7 @@ final class StatisticScreenView: UIView {
             NSAttributedString.Key.foregroundColor: UIColor.white,
             NSAttributedString.Key.font: CustomFonts.light(12).roboto
         ], for: .normal)
+        view.layer.defaultShadow()
         return view
     }()
     

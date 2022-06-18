@@ -8,11 +8,11 @@ public class Transaction: NSManagedObject {
         return NSFetchRequest<Transaction>(entityName: "Transaction")
     }
 
-    @NSManaged public var id: String?
+    @NSManaged public var id: String
     @NSManaged public var value: Double
-    @NSManaged public var category: String?
-    @NSManaged public var currency: String?
-    @NSManaged public var date: Date?
-    @NSManaged public var type: String?
+    @NSManaged public var category: String
+    @NSManaged public var currency: String
+    @NSManaged public var date: Date
+    @NSManaged public var type: String
     
 }

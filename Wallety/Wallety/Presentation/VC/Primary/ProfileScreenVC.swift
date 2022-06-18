@@ -42,7 +42,7 @@ final class ProfileScreenVC: UIViewController {
         self.tabBarItem.image = UIImage(resource: R.image.profileTabWhite)
         self.tabBarItem.selectedImage = UIImage(resource: R.image.profileTabBlue)
         self.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.font: CustomFonts.light(10).roboto, NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
-        self.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: R.color.baseElementsBlue()!], for: .highlighted)
+        self.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: R.color.baseElementsBlue()!], for: .selected)
         title = R.string.localizable.profile()
     }
     

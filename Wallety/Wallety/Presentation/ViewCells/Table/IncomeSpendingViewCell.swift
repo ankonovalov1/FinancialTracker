@@ -26,13 +26,20 @@ final class IncomeSpendingViewCell: UITableViewCell {
         return label
     }()
     
+    lazy var behindView: UIView = {
+        let view = UIView()
+        view.backgroundColor = R.color.secondaryBackground()
+        view.layer.cornerRadius = 12
+        view.layer.defaultShadow()
+        return view
+    }()
+    
     lazy var stackForLabels: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [typeLabel, valueLabel, dateLabel])
         stack.axis = .horizontal
-        stack.backgroundColor = R.color.secondaryBackground()
+        stack.backgroundColor = .clear
         stack.spacing = 0
         stack.distribution = .fillEqually
-        stack.layer.cornerRadius = 12
         return stack
     }()
     
@@ -66,21 +73,25 @@ final class IncomeSpendingViewCell: UITableViewCell {
     // MARK: Private
     
     private func manageView() {
-        self.backgroundColor = .clear
-        self.layer.cornerRadius = 12
+        backgroundColor = .clear
     }
     
     private func addSubviews() {
-        self.addSubview(stackForLabels)
+        behindView.addSubview(stackForLabels)
+        addSubview(behindView)
     }
     
     private func addConstraints() {
         
-        stackForLabels.snp.makeConstraints { make in
+        behindView.snp.makeConstraints { make in
             make.top.equalTo(self).offset(5)
-            make.left.equalTo(self).offset(5)
+            make.left.equalTo(self)
             make.bottom.equalTo(self).offset(-5)
-            make.right.equalTo(self).offset(-5)
+            make.right.equalTo(self)
+        }
+        
+        stackForLabels.snp.makeConstraints { make in
+            make.top.left.bottom.right.equalTo(behindView)
         }
         
     }

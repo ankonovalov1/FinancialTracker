@@ -49,7 +49,7 @@ final class StatisticScreenVC: UIViewController {
         self.tabBarItem.image = UIImage(resource: R.image.chartTabWhite)
         self.tabBarItem.selectedImage = UIImage(resource: R.image.chartTabBlue)
         self.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.font: CustomFonts.light(10).roboto, NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
-        self.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: R.color.baseElementsBlue()!], for: .highlighted)
+        self.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: R.color.baseElementsBlue()!], for: .selected)
     }
     
     private func setupCollectionView() {

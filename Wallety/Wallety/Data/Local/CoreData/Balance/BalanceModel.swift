@@ -1,6 +1,6 @@
 import Foundation
 
-struct BalanceMappingModel: NSMappingModel {
+struct BalanceModel: NSMappingModel {
     let id: String = StaticResources.deviceUDID
     let value: Double
 }

@@ -43,7 +43,7 @@ final class BalanceVM {
     }
     
     func setBalance() {
-        let model = BalanceMappingModel(value: 150)
+        let model = BalanceModel(value: 150)
         balanceCDService.addOrUpdate(model: model)
     }
     
@@ -63,7 +63,6 @@ final class BalanceVM {
                 let currency = currencies.first else {
             return
         }
-        currentCurrency = CurrencyModel(model: currency)
     }
     
 }

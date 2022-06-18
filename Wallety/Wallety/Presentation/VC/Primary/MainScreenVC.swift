@@ -49,7 +49,7 @@ final class MainScreenVC: UIViewController {
         self.tabBarItem.image = UIImage(resource: R.image.walletTabWhite)
         self.tabBarItem.selectedImage = UIImage(resource: R.image.walletTabBlue)
         self.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.font: CustomFonts.light(10).roboto, NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
-        self.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: R.color.baseElementsBlue()!], for: .highlighted)
+        self.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: R.color.baseElementsBlue()!], for: .selected)
     }
     
     private func addTargets() {
