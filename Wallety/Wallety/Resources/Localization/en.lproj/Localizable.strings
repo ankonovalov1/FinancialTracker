@@ -89,3 +89,12 @@
 "current balance" = "Current balance";
 "current balance capital" = "CURRENT BALANCE";
 "income and expenses" = "Income and expenses";
+
+// MARK: - Add Transaction Screen -
+
+"add new note" = "Add new note";
+"description" = "Description";
+"add text" = "Add";
+"category" = "Category";
+"category not chosen" = "not chosen";
+"empty all small" = "empty";

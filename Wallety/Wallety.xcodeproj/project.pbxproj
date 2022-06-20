@@ -112,6 +112,8 @@
 		12C116A02806AC2600D6B8C0 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1169F2806AC2600D6B8C0 /* MainTabController.swift */; };
 		12C116A22806FC2C00D6B8C0 /* PopupHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C116A12806FC2C00D6B8C0 /* PopupHandler.swift */; };
 		12C116A52806FF2F00D6B8C0 /* ChoicePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C116A42806FF2F00D6B8C0 /* ChoicePopup.swift */; };
+		12C5E73D285E65E60010895D /* AddTransactionScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C5E73C285E65E60010895D /* AddTransactionScreenVC.swift */; };
+		12C5E740285E667F0010895D /* AddTransactionScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C5E73F285E667F0010895D /* AddTransactionScreenView.swift */; };
 		12DAA532284FD1330093F9FD /* BalanceValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DAA531284FD1330093F9FD /* BalanceValidator.swift */; };
 		12DAA534284FD27E0093F9FD /* BalanceValidationParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DAA533284FD27E0093F9FD /* BalanceValidationParams.swift */; };
 		12DAA536284FEB7C0093F9FD /* Double + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DAA535284FEB7C0093F9FD /* Double + Extensions.swift */; };
@@ -133,6 +135,8 @@
 		12E4D9C0284BA44B00CF6FC9 /* BalanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E4D9BF284BA44B00CF6FC9 /* BalanceModel.swift */; };
 		12E4D9C3284BAD9D00CF6FC9 /* StaticResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E4D9C2284BAD9D00CF6FC9 /* StaticResources.swift */; };
 		12E4D9C5284BB01900CF6FC9 /* BalanceVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E4D9C4284BB01900CF6FC9 /* BalanceVM.swift */; };
+		12F15506285E85B800F87D9B /* AddTransactionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F15505285E85B800F87D9B /* AddTransactionVM.swift */; };
+		12F15508285E91C400F87D9B /* String + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F15507285E91C400F87D9B /* String + Extensions.swift */; };
 		12F1D6E027F60B4B0003B10C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F1D6DF27F60B4B0003B10C /* R.generated.swift */; };
 		12F1D6E327F61A6C0003B10C /* WTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F1D6E227F61A6C0003B10C /* WTextField.swift */; };
 		12F1D6E627F62B670003B10C /* StartBalanceVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F1D6E527F62B670003B10C /* StartBalanceVM.swift */; };
@@ -251,6 +255,8 @@
 		12C1169F2806AC2600D6B8C0 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
 		12C116A12806FC2C00D6B8C0 /* PopupHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupHandler.swift; sourceTree = "<group>"; };
 		12C116A42806FF2F00D6B8C0 /* ChoicePopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicePopup.swift; sourceTree = "<group>"; };
+		12C5E73C285E65E60010895D /* AddTransactionScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionScreenVC.swift; sourceTree = "<group>"; };
+		12C5E73F285E667F0010895D /* AddTransactionScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionScreenView.swift; sourceTree = "<group>"; };
 		12DAA531284FD1330093F9FD /* BalanceValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceValidator.swift; sourceTree = "<group>"; };
 		12DAA533284FD27E0093F9FD /* BalanceValidationParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceValidationParams.swift; sourceTree = "<group>"; };
 		12DAA535284FEB7C0093F9FD /* Double + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double + Extensions.swift"; sourceTree = "<group>"; };
@@ -272,6 +278,8 @@
 		12E4D9BF284BA44B00CF6FC9 /* BalanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceModel.swift; sourceTree = "<group>"; };
 		12E4D9C2284BAD9D00CF6FC9 /* StaticResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticResources.swift; sourceTree = "<group>"; };
 		12E4D9C4284BB01900CF6FC9 /* BalanceVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceVM.swift; sourceTree = "<group>"; };
+		12F15505285E85B800F87D9B /* AddTransactionVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionVM.swift; sourceTree = "<group>"; };
+		12F15507285E91C400F87D9B /* String + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extensions.swift"; sourceTree = "<group>"; };
 		12F1D6DF27F60B4B0003B10C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		12F1D6E227F61A6C0003B10C /* WTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTextField.swift; sourceTree = "<group>"; };
 		12F1D6E527F62B670003B10C /* StartBalanceVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartBalanceVM.swift; sourceTree = "<group>"; };
@@ -315,7 +323,6 @@
 		121A4348283D608200C54D9A /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				12C116852800617700D6B8C0 /* SettingsScreenVC.swift */,
 				12B86DD2280C74C00036FDD3 /* AboutScreenVC.swift */,
 				12B86DD6280C81D50036FDD3 /* PrivacyPolicyVC.swift */,
 				12E3F95928102B24003CBF9F /* CategoriesScreenVC.swift */,
@@ -340,6 +347,7 @@
 				1255FC4427F671C1002029DE /* MainScreenVC.swift */,
 				12C116832800614A00D6B8C0 /* StatisticScreenVC.swift */,
 				12C116812800610C00D6B8C0 /* ProfileScreenVC.swift */,
+				12C116852800617700D6B8C0 /* SettingsScreenVC.swift */,
 			);
 			path = Primary;
 			sourceTree = "<group>";
@@ -407,6 +415,7 @@
 		12482D9627F5FBB000D292CA /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				12C5E73B285E65B00010895D /* Presenting */,
 				121A434A283D60EC00C54D9A /* Primary */,
 				121A4349283D60AC00C54D9A /* Launching */,
 				121A4348283D608200C54D9A /* Settings */,
@@ -418,6 +427,7 @@
 		12482D9727F5FBB900D292CA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				12C5E73E285E665D0010895D /* Presenting */,
 				125974952843F5E4001F1056 /* EmptyState */,
 				12E3F96428109F0A003CBF9F /* Statistic */,
 				12B86DC9280C1D290036FDD3 /* Launching */,
@@ -703,6 +713,7 @@
 				12C116772800018000D6B8C0 /* UILabel + Extensions.swift */,
 				12DAA535284FEB7C0093F9FD /* Double + Extensions.swift */,
 				1208F3C1285E516B001908D8 /* UIKit + Extensions.swift */,
+				12F15507285E91C400F87D9B /* String + Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -794,6 +805,22 @@
 				12C116A42806FF2F00D6B8C0 /* ChoicePopup.swift */,
 			);
 			path = Popups;
+			sourceTree = "<group>";
+		};
+		12C5E73B285E65B00010895D /* Presenting */ = {
+			isa = PBXGroup;
+			children = (
+				12C5E73C285E65E60010895D /* AddTransactionScreenVC.swift */,
+			);
+			path = Presenting;
+			sourceTree = "<group>";
+		};
+		12C5E73E285E665D0010895D /* Presenting */ = {
+			isa = PBXGroup;
+			children = (
+				12C5E73F285E667F0010895D /* AddTransactionScreenView.swift */,
+			);
+			path = Presenting;
 			sourceTree = "<group>";
 		};
 		12DAA52F284FD10A0093F9FD /* Validation */ = {
@@ -904,6 +931,7 @@
 				1259749328427C48001F1056 /* SplashScreenVM.swift */,
 				1294BF7C284B8677004AFE0D /* StartCurrencyScreenVM.swift */,
 				12E4D9C4284BB01900CF6FC9 /* BalanceVM.swift */,
+				12F15505285E85B800F87D9B /* AddTransactionVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -1112,11 +1140,13 @@
 				12DAA53E284FF4DE0093F9FD /* CurrencyModel.swift in Sources */,
 				12482D7C27F5F14E00D292CA /* AppDelegate.swift in Sources */,
 				12C116A02806AC2600D6B8C0 /* MainTabController.swift in Sources */,
+				12F15506285E85B800F87D9B /* AddTransactionVM.swift in Sources */,
 				12E4D9BC284B9F9200CF6FC9 /* BalanceCDRepository.swift in Sources */,
 				12E4D9B9284B95C300CF6FC9 /* Balance.swift in Sources */,
 				12C1169C2805D53600D6B8C0 /* SettingsScreenView.swift in Sources */,
 				12C1167B280019DD00D6B8C0 /* IncomeSpendingViewCell.swift in Sources */,
 				12E4D9BE284BA3C100CF6FC9 /* NSMappingModel.swift in Sources */,
+				12C5E73D285E65E60010895D /* AddTransactionScreenVC.swift in Sources */,
 				12C116822800610C00D6B8C0 /* ProfileScreenVC.swift in Sources */,
 				12C1167327FFFD3500D6B8C0 /* MainScreenView.swift in Sources */,
 				12E4D9C5284BB01900CF6FC9 /* BalanceVM.swift in Sources */,
@@ -1131,6 +1161,7 @@
 				12DAA536284FEB7C0093F9FD /* Double + Extensions.swift in Sources */,
 				12B86DCF280C53F40036FDD3 /* SettingVM.swift in Sources */,
 				12B9089E285905240072CF52 /* CustomFonts.swift in Sources */,
+				12C5E740285E667F0010895D /* AddTransactionScreenView.swift in Sources */,
 				12482DA027F5FC5500D292CA /* BalanceInteractor.swift in Sources */,
 				12B86DD7280C81D50036FDD3 /* PrivacyPolicyVC.swift in Sources */,
 				12E3F954280EFF9B003CBF9F /* NotificationScreenView.swift in Sources */,
@@ -1184,6 +1215,7 @@
 				12C116842800614A00D6B8C0 /* StatisticScreenVC.swift in Sources */,
 				12482D7E27F5F14E00D292CA /* SceneDelegate.swift in Sources */,
 				12FAEA7A280ED93D007450C7 /* ContentLoader.swift in Sources */,
+				12F15508285E91C400F87D9B /* String + Extensions.swift in Sources */,
 				12C1169928056DE900D6B8C0 /* ImagePickerHandler.swift in Sources */,
 				12B86DCD280C534E0036FDD3 /* SettingsScreenVM.swift in Sources */,
 				12C1168028002B1900D6B8C0 /* TransactionVM.swift in Sources */,

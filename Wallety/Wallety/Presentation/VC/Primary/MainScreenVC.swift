@@ -39,7 +39,11 @@ final class MainScreenVC: UIViewController {
     }
     
     @objc private func increaseTapped() {
-        balanceVM.setBalance()
+        present(AddTransactionScreenVC(viewModel: .init(type: .income)), animated: true)
+    }
+    
+    @objc private func decreaseTapped() {
+        present(AddTransactionScreenVC(viewModel: .init(type: .expenses)), animated: true)
     }
     
     // MARK: - Private
@@ -54,6 +58,7 @@ final class MainScreenVC: UIViewController {
     
     private func addTargets() {
         mainView.increaseBalanceButton.addTarget(self, action: #selector(increaseTapped), for: .touchUpInside)
+        mainView.decreaseBalanceButton.addTarget(self, action: #selector(decreaseTapped), for: .touchUpInside)
     }
     
     private func configureDelegates() {

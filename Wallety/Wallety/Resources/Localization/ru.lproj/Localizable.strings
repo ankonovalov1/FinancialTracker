@@ -91,7 +91,14 @@
 "current balance capital" = "ТЕКУЩИЙ БАЛАНС";
 "income and expenses" = "Доходы и расходы";
 
+// MARK: - Add Transaction Screen -
 
+"add new note" = "Добавить новую запись";
+"description" = "Описание";
+"add text" = "Добавить";
+"category" = "Категория";
+"category not chosen" = "Не выбрана";
+"empty all small" = "пусто";
 
 
 
