@@ -6,9 +6,19 @@ final class AddTransactionScreenVC: UIViewController {
     private let mainView = AddTransactionScreenView()
     private let viewModel: AddTransactionVM
     
+//    var categoryTapRecognizer = UITapGestureRecognizer()
+    
+//    func cancelTouch() {
+//        categoryTapRecognizer.cancelsTouchesInView = true
+//    }
+    
+    
     init(viewModel: AddTransactionVM) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        mainView.categoriesCollectionView.delegate = self
+        mainView.categoriesCollectionView.dataSource = self
+        mainView.categoriesCollectionView.register(TitleViewCell.self, forCellWithReuseIdentifier: TitleViewCell.id)
     }
     
     required init?(coder: NSCoder) {
@@ -35,7 +45,9 @@ final class AddTransactionScreenVC: UIViewController {
         
         let dateTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(dateTapped))
         let categoryTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(categoryChooseTapped))
+        categoryTapRecognizer.cancelsTouchesInView = false
         let descriptionTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(descriptionWriteTapped))
+        descriptionTapRecognizer.cancelsTouchesInView = false
         
         mainView.dateLable.addGestureRecognizer(dateTapRecognizer)
         mainView.descriptionBehindView.addGestureRecognizer(descriptionTapRecognizer)
@@ -88,5 +100,28 @@ final class AddTransactionScreenVC: UIViewController {
         }
         controller.present(above: self)
     }
+    
+}
+
+extension AddTransactionScreenVC: UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 50
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TitleViewCell.id, for: indexPath) as? TitleViewCell
+        else {
+            return UICollectionViewCell()
+        }
+        cell.manageView(backgroundColor: R.color.baseElementsBlue())
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        mainView.chooseCategoryValueLabel.text = "123"
+    }
+    
     
 }

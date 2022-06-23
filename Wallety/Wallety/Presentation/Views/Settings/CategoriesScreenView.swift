@@ -23,7 +23,7 @@ final class CategoriesScreenView: UIView {
     lazy var incomeCollectionView: UICollectionView = {
         let layout = LeftAlignedCollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 10
-        layout.minimumLineSpacing = 12
+        layout.minimumLineSpacing = 10
         layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         layout.scrollDirection = .vertical
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)

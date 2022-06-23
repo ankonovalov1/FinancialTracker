@@ -4,7 +4,20 @@ final class AddTransactionScreenView: UIView {
     
     // MARK: - Properties
     
-    private var isCategoryOpen = false
+    private var isCategoryOpen = false {
+        didSet {
+            if isCategoryOpen {
+                chooseCategoryLabel.isHidden = true
+                chooseCategoryValueLabel.isHidden = true
+                categoriesCollectionView.isHidden = false
+            } else {
+                categoryBehindView.isUserInteractionEnabled = true
+                chooseCategoryLabel.isHidden = false
+                chooseCategoryValueLabel.isHidden = false
+                categoriesCollectionView.isHidden = true
+            }
+        }
+    }
     private var isDescriptionOpen = false
     
     // MARK: - Views
@@ -122,6 +135,20 @@ final class AddTransactionScreenView: UIView {
         return view
     }()
     
+    lazy var categoriesCollectionView: UICollectionView = {
+        let layout = LeftAlignedCollectionViewFlowLayout()
+        layout.minimumInteritemSpacing = 10
+        layout.minimumLineSpacing = 10
+        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        layout.scrollDirection = .vertical
+        let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .clear
+        view.showsVerticalScrollIndicator = false
+        view.isHidden = true
+        return view
+    }()
+    
     // MARK: - Lifecycle
     
     override init(frame: CGRect) {
@@ -201,7 +228,8 @@ final class AddTransactionScreenView: UIView {
         
         [
             chooseCategoryLabel,
-            chooseCategoryValueLabel
+            chooseCategoryValueLabel,
+            categoriesCollectionView
         ].forEach {
             categoryBehindView.addSubview($0)
         }
@@ -278,6 +306,11 @@ final class AddTransactionScreenView: UIView {
         chooseCategoryValueLabel.snp.makeConstraints { make in
             make.right.equalTo(categoryBehindView).offset(-20)
             make.centerY.equalTo(categoryBehindView)
+        }
+        
+        categoriesCollectionView.snp.makeConstraints { make in
+            make.top.left.equalTo(categoryBehindView).offset(15)
+            make.right.bottom.equalTo(categoryBehindView).offset(-15)
         }
         
         enterDescriptionLabel.snp.makeConstraints { make in
