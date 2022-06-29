@@ -20,14 +20,21 @@ extension RouterProtocol {
 struct MainTabScreenRouter: RouterProtocol {
     
     func configure() -> UIViewController {
+        
+        guard
+            let navigationController = sceneDelegate().navigationController,
+            let factory = sceneDelegate().routerFactory
+        else { return UIViewController() }
+        
         let container = appDelegate().persistentContainer
+        let navigator = Navigator(navigationController: navigationController, factory: factory)
         let balanceCDService = BalanceCDRepository(container: container)
         let currencyCDService = CurrencyCDRepository(container: container)
         let balanceVM = BalanceVM(balanceCDService: balanceCDService, currencyCDService: currencyCDService)
-        
+        let mainScreenVM = MainScreenVM(navigator: navigator)
         let vc = MainTabController()
         vc.setViewControllers([
-            MainScreenVC(balanceVM: balanceVM),
+            MainScreenVC(mainScreenVM: mainScreenVM, balanceVM: balanceVM),
             StatisticScreenVC(),
             ProfileScreenVC(),
             UINavigationController(rootViewController:  SettingsScreenVC())
@@ -40,11 +47,19 @@ struct MainTabScreenRouter: RouterProtocol {
 struct MainScreenRouter: RouterProtocol {
     
     func configure() -> UIViewController {
+        
+        guard
+            let navigationController = sceneDelegate().navigationController,
+            let factory = sceneDelegate().routerFactory
+        else { return UIViewController() }
+        
         let container = appDelegate().persistentContainer
+        let navigator = Navigator(navigationController: navigationController, factory: factory)
         let balanceCDService = BalanceCDRepository(container: container)
         let currencyCDService = CurrencyCDRepository(container: container)
         let balanceVM = BalanceVM(balanceCDService: balanceCDService, currencyCDService: currencyCDService)
-        return MainScreenVC(balanceVM: balanceVM)
+        let mainScreenVM = MainScreenVM(navigator: navigator)
+        return MainScreenVC(mainScreenVM: mainScreenVM, balanceVM: balanceVM)
     }
     
 }
@@ -100,6 +115,18 @@ struct AfterLaunchScreenRouter: RouterProtocol {
         let viewModel = StartBalanceVM(navigator: navigator, userDefaults: userDefaults,
                                        balanceCDService: balanceCDService, validator: validator)
         return StartBalanceScreenVC(viewModel: viewModel)
+    }
+    
+}
+
+struct AddTransactionScreenRouter: RouterProtocol {
+    
+    func configure() -> UIViewController {
+        
+        let validator = BalanceValidator()
+        let viewModel = AddTransactionVM(validator: validator)
+        
+        return AddTransactionScreenVC(viewModel: viewModel)
     }
     
 }

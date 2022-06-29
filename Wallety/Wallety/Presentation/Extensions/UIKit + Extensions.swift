@@ -9,3 +9,8 @@ extension CALayer {
         self.shadowOpacity = 0.25
     }
 }
+
+extension UIViewController {
+    
+    @objc func setViewModel(params: [String:Any]) {}
+}

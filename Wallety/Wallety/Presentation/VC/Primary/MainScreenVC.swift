@@ -6,13 +6,15 @@ final class MainScreenVC: UIViewController {
     // MARK: - Properties
     
     let mainView = MainScreenView()
-    let viewModel = MainScreenVM()
+    let mainScreenVM: MainScreenVM
     let balanceVM: BalanceVM
     
     // MARK: - Lifecycle
     
-    init(balanceVM: BalanceVM) {
+    init(mainScreenVM: MainScreenVM,
+         balanceVM: BalanceVM) {
         self.balanceVM = balanceVM
+        self.mainScreenVM = mainScreenVM
         super.init(nibName: nil, bundle: nil)
         configureTabBar()
     }
@@ -33,17 +35,16 @@ final class MainScreenVC: UIViewController {
     // MARK: - @objc methods
     
     @objc private func switchState() {
-            //mainView.change(state: .empty)
         let handler = PopupHandler()
         handler.show(factory: .chooseLanguage)
     }
     
     @objc private func increaseTapped() {
-        present(AddTransactionScreenVC(viewModel: .init(type: .income)), animated: true)
+        mainScreenVM.openAddTransaction(with: .income)
     }
     
     @objc private func decreaseTapped() {
-        present(AddTransactionScreenVC(viewModel: .init(type: .expenses)), animated: true)
+        mainScreenVM.openAddTransaction(with: .expenses)
     }
     
     // MARK: - Private
@@ -77,7 +78,7 @@ final class MainScreenVC: UIViewController {
 extension MainScreenVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.transactions.count
+        return mainScreenVM.transactions.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -87,7 +88,7 @@ extension MainScreenVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: IncomeSpendingViewCell.id, for: indexPath) as! IncomeSpendingViewCell
         cell.selectionStyle = .none
-        cell.configure(transaction: viewModel.transactions[indexPath.row])
+        cell.configure(transaction: mainScreenVM.transactions[indexPath.row])
         return cell
     }
     

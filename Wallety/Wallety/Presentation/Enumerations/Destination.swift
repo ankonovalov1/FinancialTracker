@@ -8,6 +8,7 @@ enum Destination {
     case setBalance
     case main
     case mainTabScreen
+    case addTransaction
 
 }
 

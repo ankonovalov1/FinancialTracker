@@ -18,6 +18,8 @@ struct RouterFactory: RouterFactoryProtocol {
             return SplashScreenRouter()
         case .mainTabScreen:
             return MainTabScreenRouter()
+        case .addTransaction:
+            return AddTransactionScreenRouter()
         }
     }
     

@@ -18,7 +18,20 @@ final class AddTransactionScreenView: UIView {
             }
         }
     }
-    private var isDescriptionOpen = false
+    private var isDescriptionOpen = false {
+        didSet {
+            if isDescriptionOpen {
+                enterDescriptionLabel.isHidden = true
+                enterDescriptionValueLabel.isHidden = true
+                descriptionTextView.isHidden = false
+            } else {
+                descriptionBehindView.isUserInteractionEnabled = true
+                enterDescriptionLabel.isHidden = false
+                enterDescriptionValueLabel.isHidden = false
+                descriptionTextView.isHidden = true
+            }
+        }
+    }
     
     // MARK: - Views
 
@@ -132,6 +145,7 @@ final class AddTransactionScreenView: UIView {
         )
         view.setAttributedTitle(title, for: .normal)
         view.layer.cornerRadius = 10
+        view.isEnabled = false
         return view
     }()
     
@@ -146,6 +160,16 @@ final class AddTransactionScreenView: UIView {
         view.backgroundColor = .clear
         view.showsVerticalScrollIndicator = false
         view.isHidden = true
+        return view
+    }()
+    
+    lazy var descriptionTextView: UITextView = {
+        let view = UITextView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.isHidden = true
+        view.backgroundColor = .clear
+        view.showsVerticalScrollIndicator = false
+        view.textColor = .white
         return view
     }()
     
@@ -236,7 +260,8 @@ final class AddTransactionScreenView: UIView {
         
         [
             enterDescriptionLabel,
-            enterDescriptionValueLabel
+            enterDescriptionValueLabel,
+            descriptionTextView
         ].forEach {
             descriptionBehindView.addSubview($0)
         }
@@ -321,6 +346,11 @@ final class AddTransactionScreenView: UIView {
         enterDescriptionValueLabel.snp.makeConstraints { make in
             make.right.equalTo(descriptionBehindView).offset(-20)
             make.centerY.equalTo(descriptionBehindView)
+        }
+        
+        descriptionTextView.snp.makeConstraints { make in
+            make.top.left.equalTo(descriptionBehindView).offset(15)
+            make.right.bottom.equalTo(descriptionBehindView).offset(-15)
         }
         
         addButton.snp.makeConstraints { make in

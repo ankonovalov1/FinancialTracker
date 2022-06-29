@@ -3,15 +3,12 @@ import Fastis
 
 final class AddTransactionScreenVC: UIViewController {
     
+    // MARK: - Properties
+    
     private let mainView = AddTransactionScreenView()
     private let viewModel: AddTransactionVM
     
-//    var categoryTapRecognizer = UITapGestureRecognizer()
-    
-//    func cancelTouch() {
-//        categoryTapRecognizer.cancelsTouchesInView = true
-//    }
-    
+    // MARK: - Lifecycle
     
     init(viewModel: AddTransactionVM) {
         self.viewModel = viewModel
@@ -33,12 +30,27 @@ final class AddTransactionScreenVC: UIViewController {
         super.viewDidLoad()
         self.view = mainView
         setupTargets()
+        setupCallbacks()
+        setupDelegates()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setView()
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
+    override func setViewModel(params: [String:Any]) {
+        guard let transactionType = params[NavigationParams.transactionType] as? TransactionType else {
+            return
+        }
+        viewModel.type = transactionType
+    }
+    
+    // MARK: - Private
     
     private func setupTargets() {
         mainView.transactionTypeSegment.addTarget(self, action: #selector(transactionTypeChanged), for: .valueChanged)
@@ -52,6 +64,16 @@ final class AddTransactionScreenVC: UIViewController {
         mainView.dateLable.addGestureRecognizer(dateTapRecognizer)
         mainView.descriptionBehindView.addGestureRecognizer(descriptionTapRecognizer)
         mainView.categoryBehindView.addGestureRecognizer(categoryTapRecognizer)
+    }
+    
+    private func setupCallbacks() {
+        viewModel.balanceChanged = { [weak self] isEmpty in
+            self?.mainView.addButton.isEnabled = !isEmpty
+        }
+    }
+    
+    private func setupDelegates() {
+        mainView.transactionValueTextField.delegate = self
     }
     
     private func setView() {
@@ -80,7 +102,7 @@ final class AddTransactionScreenVC: UIViewController {
             self.mainView.dateLable.layer.opacity = 0.1
         } completion: { _ in
             self.mainView.dateLable.layer.opacity = 1
-            self.openCalandar()
+            self.openCalendar()
         }
     }
     
@@ -92,7 +114,7 @@ final class AddTransactionScreenVC: UIViewController {
         self.mainView.descriptionViewTapped()
     }
     
-    private func openCalandar() {
+    private func openCalendar() {
         let controller = FastisController(mode: .single)
         controller.initialValue = Date()
         controller.doneHandler = { [weak self] date in
@@ -123,5 +145,17 @@ extension AddTransactionScreenVC: UICollectionViewDataSource, UICollectionViewDe
         mainView.chooseCategoryValueLabel.text = "123"
     }
     
+}
+
+extension AddTransactionScreenVC: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return viewModel.validate(fullValue: textField.text, value: string)
+    }
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        guard let isEmpty = textField.text?.isEmpty else { return }
+        viewModel.isBalanceEmpty = isEmpty
+    }
     
 }
