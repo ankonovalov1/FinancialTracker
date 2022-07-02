@@ -4,14 +4,14 @@ struct TransactionModel: NSMappingModel, Hashable {
     
     let id: String
     let value: Double
-    let category: String
+    let category: TransactionCategory
     let currency: String
     let date: Date
     let type: TransactionType
     
     init(id: String,
     value: Double,
-    category: String,
+    category: TransactionCategory,
     currency: String,
     date: Date,
     type: TransactionType) {

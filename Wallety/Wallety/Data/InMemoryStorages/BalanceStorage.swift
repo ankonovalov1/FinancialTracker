@@ -1,6 +1,6 @@
 import Foundation
 
-final class BalanceStorage: BalanceStorageProtocol, CoreDataMappable {
+final class BalanceStorage: BalanceStorageProtocol, CoreDataMappable, Resetable {
     
     // MARK: - Properties
     
@@ -47,6 +47,12 @@ final class BalanceStorage: BalanceStorageProtocol, CoreDataMappable {
         }
         balance = BalanceModel(value: first.value)
         return true
+    }
+    
+    // MARK: - Resetable func
+    
+    func reset() {
+        delete()
     }
     
 }

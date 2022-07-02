@@ -1,6 +1,6 @@
 import Foundation
 
-final class TransactionStorage: TransactionStorageProtocol, CoreDataMappable {
+final class TransactionStorage: TransactionStorageProtocol, CoreDataMappable, Resetable {
     
     // MARK: - Properties
     
@@ -65,5 +65,10 @@ final class TransactionStorage: TransactionStorageProtocol, CoreDataMappable {
         return true
     }
     
+    // MARK: - Resetable func
+    
+    func reset() {
+        deleteAll()
+    }
     
 }

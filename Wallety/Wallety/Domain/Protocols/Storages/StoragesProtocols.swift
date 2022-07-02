@@ -22,3 +22,12 @@ protocol TransactionStorageProtocol {
     func delete(transaction: TransactionModel)
     func deleteAll()
 }
+
+protocol TransactionCategoryStorageProtocol {
+    func add(transactionCategory: TransactionCategoryModel)
+    func update(transactionCategory: TransactionCategoryModel)
+    func get(by id: String) -> TransactionCategoryModel?
+    func getAll() -> Set<TransactionCategoryModel>
+    func delete(transactionCategory: TransactionCategoryModel)
+    func deleteAll()
+}

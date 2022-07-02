@@ -3,6 +3,7 @@ import CoreData
 
 protocol DataSyncable {
     func sync()
+    func reset()
 }
 
 final class DataSyncInteractor: DataSyncable {
@@ -22,6 +23,18 @@ final class DataSyncInteractor: DataSyncable {
                 continue
             }
             add(data: data)
+        }
+    }
+    
+    func reset() {
+        for repository in repositories {
+            repository.deleteAll()
+        }
+        for storage in storages {
+            guard let resetable = storage as? Resetable else {
+                continue
+            }
+            resetable.reset()
         }
     }
     

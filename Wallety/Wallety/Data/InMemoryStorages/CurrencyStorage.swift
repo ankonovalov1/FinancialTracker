@@ -1,6 +1,6 @@
 import Foundation
 
-final class CurrencyStorage: CurrencyStorageProtocol, CoreDataMappable {
+final class CurrencyStorage: CurrencyStorageProtocol, CoreDataMappable, Resetable {
     
     // MARK: - Properties
     
@@ -49,5 +49,10 @@ final class CurrencyStorage: CurrencyStorageProtocol, CoreDataMappable {
         return true
     }
     
+    // MARK: - Resetable func
+    
+    func reset() {
+        delete()
+    }
     
 }
