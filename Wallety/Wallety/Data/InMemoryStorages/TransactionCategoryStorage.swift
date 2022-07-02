@@ -1,6 +1,6 @@
 import Foundation
 
-final class TransactionCategoryStorage: TransactionCategoryStorageProtocol, CoreDataMappable, Resetable {
+final class TransactionCategoryStorage: TransactionCategoryStorageProtocol {
     
     // MARK: - Properties
     

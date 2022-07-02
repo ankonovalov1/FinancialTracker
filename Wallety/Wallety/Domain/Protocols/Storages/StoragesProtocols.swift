@@ -1,20 +1,20 @@
 import Foundation
 
-protocol BalanceStorageProtocol {
+protocol BalanceStorageProtocol: CoreDataMappable, Resetable {
     func add(balance: BalanceModel)
     func update(balance: BalanceModel)
     func get() -> BalanceModel?
     func delete()
 }
 
-protocol CurrencyStorageProtocol {
+protocol CurrencyStorageProtocol: CoreDataMappable, Resetable {
     func add(currency: CurrencyModel)
     func update(currency: CurrencyModel)
     func get() -> CurrencyModel?
     func delete()
 }
 
-protocol TransactionStorageProtocol {
+protocol TransactionStorageProtocol: CoreDataMappable, Resetable {
     func add(transaction: TransactionModel)
     func update(transaction: TransactionModel)
     func get(by id: String) -> TransactionModel?
@@ -23,7 +23,7 @@ protocol TransactionStorageProtocol {
     func deleteAll()
 }
 
-protocol TransactionCategoryStorageProtocol {
+protocol TransactionCategoryStorageProtocol: CoreDataMappable, Resetable {
     func add(transactionCategory: TransactionCategoryModel)
     func update(transactionCategory: TransactionCategoryModel)
     func get(by id: String) -> TransactionCategoryModel?

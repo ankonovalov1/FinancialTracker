@@ -1,6 +1,6 @@
 import Foundation
 
-final class CurrencyStorage: CurrencyStorageProtocol, CoreDataMappable, Resetable {
+final class CurrencyStorage: CurrencyStorageProtocol {
     
     // MARK: - Properties
     

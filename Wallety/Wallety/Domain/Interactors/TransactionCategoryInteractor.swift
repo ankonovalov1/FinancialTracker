@@ -1,16 +1,16 @@
 import Foundation
 
 
-protocol TransactionCategoryProtocol {
-    func add(transaction: TransactionCategoryModel)
-    func update(transaction: TransactionCategoryModel)
+protocol TransactionCategoryInteractorProtocol {
+    func add(transactionCategory: TransactionCategoryModel)
+    func update(transactionCategory: TransactionCategoryModel)
     func get(by id: String) -> TransactionCategoryModel?
     func getAll() -> Set<TransactionCategoryModel>
-    func delete(transaction: TransactionCategoryModel)
+    func delete(transactionCategory: TransactionCategoryModel)
     func deleteAll()
 }
 
-final class TransactionCategoryInteractor {
+final class TransactionCategoryInteractor: TransactionCategoryInteractorProtocol {
     
     // MARK: - Properties
     

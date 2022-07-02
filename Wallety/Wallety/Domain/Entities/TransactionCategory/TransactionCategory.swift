@@ -10,6 +10,7 @@ public class TransactionCategory: NSManagedObject, Identifiable {
 
     @NSManaged public var id: String
     @NSManaged public var name: String
+    @NSManaged public var type: String
     @NSManaged public var image: Data?
     
 }

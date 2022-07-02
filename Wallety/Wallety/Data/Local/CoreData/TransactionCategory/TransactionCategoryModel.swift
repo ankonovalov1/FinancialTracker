@@ -4,20 +4,24 @@ struct TransactionCategoryModel: NSMappingModel, Hashable {
     
     let id: String
     let name: String
+    let type: TransactionType
     let image: Data?
     
     init(id: String,
          name: String,
+         type: TransactionType,
          image: Data?) {
         self.id = id
         self.name = name
         self.image = image
+        self.type = type
     }
     
     init(model: TransactionCategory) {
-        self.id = model.id
-        self.name = model.name
-        self.image = model.image
+        id = model.id
+        name = model.name
+        type = model.type == "income" ? .income : .expenses
+        image = model.image
     }
     
     func hash(into hasher: inout Hasher) {

@@ -1,6 +1,6 @@
 import Foundation
 
-final class BalanceStorage: BalanceStorageProtocol, CoreDataMappable, Resetable {
+final class BalanceStorage: BalanceStorageProtocol {
     
     // MARK: - Properties
     

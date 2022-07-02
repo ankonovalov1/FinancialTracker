@@ -54,6 +54,7 @@ final class TransactionCategoryCDRepository: CoreDataProtocol {
         transactionCategory?.id = model.id
         transactionCategory?.name = model.name
         transactionCategory?.image = model.image
+        transactionCategory?.type = model.type.rawValue
         
         save()
     }
