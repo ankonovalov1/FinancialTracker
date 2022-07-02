@@ -16,7 +16,7 @@ final class AddTransactionVM {
         }
     }
     
-    private let validator: ValidationProtocol
+    private var validator: ValidationProtocol
     
     // MARK: Lifecycle
     

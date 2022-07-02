@@ -55,6 +55,7 @@ final class TransactionCategoryCDRepository: CoreDataProtocol {
         transactionCategory?.name = model.name
         transactionCategory?.image = model.image
         transactionCategory?.type = model.type.rawValue
+        transactionCategory?.transactions = model.transactions as NSSet
         
         save()
     }

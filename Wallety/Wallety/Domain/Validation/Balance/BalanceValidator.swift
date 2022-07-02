@@ -1,11 +1,11 @@
 import Foundation
 
-protocol ValidationProtocol: AnyObject {
+protocol ValidationProtocol {
     var parameters: [ValidationParams]? { get set }
     func validate(value: Any) -> Bool
 }
 
-final class BalanceValidator: ValidationProtocol {
+struct BalanceValidator: ValidationProtocol {
     
     // MARK: - Properties
     var parameters: [ValidationParams]?

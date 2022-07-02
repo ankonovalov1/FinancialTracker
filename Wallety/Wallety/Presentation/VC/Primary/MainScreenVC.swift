@@ -5,17 +5,21 @@ final class MainScreenVC: UIViewController {
     
     // MARK: - Properties
     
-    let mainView = MainScreenView()
-    let mainScreenVM: MainScreenVM
-    let balanceVM: BalanceVM
+    private let mainView = MainScreenView()
+    private let mainScreenVM: MainScreenVM
+    private let balanceVM: BalanceVM
+    private let transactionsVM: TransactionsListVM
     
     // MARK: - Lifecycle
     
     init(mainScreenVM: MainScreenVM,
-         balanceVM: BalanceVM) {
+         balanceVM: BalanceVM,
+         transactionsVM: TransactionsListVM) {
         self.balanceVM = balanceVM
         self.mainScreenVM = mainScreenVM
+        self.transactionsVM = transactionsVM
         super.init(nibName: nil, bundle: nil)
+        
         configureTabBar()
     }
     
@@ -29,7 +33,9 @@ final class MainScreenVC: UIViewController {
         addTargets()
         configureDelegates()
         configureCallbacks()
+        
         balanceVM.viewDidLoad()
+        transactionsVM.load()
     }
     
     // MARK: - @objc methods
@@ -63,13 +69,17 @@ final class MainScreenVC: UIViewController {
     }
     
     private func configureDelegates() {
-        mainView.infoTableView.delegate = self
-        mainView.infoTableView.dataSource = self
+        mainView.transactionsTableView.delegate = self
+        mainView.transactionsTableView.dataSource = self
     }
     
     private func configureCallbacks() {
+        
         balanceVM.balanceChanged = { [weak self] balance in
             self?.mainView.balanceValueLabel.text = balance
+        }
+        transactionsVM.transactionsLoaded = { _ in
+            self.mainView.transactionsTableView.reloadData()
         }
     }
     
@@ -78,7 +88,7 @@ final class MainScreenVC: UIViewController {
 extension MainScreenVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mainScreenVM.transactions.count
+        return transactionsVM.transactions.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -87,14 +97,9 @@ extension MainScreenVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: IncomeSpendingViewCell.id, for: indexPath) as! IncomeSpendingViewCell
-        cell.selectionStyle = .none
-        cell.configure(transaction: mainScreenVM.transactions[indexPath.row])
+        let transaction = transactionsVM.transactions[indexPath.item]
+        cell.configure(transaction: transaction)
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
-        cell?.contentView.frame.size.height += 20
     }
     
 }

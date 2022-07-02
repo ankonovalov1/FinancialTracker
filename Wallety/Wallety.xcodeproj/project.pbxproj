@@ -98,7 +98,6 @@
 		12C116782800018000D6B8C0 /* UILabel + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C116772800018000D6B8C0 /* UILabel + Extensions.swift */; };
 		12C1167B280019DD00D6B8C0 /* IncomeSpendingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1167A280019DD00D6B8C0 /* IncomeSpendingViewCell.swift */; };
 		12C1167E28002AE900D6B8C0 /* MainScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1167D28002AE900D6B8C0 /* MainScreenVM.swift */; };
-		12C1168028002B1900D6B8C0 /* TransactionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1167F28002B1900D6B8C0 /* TransactionVM.swift */; };
 		12C116822800610C00D6B8C0 /* ProfileScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C116812800610C00D6B8C0 /* ProfileScreenVC.swift */; };
 		12C116842800614A00D6B8C0 /* StatisticScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C116832800614A00D6B8C0 /* StatisticScreenVC.swift */; };
 		12C116862800617700D6B8C0 /* SettingsScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C116852800617700D6B8C0 /* SettingsScreenVC.swift */; };
@@ -121,6 +120,10 @@
 		12C2D99E287088F30063A85F /* DIFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C2D99D287088F30063A85F /* DIFactory.swift */; };
 		12C2D9A0287089800063A85F /* SJContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C2D99F287089800063A85F /* SJContainer.swift */; };
 		12C2D9A2287089A10063A85F /* ContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C2D9A1287089A10063A85F /* ContainerProtocol.swift */; };
+		12C2D9A62870BC950063A85F /* SJContainer + Interactors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C2D9A52870BC950063A85F /* SJContainer + Interactors.swift */; };
+		12C2D9A82870BD2C0063A85F /* SJContainer + Storages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C2D9A72870BD2C0063A85F /* SJContainer + Storages.swift */; };
+		12C2D9AA2870BD7B0063A85F /* SJContainer + Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C2D9A92870BD7B0063A85F /* SJContainer + Repositories.swift */; };
+		12C2D9B02870CEB20063A85F /* TransactionsListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C2D9AF2870CEB20063A85F /* TransactionsListVM.swift */; };
 		12C5E73D285E65E60010895D /* AddTransactionScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C5E73C285E65E60010895D /* AddTransactionScreenVC.swift */; };
 		12C5E740285E667F0010895D /* AddTransactionScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C5E73F285E667F0010895D /* AddTransactionScreenView.swift */; };
 		12DAA532284FD1330093F9FD /* BalanceValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DAA531284FD1330093F9FD /* BalanceValidator.swift */; };
@@ -250,7 +253,6 @@
 		12C116772800018000D6B8C0 /* UILabel + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extensions.swift"; sourceTree = "<group>"; };
 		12C1167A280019DD00D6B8C0 /* IncomeSpendingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeSpendingViewCell.swift; sourceTree = "<group>"; };
 		12C1167D28002AE900D6B8C0 /* MainScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenVM.swift; sourceTree = "<group>"; };
-		12C1167F28002B1900D6B8C0 /* TransactionVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionVM.swift; sourceTree = "<group>"; };
 		12C116812800610C00D6B8C0 /* ProfileScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenVC.swift; sourceTree = "<group>"; };
 		12C116832800614A00D6B8C0 /* StatisticScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticScreenVC.swift; sourceTree = "<group>"; };
 		12C116852800617700D6B8C0 /* SettingsScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenVC.swift; sourceTree = "<group>"; };
@@ -273,6 +275,10 @@
 		12C2D99D287088F30063A85F /* DIFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIFactory.swift; sourceTree = "<group>"; };
 		12C2D99F287089800063A85F /* SJContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SJContainer.swift; sourceTree = "<group>"; };
 		12C2D9A1287089A10063A85F /* ContainerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerProtocol.swift; sourceTree = "<group>"; };
+		12C2D9A52870BC950063A85F /* SJContainer + Interactors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SJContainer + Interactors.swift"; sourceTree = "<group>"; };
+		12C2D9A72870BD2C0063A85F /* SJContainer + Storages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SJContainer + Storages.swift"; sourceTree = "<group>"; };
+		12C2D9A92870BD7B0063A85F /* SJContainer + Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SJContainer + Repositories.swift"; sourceTree = "<group>"; };
+		12C2D9AF2870CEB20063A85F /* TransactionsListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsListVM.swift; sourceTree = "<group>"; };
 		12C5E73C285E65E60010895D /* AddTransactionScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionScreenVC.swift; sourceTree = "<group>"; };
 		12C5E73F285E667F0010895D /* AddTransactionScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionScreenView.swift; sourceTree = "<group>"; };
 		12DAA531284FD1330093F9FD /* BalanceValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceValidator.swift; sourceTree = "<group>"; };
@@ -754,7 +760,6 @@
 			isa = PBXGroup;
 			children = (
 				12C1167D28002AE900D6B8C0 /* MainScreenVM.swift */,
-				12C1167F28002B1900D6B8C0 /* TransactionVM.swift */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -851,11 +856,30 @@
 		12C2D99C287088BF0063A85F /* DI */ = {
 			isa = PBXGroup;
 			children = (
+				12C2D9A42870BC620063A85F /* Containers */,
+				12C2D9A32870BC540063A85F /* Protocols */,
 				12C2D99D287088F30063A85F /* DIFactory.swift */,
-				12C2D99F287089800063A85F /* SJContainer.swift */,
-				12C2D9A1287089A10063A85F /* ContainerProtocol.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		12C2D9A32870BC540063A85F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				12C2D9A1287089A10063A85F /* ContainerProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		12C2D9A42870BC620063A85F /* Containers */ = {
+			isa = PBXGroup;
+			children = (
+				12C2D99F287089800063A85F /* SJContainer.swift */,
+				12C2D9A52870BC950063A85F /* SJContainer + Interactors.swift */,
+				12C2D9A72870BD2C0063A85F /* SJContainer + Storages.swift */,
+				12C2D9A92870BD7B0063A85F /* SJContainer + Repositories.swift */,
+			);
+			path = Containers;
 			sourceTree = "<group>";
 		};
 		12C5E73B285E65B00010895D /* Presenting */ = {
@@ -983,6 +1007,7 @@
 				1294BF7C284B8677004AFE0D /* StartCurrencyScreenVM.swift */,
 				12E4D9C4284BB01900CF6FC9 /* BalanceVM.swift */,
 				12F15505285E85B800F87D9B /* AddTransactionVM.swift */,
+				12C2D9AF2870CEB20063A85F /* TransactionsListVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -1214,6 +1239,7 @@
 				12DAA536284FEB7C0093F9FD /* Double + Extensions.swift in Sources */,
 				12B86DCF280C53F40036FDD3 /* SettingVM.swift in Sources */,
 				12B9089E285905240072CF52 /* CustomFonts.swift in Sources */,
+				12C2D9A82870BD2C0063A85F /* SJContainer + Storages.swift in Sources */,
 				12C5E740285E667F0010895D /* AddTransactionScreenView.swift in Sources */,
 				12482DA027F5FC5500D292CA /* BalanceInteractor.swift in Sources */,
 				12B86DD7280C81D50036FDD3 /* PrivacyPolicyVC.swift in Sources */,
@@ -1229,6 +1255,7 @@
 				12E4D9C0284BA44B00CF6FC9 /* BalanceModel.swift in Sources */,
 				1255FC4527F671C1002029DE /* MainScreenVC.swift in Sources */,
 				12B86DC8280C1D090036FDD3 /* StartCurrencyScreenVC.swift in Sources */,
+				12C2D9AA2870BD7B0063A85F /* SJContainer + Repositories.swift in Sources */,
 				12482D8627F5F14E00D292CA /* Wallety.xcdatamodeld in Sources */,
 				1255FC3E27F66AF6002029DE /* Destination.swift in Sources */,
 				1255FC4327F67102002029DE /* Router.swift in Sources */,
@@ -1271,18 +1298,19 @@
 				12C2D99B287086210063A85F /* Resetable.swift in Sources */,
 				12E4D9C3284BAD9D00CF6FC9 /* StaticResources.swift in Sources */,
 				12C116842800614A00D6B8C0 /* StatisticScreenVC.swift in Sources */,
+				12C2D9A62870BC950063A85F /* SJContainer + Interactors.swift in Sources */,
 				12482D7E27F5F14E00D292CA /* SceneDelegate.swift in Sources */,
 				12FAEA7A280ED93D007450C7 /* ContentLoader.swift in Sources */,
 				12F15508285E91C400F87D9B /* String + Extensions.swift in Sources */,
 				12C1169928056DE900D6B8C0 /* ImagePickerHandler.swift in Sources */,
 				12C2D99528707E270063A85F /* TransactionCategoryCDRepository.swift in Sources */,
 				12B86DCD280C534E0036FDD3 /* SettingsScreenVM.swift in Sources */,
-				12C1168028002B1900D6B8C0 /* TransactionVM.swift in Sources */,
 				12B82E26284BE46300C54747 /* HapticHandler.swift in Sources */,
 				12E3F952280EFF6A003CBF9F /* NotificationScreenVC.swift in Sources */,
 				1208F3C2285E516B001908D8 /* UIKit + Extensions.swift in Sources */,
 				12C2D997287080E80063A85F /* TransactionCategoryStorage.swift in Sources */,
 				1294BF7D284B8677004AFE0D /* StartCurrencyScreenVM.swift in Sources */,
+				12C2D9B02870CEB20063A85F /* TransactionsListVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

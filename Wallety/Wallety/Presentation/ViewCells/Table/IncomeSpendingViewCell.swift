@@ -9,19 +9,19 @@ final class IncomeSpendingViewCell: UITableViewCell {
     // MARK: - Views
     
     lazy var typeLabel: UILabel = {
-        let label = UILabel(text: "1", font: CustomFonts.light(8).roboto, textColor: .white)
+        let label = UILabel(text: "", font: CustomFonts.light(8).roboto, textColor: .white)
         label.textAlignment = .center
         return label
     }()
     
     lazy var valueLabel: UILabel = {
-        let label = UILabel(text: "1", font: CustomFonts.light(14).roboto, textColor: .white)
+        let label = UILabel(text: "", font: CustomFonts.light(14).roboto, textColor: .white)
         label.textAlignment = .center
         return label
     }()
     
     lazy var dateLabel: UILabel = {
-        let label = UILabel(text: "1", font: CustomFonts.light(8).roboto, textColor: .white)
+        let label = UILabel(text: "", font: CustomFonts.light(8).roboto, textColor: .white)
         label.textAlignment = .center
         return label
     }()
@@ -58,14 +58,14 @@ final class IncomeSpendingViewCell: UITableViewCell {
     
     // MARK: Internal
     
-    func configure(transaction: TransactionVM) {
-        typeLabel.text = transaction.kind
-        valueLabel.text = transaction.value
-        dateLabel.text = transaction.date
+    func configure(transaction: TransactionModel) {
+        typeLabel.text = transaction.category.name
+        valueLabel.text = transaction.value.formatWith()
+        dateLabel.text = String.from(date: transaction.date, format: "YYYY, MMM d")
         switch transaction.type {
-        case .ask:
+        case .expenses:
             valueLabel.textColor = R.color.baseElementsRed()
-        case .bid:
+        case .income:
             valueLabel.textColor = R.color.baseElementsGreen()
         }
     }
@@ -74,6 +74,7 @@ final class IncomeSpendingViewCell: UITableViewCell {
     
     private func manageView() {
         backgroundColor = .clear
+        selectionStyle = .none
     }
     
     private func addSubviews() {

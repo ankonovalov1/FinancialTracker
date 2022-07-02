@@ -8,11 +8,7 @@ final class BalanceVM {
     
     // MARK: Internal properties
     
-    var numberBalance: Double = 0 {
-        didSet {
-            balanceChanged?(currentBalance)
-        }
-    }
+    var numberBalance: Double = 0
     var currentBalance: String {
         get {
             numberBalance.formatWith(digit: 2, locale: currentCurrency.locale) ?? "0"
@@ -22,15 +18,15 @@ final class BalanceVM {
     
     // MARK: Private properties
     
-    private let balanceCDService: CoreDataProtocol
-    private let currencyCDService: CoreDataProtocol
+    private let balanceInteractor: BalanceInteractorProtocol
+    private let currencyInteractor: CurrencyInteractorProtocol
     
     // MARK: Lifecycle
     
-    init(balanceCDService: CoreDataProtocol,
-         currencyCDService: CoreDataProtocol) {
-        self.balanceCDService = balanceCDService
-        self.currencyCDService = currencyCDService
+    init(balanceInteractor: BalanceInteractorProtocol,
+         currencyInteractor: CurrencyInteractorProtocol) {
+        self.balanceInteractor = balanceInteractor
+        self.currencyInteractor = currencyInteractor
     }
     
     deinit {
@@ -40,17 +36,12 @@ final class BalanceVM {
     func viewDidLoad() {
         loadCurrency()
         loadBalance()
-    }
-    
-    func setBalance() {
-        let model = BalanceModel(value: 150)
-        balanceCDService.addOrUpdate(model: model)
+        balanceChanged?(currentBalance)
     }
     
     private func loadBalance() {
         guard
-            let balances = balanceCDService.getAll() as? [Balance],
-            let balance = balances.first
+            let balance = balanceInteractor.get()
         else {
             numberBalance = 0
             return
@@ -59,10 +50,10 @@ final class BalanceVM {
     }
     
     private func loadCurrency() {
-        guard let currencies = currencyCDService.getAll(),
-                let currency = currencies.first else {
+        guard let currency = currencyInteractor.get() else {
             return
         }
+        currentCurrency = currency
     }
     
 }

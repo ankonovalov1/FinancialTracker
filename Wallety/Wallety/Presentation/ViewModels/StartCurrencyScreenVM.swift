@@ -9,13 +9,14 @@ final class StartCurrencyScreenVM {
     // MARK: Private properties
     
     private let navigator: NavigatorProtocol
-    private let currencyCDService: CoreDataProtocol
+    private let currencyInteractor: CurrencyInteractorProtocol
     
     // MARK: Lifecycle
     
-    init(navigator: NavigatorProtocol, currencyCDService: CoreDataProtocol) {
+    init(navigator: NavigatorProtocol,
+         currencyInteractor: CurrencyInteractorProtocol) {
         self.navigator = navigator
-        self.currencyCDService = currencyCDService
+        self.currencyInteractor = currencyInteractor
     }
     
     deinit {
@@ -28,7 +29,7 @@ final class StartCurrencyScreenVM {
         guard let currency = currency else {
             return
         }
-        currencyCDService.addOrUpdate(model: currency)
+        currencyInteractor.add(currency: currency)
     }
     
     func showSetBalanceScreen() {

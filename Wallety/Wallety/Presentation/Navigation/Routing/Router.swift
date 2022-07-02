@@ -21,20 +21,12 @@ struct MainTabScreenRouter: RouterProtocol {
     
     func configure() -> UIViewController {
         
-        guard
-            let navigationController = sceneDelegate().navigationController,
-            let factory = sceneDelegate().routerFactory
-        else { return UIViewController() }
+        let mainScreenRouter = MainScreenRouter()
+        let mainScreenVC = mainScreenRouter.configure()
         
-        let container = appDelegate().persistentContainer
-        let navigator = Navigator(navigationController: navigationController, factory: factory)
-        let balanceCDService = BalanceCDRepository(container: container)
-        let currencyCDService = CurrencyCDRepository(container: container)
-        let balanceVM = BalanceVM(balanceCDService: balanceCDService, currencyCDService: currencyCDService)
-        let mainScreenVM = MainScreenVM(navigator: navigator)
         let vc = MainTabController()
         vc.setViewControllers([
-            MainScreenVC(mainScreenVM: mainScreenVM, balanceVM: balanceVM),
+            mainScreenVC,
             StatisticScreenVC(),
             ProfileScreenVC(),
             UINavigationController(rootViewController:  SettingsScreenVC())
@@ -53,13 +45,17 @@ struct MainScreenRouter: RouterProtocol {
             let factory = sceneDelegate().routerFactory
         else { return UIViewController() }
         
-        let container = appDelegate().persistentContainer
         let navigator = Navigator(navigationController: navigationController, factory: factory)
-        let balanceCDService = BalanceCDRepository(container: container)
-        let currencyCDService = CurrencyCDRepository(container: container)
-        let balanceVM = BalanceVM(balanceCDService: balanceCDService, currencyCDService: currencyCDService)
+        let transactionInteractor = DIFactory.shared.resolve(type: TransactionInteractorProtocol.self)
+        let balanceInteractor = DIFactory.shared.resolve(type: BalanceInteractorProtocol.self)
+        let currencyInteractor = DIFactory.shared.resolve(type: CurrencyInteractorProtocol.self)
+        let balanceVM = BalanceVM(balanceInteractor: balanceInteractor, currencyInteractor: currencyInteractor)
         let mainScreenVM = MainScreenVM(navigator: navigator)
-        return MainScreenVC(mainScreenVM: mainScreenVM, balanceVM: balanceVM)
+        let transactionsVM = TransactionsListVM(transactionInteractor: transactionInteractor)
+        
+        return MainScreenVC(mainScreenVM: mainScreenVM,
+                            balanceVM: balanceVM,
+                            transactionsVM: transactionsVM)
     }
     
 }
@@ -91,8 +87,8 @@ struct StartCurrencyScreenRouter: RouterProtocol {
         else { return UIViewController() }
         
         let navigator = Navigator(navigationController: navigationController, factory: factory)
-        let currencyCDService = CurrencyCDRepository(container: appDelegate().persistentContainer)
-        let viewModel = StartCurrencyScreenVM(navigator: navigator, currencyCDService: currencyCDService)
+        let currencyInteractor = DIFactory.shared.resolve(type: CurrencyInteractorProtocol.self)
+        let viewModel = StartCurrencyScreenVM(navigator: navigator, currencyInteractor: currencyInteractor)
         return StartCurrencyScreenVC(viewModel: viewModel)
     }
     
@@ -109,11 +105,10 @@ struct AfterLaunchScreenRouter: RouterProtocol {
         
         let navigator = Navigator(navigationController: navigationController, factory: factory)
         let userDefaults = UserDefaultsService()
-        let container = appDelegate().persistentContainer
-        let  balanceCDService = BalanceCDRepository(container: container)
+        let balanceInteractor = DIFactory.shared.resolve(type: BalanceInteractorProtocol.self)
         let validator = BalanceValidator()
         let viewModel = StartBalanceVM(navigator: navigator, userDefaults: userDefaults,
-                                       balanceCDService: balanceCDService, validator: validator)
+                                       balanceInteractor: balanceInteractor, validator: validator)
         return StartBalanceScreenVC(viewModel: viewModel)
     }
     

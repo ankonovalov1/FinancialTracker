@@ -98,7 +98,7 @@ final class MainScreenView: UIView {
         return button
     }()
     
-    lazy var infoTableView: UITableView = {
+    lazy var transactionsTableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = .clear
@@ -135,13 +135,13 @@ final class MainScreenView: UIView {
         
         switch state {
         case .hasData:
-            infoTableView.isHidden = false
+            transactionsTableView.isHidden = false
             emptyView.isHidden = true
         case .loading:
-            infoTableView.isHidden = true
+            transactionsTableView.isHidden = true
             emptyView.isHidden = true
         case .empty:
-            infoTableView.isHidden = true
+            transactionsTableView.isHidden = true
             emptyView.isHidden = false
         }
         
@@ -163,7 +163,7 @@ final class MainScreenView: UIView {
             lineView,
             incomeSpendingLabel,
             dateButton,
-            infoTableView,
+            transactionsTableView,
             emptyView
         ].forEach {
             self.addSubview($0)
@@ -220,7 +220,7 @@ final class MainScreenView: UIView {
             make.height.equalTo(15)
         }
         
-        infoTableView.snp.makeConstraints { make in
+        transactionsTableView.snp.makeConstraints { make in
             make.top.equalTo(incomeSpendingLabel.snp.bottom).offset(18)
             make.left.equalTo(self.snp.left).offset(30)
             make.bottom.equalTo(self.snp.bottom)

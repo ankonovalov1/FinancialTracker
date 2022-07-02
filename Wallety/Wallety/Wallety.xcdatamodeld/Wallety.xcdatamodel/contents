@@ -15,18 +15,19 @@
         <attribute name="id" attributeType="String"/>
         <attribute name="type" attributeType="String"/>
         <attribute name="value" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <relationship name="category" maxCount="1" deletionRule="Nullify" destinationEntity="TransactionCategory"/>
+        <relationship name="category" maxCount="1" deletionRule="Deny" destinationEntity="TransactionCategory" inverseName="transactions" inverseEntity="TransactionCategory"/>
     </entity>
     <entity name="TransactionCategory" representedClassName="TransactionCategory" syncable="YES">
         <attribute name="id" attributeType="String"/>
         <attribute name="image" optional="YES" attributeType="Binary"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="type" attributeType="String"/>
+        <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transaction" inverseName="category" inverseEntity="Transaction"/>
     </entity>
     <elements>
-        <element name="Balance" positionX="-63" positionY="-18" width="128" height="59"/>
-        <element name="Currency" positionX="-63" positionY="0" width="128" height="74"/>
-        <element name="Transaction" positionX="-63" positionY="18" width="128" height="119"/>
-        <element name="TransactionCategory" positionX="-63" positionY="45" width="128" height="89"/>
+        <element name="Balance" positionX="-428.13671875" positionY="-41.0859375" width="128" height="59"/>
+        <element name="Currency" positionX="-425.33203125" positionY="-128.6640625" width="128" height="74"/>
+        <element name="Transaction" positionX="-427.64453125" positionY="36.69921875" width="128" height="133"/>
+        <element name="TransactionCategory" positionX="-178.32421875" positionY="55.328125" width="128" height="103"/>
     </elements>
 </model>

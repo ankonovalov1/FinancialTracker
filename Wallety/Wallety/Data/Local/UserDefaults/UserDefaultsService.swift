@@ -6,20 +6,17 @@ protocol UserDefaultsProtocol {
     func remove(objectFor key: String)
 }
 
-final class UserDefaultsService: UserDefaultsProtocol {
-    
-    private let storage = UserDefaults.standard
+struct UserDefaultsService: UserDefaultsProtocol {
     
     func set(object: Any, for key: String) {
-        storage.set(object, forKey: key)
+        UserDefaults.standard.set(object, forKey: key)
     }
     
     func get(objectFor key: String) -> Any? {
-        return storage.object(forKey: key)
+        return UserDefaults.standard.object(forKey: key)
     }
     
     func remove(objectFor key: String) {
-        storage.removeObject(forKey: key)
+        UserDefaults.standard.removeObject(forKey: key)
     }
-    
 }

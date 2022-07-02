@@ -6,3 +6,5 @@ struct StaticResources {
     static let deviceUDID: String = UIDevice.current.identifierForVendor?.uuidString ?? ""
     
 }
+
+

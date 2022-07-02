@@ -6,6 +6,7 @@ struct TransactionCategoryModel: NSMappingModel, Hashable {
     let name: String
     let type: TransactionType
     let image: Data?
+    var transactions = Set<TransactionModel>()
     
     init(id: String,
          name: String,
@@ -22,6 +23,10 @@ struct TransactionCategoryModel: NSMappingModel, Hashable {
         name = model.name
         type = model.type == "income" ? .income : .expenses
         image = model.image
+    }
+    
+    mutating func insert(transaction: TransactionModel) {
+        transactions.insert(transaction)
     }
     
     func hash(into hasher: inout Hasher) {

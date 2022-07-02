@@ -1,73 +1,8 @@
 import Foundation
-import CoreData
-import Swinject
 
-final class SJContainer: ContainerProtocol {
+extension SJContainer {
     
-    private let container: Container
-    var persistenContainer: NSPersistentContainer?
-    
-    init() {
-        container = Container()
-    }
-    
-    func register() {
-        registerStorages()
-        registerRepositories()
-        registerInteractors()
-    }
-    
-    func resolve<T>(by type: T.Type) -> T? {
-        return container.resolve(type)
-    }
-    
-    func resolve<T>(by type: T.Type, name: String) -> T? {
-        return container.resolve(type, name: name)
-    }
-    
-    private func registerStorages() {
-        
-        container.register(BalanceStorageProtocol.self) { _ in
-            return BalanceStorage()
-        }.inObjectScope(.container)
-        
-        container.register(CurrencyStorageProtocol.self) { _ in
-            return CurrencyStorage()
-        }.inObjectScope(.container)
-        
-        container.register(TransactionStorageProtocol.self) { _ in
-            return TransactionStorage()
-        }.inObjectScope(.container)
-        
-        container.register(TransactionCategoryStorageProtocol.self) { _ in
-            return TransactionCategoryStorage()
-        }.inObjectScope(.container)
-    }
-    
-    private func registerRepositories() {
-        
-        guard let persistenContainer = persistenContainer else {
-            fatalError("Check configure function")
-        }
-
-        container.register(CoreDataProtocol.self, name: "BalanceCDRepository") { _ in
-            return BalanceCDRepository(container: persistenContainer)
-        }.inObjectScope(.container)
-        
-        container.register(CoreDataProtocol.self, name: "CurrencyCDRepository") { _ in
-            return CurrencyCDRepository(container: persistenContainer)
-        }.inObjectScope(.container)
-        
-        container.register(CoreDataProtocol.self, name: "TransactionCDRepository") { _ in
-            return TransactionCDRepository(container: persistenContainer)
-        }.inObjectScope(.container)
-        
-        container.register(CoreDataProtocol.self, name: "TransactionCategoryCDRepository") { _ in
-            return TransactionCategoryCDRepository(container: persistenContainer)
-        }.inObjectScope(.container)
-    }
-    
-    private func registerInteractors() {
+    func registerInteractors() {
         
         container.register(BalanceInteractorProtocol.self) { resolver in
             return BalanceInteractor(balanceStorage: resolver.resolve(BalanceStorageProtocol.self)!,
@@ -103,5 +38,4 @@ final class SJContainer: ContainerProtocol {
             ])
         }.inObjectScope(.container)
     }
-    
 }

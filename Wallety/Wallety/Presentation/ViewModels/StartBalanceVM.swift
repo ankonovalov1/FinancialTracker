@@ -16,18 +16,18 @@ final class StartBalanceVM {
     
     private let navigator: NavigatorProtocol
     private let userDefaults: UserDefaultsProtocol
-    private let balanceCDService: CoreDataProtocol
-    private let validator: ValidationProtocol
+    private let balanceInteractor: BalanceInteractorProtocol
+    private var validator: ValidationProtocol
     
     // MARK: Lifecycle
     
     init(navigator: NavigatorProtocol,
          userDefaults: UserDefaultsProtocol,
-         balanceCDService: CoreDataProtocol,
+         balanceInteractor: BalanceInteractorProtocol,
          validator: ValidationProtocol) {
         self.navigator = navigator
         self.userDefaults = userDefaults
-        self.balanceCDService = balanceCDService
+        self.balanceInteractor = balanceInteractor
         self.validator = validator
         
         self.validator.parameters = BalanceValidationParams.allCases
@@ -54,11 +54,11 @@ final class StartBalanceVM {
     func createBalance(isEmpty: Bool) {
         if isEmpty {
             let model = BalanceModel(value: 0)
-            balanceCDService.addOrUpdate(model: model)
+            balanceInteractor.add(balance: model)
         } else {
             let balance = Double(currentBalance)
             let model = BalanceModel(value: balance ?? 0)
-            balanceCDService.addOrUpdate(model: model)
+            balanceInteractor.add(balance: model)
         }
     }
     

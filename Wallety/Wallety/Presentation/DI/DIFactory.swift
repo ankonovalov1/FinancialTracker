@@ -11,12 +11,18 @@ final class DIFactory {
         container = SJContainer()
     }
     
-    func resolve<T>(type: T.Type) -> T? {
-        return container.resolve(by: type)
+    func resolve<T>(type: T.Type) -> T {
+        guard let obj = container.resolve(by: type) else {
+            fatalError("Bad register for \(type)")
+        }
+        return obj
     }
     
-    func resolve<T>(type: T.Type, name: String) -> T? {
-        return container.resolve(by: type, name: name)
+    func resolve<T>(type: T.Type, name: String) -> T {
+        guard let obj = container.resolve(by: type, name: name) else {
+            fatalError("Bad register for \(type) with name \(name)")
+        }
+        return obj
     }
     
     /// Use before resolve any dependency
@@ -26,4 +32,5 @@ final class DIFactory {
         
         container.register()
     }
+    
 }
