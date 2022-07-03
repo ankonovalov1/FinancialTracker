@@ -60,6 +60,22 @@ final class TransactionCategoryCDRepository: CoreDataProtocol {
         save()
     }
     
+    func addMany(models: [NSMappingModel]) {
+        
+        for model in models {
+            guard let model = model as? TransactionCategoryModel else {
+                continue
+            }
+            let newCategory = TransactionCategory(context: context)
+            newCategory.id = model.id
+            newCategory.name = model.name
+            newCategory.image = model.image
+            newCategory.type = model.type.rawValue
+            newCategory.transactions = model.transactions as NSSet
+        }
+        save()
+    }
+    
     func delete(model: NSMappingModel) {
         guard
             let model = model as? TransactionCategoryModel,

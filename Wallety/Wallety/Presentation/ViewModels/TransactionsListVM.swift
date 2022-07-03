@@ -1,15 +1,18 @@
 import Foundation
+import Combine
 
-final class TransactionsListVM {
+final class TransactionsListVM: ObservableObject {
     
-    // MARK: - Callbacks
-    
-    var transactionsLoaded: (([TransactionModel]) -> Void)?
+    enum State {
+        case empty
+        case hasData
+    }
     
     // MARK: - Properties
     
     let transactionInteractor: TransactionInteractorProtocol
     var transactions = [TransactionModel]()
+    @Published var transactionsState: State = .empty
     
     // MARK: - Lifecycle
     
@@ -25,7 +28,12 @@ final class TransactionsListVM {
     
     func load() {
         transactions = Array(transactionInteractor.getAll())
-        transactionsLoaded?(transactions)
+        if transactions.isEmpty {
+            transactionsState = .empty
+        } else {
+            transactionsState = .hasData
+        }
+        
     }
     
 }

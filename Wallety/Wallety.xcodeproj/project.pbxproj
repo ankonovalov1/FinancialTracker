@@ -48,6 +48,7 @@
 		1259749428427C48001F1056 /* SplashScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1259749328427C48001F1056 /* SplashScreenVM.swift */; };
 		125974972843F61B001F1056 /* NoDataEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125974962843F61B001F1056 /* NoDataEmptyView.swift */; };
 		125DA0DC286D18710044BEA5 /* NavigationParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125DA0DB286D18710044BEA5 /* NavigationParams.swift */; };
+		127EDAE62870F104006ABE00 /* CategoriesScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127EDAE52870F104006ABE00 /* CategoriesScreenVM.swift */; };
 		1294BF7D284B8677004AFE0D /* StartCurrencyScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1294BF7C284B8677004AFE0D /* StartCurrencyScreenVM.swift */; };
 		12B468F1284B8F3D0023E2D2 /* CoreDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B468F0284B8F3D0023E2D2 /* CoreDataProtocol.swift */; };
 		12B4CACA283EA4F700D775B2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 12B4CACC283EA4F700D775B2 /* Localizable.strings */; };
@@ -124,6 +125,7 @@
 		12C2D9A82870BD2C0063A85F /* SJContainer + Storages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C2D9A72870BD2C0063A85F /* SJContainer + Storages.swift */; };
 		12C2D9AA2870BD7B0063A85F /* SJContainer + Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C2D9A92870BD7B0063A85F /* SJContainer + Repositories.swift */; };
 		12C2D9B02870CEB20063A85F /* TransactionsListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C2D9AF2870CEB20063A85F /* TransactionsListVM.swift */; };
+		12C2D9B22870ED900063A85F /* DefaultModelGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C2D9B12870ED900063A85F /* DefaultModelGenerator.swift */; };
 		12C5E73D285E65E60010895D /* AddTransactionScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C5E73C285E65E60010895D /* AddTransactionScreenVC.swift */; };
 		12C5E740285E667F0010895D /* AddTransactionScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C5E73F285E667F0010895D /* AddTransactionScreenView.swift */; };
 		12DAA532284FD1330093F9FD /* BalanceValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DAA531284FD1330093F9FD /* BalanceValidator.swift */; };
@@ -203,6 +205,7 @@
 		1259749328427C48001F1056 /* SplashScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenVM.swift; sourceTree = "<group>"; };
 		125974962843F61B001F1056 /* NoDataEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataEmptyView.swift; sourceTree = "<group>"; };
 		125DA0DB286D18710044BEA5 /* NavigationParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationParams.swift; sourceTree = "<group>"; };
+		127EDAE52870F104006ABE00 /* CategoriesScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesScreenVM.swift; sourceTree = "<group>"; };
 		1294BF7C284B8677004AFE0D /* StartCurrencyScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCurrencyScreenVM.swift; sourceTree = "<group>"; };
 		12B468F0284B8F3D0023E2D2 /* CoreDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProtocol.swift; sourceTree = "<group>"; };
 		12B4CACB283EA4F700D775B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -279,6 +282,7 @@
 		12C2D9A72870BD2C0063A85F /* SJContainer + Storages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SJContainer + Storages.swift"; sourceTree = "<group>"; };
 		12C2D9A92870BD7B0063A85F /* SJContainer + Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SJContainer + Repositories.swift"; sourceTree = "<group>"; };
 		12C2D9AF2870CEB20063A85F /* TransactionsListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsListVM.swift; sourceTree = "<group>"; };
+		12C2D9B12870ED900063A85F /* DefaultModelGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultModelGenerator.swift; sourceTree = "<group>"; };
 		12C5E73C285E65E60010895D /* AddTransactionScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionScreenVC.swift; sourceTree = "<group>"; };
 		12C5E73F285E667F0010895D /* AddTransactionScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionScreenView.swift; sourceTree = "<group>"; };
 		12DAA531284FD1330093F9FD /* BalanceValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceValidator.swift; sourceTree = "<group>"; };
@@ -618,6 +622,7 @@
 				12507DCF285928BE009C38DC /* Transaction */,
 				12DAA53A284FF4450093F9FD /* Currency */,
 				12E4D9BA284B9F4E00CF6FC9 /* Balance */,
+				12C2D9B12870ED900063A85F /* DefaultModelGenerator.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -1008,6 +1013,7 @@
 				12E4D9C4284BB01900CF6FC9 /* BalanceVM.swift */,
 				12F15505285E85B800F87D9B /* AddTransactionVM.swift */,
 				12C2D9AF2870CEB20063A85F /* TransactionsListVM.swift */,
+				127EDAE52870F104006ABE00 /* CategoriesScreenVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -1247,6 +1253,7 @@
 				12C116A52806FF2F00D6B8C0 /* ChoicePopup.swift in Sources */,
 				12DAA53C284FF4670093F9FD /* CurrencyCDRepository.swift in Sources */,
 				1255FC4127F67013002029DE /* RouterFactory.swift in Sources */,
+				12C2D9B22870ED900063A85F /* DefaultModelGenerator.swift in Sources */,
 				12C2D9A2287089A10063A85F /* ContainerProtocol.swift in Sources */,
 				12B468F1284B8F3D0023E2D2 /* CoreDataProtocol.swift in Sources */,
 				12C2D9992870837A0063A85F /* TransactionCategoryInteractor.swift in Sources */,
@@ -1260,6 +1267,7 @@
 				1255FC3E27F66AF6002029DE /* Destination.swift in Sources */,
 				1255FC4327F67102002029DE /* Router.swift in Sources */,
 				125974972843F61B001F1056 /* NoDataEmptyView.swift in Sources */,
+				127EDAE62870F104006ABE00 /* CategoriesScreenVM.swift in Sources */,
 				12C2D99328707E120063A85F /* TransactionCategoryModel.swift in Sources */,
 				1208F3BD285E2073001908D8 /* CoreDataMappable.swift in Sources */,
 				1208F3B9285E158F001908D8 /* TransactionStorage.swift in Sources */,

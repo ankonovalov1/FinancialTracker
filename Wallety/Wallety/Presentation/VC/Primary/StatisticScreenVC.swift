@@ -122,8 +122,6 @@ extension StatisticScreenVC: UICollectionViewDelegate, UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TitleViewCell.id, for: indexPath) as? TitleViewCell else { return UICollectionViewCell() }
-        cell.manageView()
-        cell.nameLabel.font = CustomFonts.light(14).roboto
         cell.nameLabel.text = array[indexPath.row]
         return cell
     }

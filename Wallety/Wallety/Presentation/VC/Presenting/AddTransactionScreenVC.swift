@@ -137,7 +137,6 @@ extension AddTransactionScreenVC: UICollectionViewDataSource, UICollectionViewDe
         else {
             return UICollectionViewCell()
         }
-        cell.manageView(backgroundColor: R.color.baseElementsBlue())
         return cell
     }
     

@@ -1,4 +1,5 @@
 import UIKit
+import Combine
 import SwiftEntryKit
 
 final class MainScreenVC: UIViewController {
@@ -9,6 +10,8 @@ final class MainScreenVC: UIViewController {
     private let mainScreenVM: MainScreenVM
     private let balanceVM: BalanceVM
     private let transactionsVM: TransactionsListVM
+    
+    private var observables = [AnyCancellable]()
     
     // MARK: - Lifecycle
     
@@ -75,12 +78,16 @@ final class MainScreenVC: UIViewController {
     
     private func configureCallbacks() {
         
-        balanceVM.balanceChanged = { [weak self] balance in
-            self?.mainView.balanceValueLabel.text = balance
+        let obsBalance = balanceVM.$currentBalance.assign(to: \.mainView.balanceValueLabel.text, on: self)
+        let obsState = transactionsVM.$transactionsState.sink { [weak self] state in
+            switch state {
+            case .empty:
+                self?.mainView.change(state: .empty)
+            case .hasData:
+                self?.mainView.transactionsTableView.reloadData()
+            }
         }
-        transactionsVM.transactionsLoaded = { _ in
-            self.mainView.transactionsTableView.reloadData()
-        }
+        observables.append(contentsOf: [obsBalance, obsState])
     }
     
 }

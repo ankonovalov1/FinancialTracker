@@ -61,6 +61,8 @@ final class TransactionCDRepository: CoreDataProtocol {
         save()
     }
     
+    func addMany(models: [NSMappingModel]) {}
+    
     func delete(model: NSMappingModel) {
         guard
             let model = model as? TransactionModel,

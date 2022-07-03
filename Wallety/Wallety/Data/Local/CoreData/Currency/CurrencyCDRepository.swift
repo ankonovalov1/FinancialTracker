@@ -58,6 +58,8 @@ final class CurrencyCDRepository: CoreDataProtocol {
         save()
     }
     
+    func addMany(models: [NSMappingModel]) {}
+    
     func delete(model: NSMappingModel) {
         guard
             let model = model as? CurrencyModel,

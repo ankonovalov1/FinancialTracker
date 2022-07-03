@@ -35,7 +35,7 @@ extension SJContainer {
                 resolver.resolve(CurrencyStorageProtocol.self)!,
                 resolver.resolve(TransactionStorageProtocol.self)!,
                 resolver.resolve(TransactionCategoryStorageProtocol.self)!
-            ])
+            ], userDefaults: UserDefaultsService())
         }.inObjectScope(.container)
     }
 }

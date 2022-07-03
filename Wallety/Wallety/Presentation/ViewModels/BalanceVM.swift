@@ -1,19 +1,12 @@
 import Foundation
+import Combine
 
-final class BalanceVM {
-    
-    // MARK: Callbacks
-    
-    var balanceChanged: ((String) -> Void)?
+final class BalanceVM: ObservableObject {
     
     // MARK: Internal properties
     
-    var numberBalance: Double = 0
-    var currentBalance: String {
-        get {
-            numberBalance.formatWith(digit: 2, locale: currentCurrency.locale) ?? "0"
-        }
-    }
+    @Published var currentBalance: String?
+    
     var currentCurrency = CurrencyModel(type: .dollar)
     
     // MARK: Private properties
@@ -36,17 +29,16 @@ final class BalanceVM {
     func viewDidLoad() {
         loadCurrency()
         loadBalance()
-        balanceChanged?(currentBalance)
     }
     
     private func loadBalance() {
         guard
             let balance = balanceInteractor.get()
         else {
-            numberBalance = 0
+            currentBalance = Double(0).formatWith(digit: 2, locale: currentCurrency.locale) ?? "0.00"
             return
         }
-        numberBalance = balance.value
+        currentBalance = balance.value.formatWith(digit: 2, locale: currentCurrency.locale) ?? "0.00"
     }
     
     private func loadCurrency() {

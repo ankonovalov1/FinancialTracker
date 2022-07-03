@@ -5,12 +5,18 @@ final class CategoriesScreenVC: UIViewController {
     // MARK: - Properties
     
     let mainView = CategoriesScreenView()
+    private let categoriesScreenVM: CategoriesScreenVM
     
     // MARK: - Lifecycle
     
-    init() {
+    init(categoriesScreenVM: CategoriesScreenVM) {
+        self.categoriesScreenVM = categoriesScreenVM
         super.init(nibName: nil, bundle: nil)
         self.hidesBottomBarWhenPushed = true
+    }
+    
+    deinit {
+        print("CategoriesScreenVC - was disposed")
     }
     
     required init?(coder: NSCoder) {
@@ -21,7 +27,11 @@ final class CategoriesScreenVC: UIViewController {
         super.viewDidLoad()
         self.view = mainView
         self.navigationItem.title = R.string.localizable.categories()
+        
         setupCollectionView()
+        setupCallbacks()
+        
+        categoriesScreenVM.load()
     }
     
     // MARK: - Private
@@ -36,17 +46,39 @@ final class CategoriesScreenVC: UIViewController {
         mainView.incomeCollectionView.register(TitleViewCell.self, forCellWithReuseIdentifier: TitleViewCell.id)
     }
     
+    private func setupCallbacks() {
+        categoriesScreenVM.categoriesLoaded = { [weak self] in
+            self?.mainView.incomeCollectionView.reloadData()
+            self?.mainView.spendingCollectionView.reloadData()
+        }
+    }
+    
 }
 
 extension CategoriesScreenVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        if mainView.incomeCollectionView == collectionView {
+            return categoriesScreenVM.incomeCategories.count
+        } else {
+            return categoriesScreenVM.expensesCategories.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TitleViewCell.id, for: indexPath) as? TitleViewCell else { return UICollectionViewCell() }
-        cell.manageView(backgroundColor: R.color.baseElementsBlue())
+        guard
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TitleViewCell.id, for: indexPath) as? TitleViewCell
+        else {
+            return UICollectionViewCell()
+        }
+        
+        var model: TransactionCategoryModel
+        if mainView.incomeCollectionView == collectionView {
+            model = categoriesScreenVM.incomeCategories[indexPath.item]
+        } else {
+            model = categoriesScreenVM.expensesCategories[indexPath.item]
+        }
+        cell.setup(model: model)
         return cell
     }
     

@@ -101,7 +101,7 @@ extension SettingsScreenVC: UITableViewDelegate, UITableViewDataSource {
                 self.navigationController?.pushViewController(NotificationScreenVC(), animated: true)
             }
             else if cellType == .categories {
-                self.navigationController?.pushViewController(CategoriesScreenVC(), animated: true)
+                self.navigationController?.pushViewController(CategoriesScreenVC(categoriesScreenVM: CategoriesScreenVM(transactionCategoriesInteractor: DIFactory.shared.resolve(type: TransactionCategoryInteractorProtocol.self))), animated: true)
             }
         }
         return cell

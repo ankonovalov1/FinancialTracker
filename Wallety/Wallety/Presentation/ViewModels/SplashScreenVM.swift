@@ -9,7 +9,8 @@ final class SplashScreenVM {
     
     // MARK: - Lifecycle
     
-    init(navigator: NavigatorProtocol, userDefaults: UserDefaultsProtocol) {
+    init(navigator: NavigatorProtocol,
+         userDefaults: UserDefaultsProtocol) {
         self.navigator = navigator
         self.userDefaults = userDefaults
     }

@@ -100,9 +100,26 @@
 "category not chosen" = "Не выбрана";
 "empty all small" = "пусто";
 
+// MARK: - Default category -
 
+// Income
+"salary category" = "Зарплата";
+"rent category" = "Рента";
+"savings category" = "Сбережения";
 
-
-
-
+// Expenses
+"transport category" = "Транспорт";
+"taxi category" = "Такси";
+"hobby category" = "Хобби";
+"internet category" = "Интернет и связь";
+"entertainment category" = "Развлечения";
+"cafe category" = "Кафе";
+"car category" = "Машина";
+"presents category" = "Подарки";
+"pets category" = "Животные";
+"clothing category" = "Одежда";
+"health category" = "Здоровье";
+"house category" = "Дом";
+"food category" = "Еда";
+"beauty and hygiene category" = "Красота и Гигиена";
 

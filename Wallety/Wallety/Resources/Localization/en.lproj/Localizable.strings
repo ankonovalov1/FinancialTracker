@@ -1,7 +1,7 @@
 // MARK: - Splash screen -
 
 "hello" = "Hello!";
-"control income and spendings" = "Control your income and expenses in a few clicks";
+"control income and spendings" = "Control your income and expense in a few clicks";
 
 // MARK: - Start Currency -
 
@@ -54,7 +54,7 @@
 "chart" = "Chart";
 "analysis" = "Analysis";
 "income" = "Income";
-"expenses" = "Expenses";
+"expenses" = "Expense";
 "no Operations" = "No operations";
 "for this period" = "for this period";
 
@@ -88,7 +88,7 @@
 
 "current balance" = "Current balance";
 "current balance capital" = "CURRENT BALANCE";
-"income and expenses" = "Income and expenses";
+"income and expenses" = "Income and expense";
 
 // MARK: - Add Transaction Screen -
 
@@ -98,3 +98,27 @@
 "category" = "Category";
 "category not chosen" = "not chosen";
 "empty all small" = "empty";
+
+// MARK: - Default category -
+
+// Income
+"salary category" = "Salary";
+"rent category" = "Rent";
+"savings category" = "Savings";
+
+// Expenses
+"transport category" = "Transport";
+"taxi category" = "Taxi";
+"hobby category" = "Hobby";
+"internet category" = "Internet and connection";
+"entertainment category" = "Entertainment";
+"cafe category" = "Cafe";
+"car category" = "Car";
+"presents category" = "Presents";
+"pets category" = "Pets";
+"clothing category" = "Clothing";
+"health category" = "Health";
+"house category" = "House";
+"food category" = "Food";
+"beauty and hygiene category" = "Beauty and Hygiene";
+

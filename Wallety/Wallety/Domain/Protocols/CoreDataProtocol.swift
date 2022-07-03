@@ -9,6 +9,7 @@ protocol CoreDataProtocol {
     func getAll() -> [NSManagedObject]?
     func getWith(predicate: String) -> [NSManagedObject]?
     func addOrUpdate(model: NSMappingModel)
+    func addMany(models: [NSMappingModel])
     func delete(model: NSMappingModel)
     func deleteAll()
 }
@@ -24,4 +25,5 @@ extension CoreDataProtocol {
             }
         }
     }
+
 }

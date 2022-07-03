@@ -11,6 +11,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         configureAppCenter()
         configureDI()
+        syncRepositoryAndStorages()
         
         return true
     }
@@ -39,6 +40,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func  configureDI() {
         DIFactory.shared.configure(persistenContainer: persistentContainer)
+    }
+    
+    private func syncRepositoryAndStorages() {
+        let dataSyncInteractor = DIFactory.shared.resolve(type: DataSyncable.self)
+        dataSyncInteractor.sync()
     }
 
     // MARK: - Core Data stack

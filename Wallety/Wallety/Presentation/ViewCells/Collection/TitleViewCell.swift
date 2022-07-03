@@ -9,7 +9,7 @@ final class TitleViewCell: UICollectionViewCell {
     // MARK: - Views
     
     lazy var nameLabel: UILabel = {
-        let view = UILabel(text: "Ho-",
+        let view = UILabel(text: "",
                            font: CustomFonts.light(10).roboto,
                            textColor: .white)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -21,6 +21,7 @@ final class TitleViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
+        manageView()
         addSubviews()
         addConstraints()
     }
@@ -29,11 +30,17 @@ final class TitleViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Setup
+    
+    func setup(model: TransactionCategoryModel) {
+        nameLabel.text = model.name
+    }
+    
     // MARK: - Manage views
     
-    func manageView(backgroundColor: UIColor? = .clear, cornerRadius: CGFloat = 8) {
-        self.backgroundColor = backgroundColor
-        self.layer.cornerRadius = cornerRadius
+    private func manageView() {
+        self.backgroundColor = R.color.baseElementsBlue()
+        self.layer.cornerRadius = 8
     }
     
     private func addSubviews() {
