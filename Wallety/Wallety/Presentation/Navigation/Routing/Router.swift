@@ -24,12 +24,15 @@ struct MainTabScreenRouter: RouterProtocol {
         let mainScreenRouter = MainScreenRouter()
         let mainScreenVC = mainScreenRouter.configure()
         
+        let settingsScreenRouter = SettingsScreenRouter()
+        let settingsScreenVC = settingsScreenRouter.configure()
+        
         let vc = MainTabController()
         vc.setViewControllers([
             mainScreenVC,
             StatisticScreenVC(),
             ProfileScreenVC(),
-            UINavigationController(rootViewController:  SettingsScreenVC())
+            settingsScreenVC
         ], animated: false)
         return vc
     }
@@ -124,4 +127,51 @@ struct AddTransactionScreenRouter: RouterProtocol {
         return AddTransactionScreenVC(viewModel: viewModel)
     }
     
+}
+
+struct SettingsScreenRouter: RouterProtocol {
+    
+    func configure() -> UIViewController {
+        guard
+            let navigationController = sceneDelegate().navigationController,
+            let factory = sceneDelegate().routerFactory
+        else { return UIViewController() }
+        
+        let navigator = Navigator(navigationController: navigationController, factory: factory)
+        let viewModel = SettingsScreenVM(navigator: navigator)
+        
+        return UINavigationController(rootViewController: SettingsScreenVC(viewModel: viewModel))
+    }
+}
+
+struct NotificationsScreenRouter: RouterProtocol {
+    
+    func configure() -> UIViewController {
+        return NotificationScreenVC()
+    }
+}
+
+struct CategoriesScreenRouter: RouterProtocol {
+    
+    func configure() -> UIViewController {
+        
+        let interactor = DIFactory.shared.resolve(type: TransactionCategoryInteractorProtocol.self)
+        let categoriesScreenVM = CategoriesScreenVM(transactionCategoriesInteractor: interactor)
+        
+        return CategoriesScreenVC(categoriesScreenVM: categoriesScreenVM)
+    }
+}
+
+struct PrivacyPolicyScreenRouter: RouterProtocol {
+    
+    func configure() -> UIViewController {
+        return PrivacyPolicyVC()
+    }
+}
+
+struct AboutScreenRouter: RouterProtocol {
+    
+    func configure() -> UIViewController {
+        return AboutScreenVC()
+    }
 }

@@ -5,12 +5,14 @@ final class SettingsScreenVC: UIViewController {
     // MARK: - Lifecycle
     
     let mainView = SettingsScreenView()
-    let viewModel = SettingsScreenVM()
+    let viewModel: SettingsScreenVM
     
     // MARK: - Lifecycle
     
-    init() {
+    init(viewModel: SettingsScreenVM) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        
         configureTabBar()
         configureTableView()
     }
@@ -87,10 +89,10 @@ extension SettingsScreenVC: UITableViewDelegate, UITableViewDataSource {
         cell.setup(model: models.settings[indexPath.row])
         cell.navigate = { cellType in
             if cellType == .about {
-                self.navigationController?.pushViewController(AboutScreenVC(), animated: true)
+                self.viewModel.push(to: .aboutApp, from: self.navigationController)
             }
             else if cellType == .policy {
-                self.navigationController?.pushViewController(PrivacyPolicyVC(), animated: true)
+                self.viewModel.push(to: .privacyPolicy, from: self.navigationController)
             }
             else if cellType == .mark {
                 guard let url = URL(string: "https://www.apple.com/app-store/")
@@ -98,10 +100,10 @@ extension SettingsScreenVC: UITableViewDelegate, UITableViewDataSource {
                 UIApplication.shared.open(url)
             }
             else if cellType == .notification {
-                self.navigationController?.pushViewController(NotificationScreenVC(), animated: true)
+                self.viewModel.push(to: .notifications, from: self.navigationController)
             }
             else if cellType == .categories {
-                self.navigationController?.pushViewController(CategoriesScreenVC(categoriesScreenVM: CategoriesScreenVM(transactionCategoriesInteractor: DIFactory.shared.resolve(type: TransactionCategoryInteractorProtocol.self))), animated: true)
+                self.viewModel.push(to: .categories, from: self.navigationController)
             }
         }
         return cell

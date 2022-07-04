@@ -22,6 +22,18 @@ extension NavigatorProtocol {
         navigationController?.present(vc, animated: true)
     }
     
+    func push(_ destination: Destination, params: [String: Any]? = nil, from: UINavigationController? = nil) {
+        let vc = createVC(from: destination)
+        if let params = params {
+            vc.setViewModel(params: params)
+        }
+        if let from = from {
+            from.pushViewController(vc, animated: true)
+        } else {
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
     func setTransitionStyle(interval: CFTimeInterval, timingFunc: CAMediaTimingFunction, type: CATransitionType) {
         let animation = CATransition()
         animation.duration = interval

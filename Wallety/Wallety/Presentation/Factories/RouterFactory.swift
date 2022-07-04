@@ -20,6 +20,14 @@ struct RouterFactory: RouterFactoryProtocol {
             return MainTabScreenRouter()
         case .addTransaction:
             return AddTransactionScreenRouter()
+        case .notifications:
+            return NotificationsScreenRouter()
+        case .categories:
+            return CategoriesScreenRouter()
+        case .privacyPolicy:
+            return PrivacyPolicyScreenRouter()
+        case .aboutApp:
+            return AboutScreenRouter()
         }
     }
     

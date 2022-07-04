@@ -1,9 +1,9 @@
-import Foundation
+import UIKit
 
 final class DefaultModelGenerator {
     
     static func generateDefaultCategories() -> Set<TransactionCategoryModel> {
-        let defSet: Set<TransactionCategoryModel> = [
+        return [
             // Incomes
             .init(id: UUID().uuidString,
                   name: R.string.localizable.salaryCategory(),
@@ -75,7 +75,24 @@ final class DefaultModelGenerator {
                   type: .expenses,
                   image: nil)
         ]
-        return defSet
+    }
+    
+    static func generateSettingsVM() -> [SettingVM] {
+        return [
+            .init(title: "Styling", settings: [
+                .init(image: UIImage(resource: R.image.themeBrushWhite)!, cellType: .theme),
+                .init(image: UIImage(resource: R.image.dollarSquareWhite)!, cellType: .currency)
+            ]),
+            .init(title: "Settings", settings: [
+                .init(image: UIImage(resource: R.image.notificationRingWhite)!, cellType: .notification),
+                .init(image: UIImage(resource: R.image.searchCategoryWhite)!, cellType: .categories)
+            ]),
+            .init(title: "Additional", settings: [
+                .init(image: UIImage(resource: R.image.likeDislikeWhite)!, cellType: .mark),
+                .init(image: UIImage(resource: R.image.shielPrivacyWhite)!, cellType: .policy),
+                .init(image: UIImage(resource: R.image.aboutInfoWhite)!, cellType: .about)
+            ])
+        ]
     }
     
 }

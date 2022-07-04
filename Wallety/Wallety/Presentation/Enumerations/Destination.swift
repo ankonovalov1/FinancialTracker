@@ -9,6 +9,10 @@ enum Destination {
     case main
     case mainTabScreen
     case addTransaction
+    case notifications
+    case categories
+    case privacyPolicy
+    case aboutApp
 
 }
 
