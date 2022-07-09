@@ -84,6 +84,7 @@ final class MainScreenVC: UIViewController {
             case .empty:
                 self?.mainView.change(state: .empty)
             case .hasData:
+                self?.mainView.change(state: .hasData)
                 self?.mainView.transactionsTableView.reloadData()
             }
         }
@@ -99,7 +100,7 @@ extension MainScreenVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return 60
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -53,7 +53,7 @@ final class TransactionCategoryCDRepository: CoreDataProtocol {
         
         transactionCategory?.id = model.id
         transactionCategory?.name = model.name
-        transactionCategory?.image = model.image
+        transactionCategory?.image =  model.image?.jpegData(compressionQuality: 1)
         transactionCategory?.type = model.type.rawValue
         transactionCategory?.transactions = model.transactions as NSSet
         
@@ -69,7 +69,7 @@ final class TransactionCategoryCDRepository: CoreDataProtocol {
             let newCategory = TransactionCategory(context: context)
             newCategory.id = model.id
             newCategory.name = model.name
-            newCategory.image = model.image
+            newCategory.image = model.image?.jpegData(compressionQuality: 1)
             newCategory.type = model.type.rawValue
             newCategory.transactions = model.transactions as NSSet
         }

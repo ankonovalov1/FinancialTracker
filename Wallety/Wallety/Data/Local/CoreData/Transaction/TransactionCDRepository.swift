@@ -55,8 +55,13 @@ final class TransactionCDRepository: CoreDataProtocol {
         transaction?.date = model.date
         transaction?.currency = model.currency
         transaction?.value = model.value
-        transaction?.category = model.category
         transaction?.type = model.type.rawValue
+        
+        let fetch = TransactionCategory.fetchRequest()
+        fetch.predicate = NSPredicate(format: "id = %@", model.category.id)
+        if let categories = try? context.fetch(fetch), let category = categories.first {
+            transaction?.category = category
+        }
         
         save()
     }

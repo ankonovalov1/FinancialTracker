@@ -13,7 +13,7 @@ final class MainTabController: UITabBarController {
         super.setViewControllers(viewControllers, animated: animated)
         
         viewControllers?.forEach{
-            $0.tabBarItem.imageInsets = UIEdgeInsets(top: 5, left: 0, bottom: 0, right: 0)
+            $0.tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: 0, right: 0)
         }
     }
     

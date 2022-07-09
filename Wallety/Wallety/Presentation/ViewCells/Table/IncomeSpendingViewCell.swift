@@ -8,22 +8,30 @@ final class IncomeSpendingViewCell: UITableViewCell {
     
     // MARK: - Views
     
+    lazy var categoryImage: UIImageView = {
+        let view = UIImageView()
+        view.contentMode = .scaleAspectFit
+        return view
+    }()
+    
     lazy var typeLabel: UILabel = {
-        let label = UILabel(text: "", font: CustomFonts.light(8).roboto, textColor: .white)
-        label.textAlignment = .center
-        return label
+        let view = UILabel(text: "", font: CustomFonts.regular(12).roboto, textColor: .white)
+        view.textAlignment = .left
+        view.numberOfLines = 1
+        view.minimumScaleFactor = 0.5
+        return view
     }()
     
     lazy var valueLabel: UILabel = {
-        let label = UILabel(text: "", font: CustomFonts.light(14).roboto, textColor: .white)
-        label.textAlignment = .center
-        return label
+        let view = UILabel(text: "", font: CustomFonts.medium(16).roboto, textColor: .white)
+        view.textAlignment = .right
+        return view
     }()
     
     lazy var dateLabel: UILabel = {
-        let label = UILabel(text: "", font: CustomFonts.light(8).roboto, textColor: .white)
-        label.textAlignment = .center
-        return label
+        let view = UILabel(text: "", font: CustomFonts.regular(10).roboto, textColor: .white)
+        view.textAlignment = .right
+        return view
     }()
     
     lazy var behindView: UIView = {
@@ -35,12 +43,24 @@ final class IncomeSpendingViewCell: UITableViewCell {
     }()
     
     lazy var stackForLabels: UIStackView = {
-        let stack = UIStackView(arrangedSubviews: [typeLabel, valueLabel, dateLabel])
-        stack.axis = .horizontal
-        stack.backgroundColor = .clear
-        stack.spacing = 0
-        stack.distribution = .fillEqually
-        return stack
+        let view = UIStackView(arrangedSubviews: [dateLabel, valueLabel])
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.axis = .vertical
+        view.backgroundColor = .clear
+        view.spacing = 10
+        view.distribution = .fillEqually
+        
+        return view
+    }()
+    
+    lazy var stackForImageAndLabel: UIStackView = {
+        let view = UIStackView(arrangedSubviews: [categoryImage,typeLabel])
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.axis = .horizontal
+        view.backgroundColor = .clear
+        view.spacing = 15
+        view.distribution = .fillProportionally
+        return view
     }()
     
     // MARK:  - Lifecycle
@@ -59,6 +79,7 @@ final class IncomeSpendingViewCell: UITableViewCell {
     // MARK: Internal
     
     func configure(transaction: TransactionModel) {
+        categoryImage.image = transaction.category.image
         typeLabel.text = transaction.category.name
         valueLabel.text = transaction.value.formatWith()
         dateLabel.text = String.from(date: transaction.date, format: "YYYY, MMM d")
@@ -78,21 +99,33 @@ final class IncomeSpendingViewCell: UITableViewCell {
     }
     
     private func addSubviews() {
-        behindView.addSubview(stackForLabels)
+        [
+            stackForImageAndLabel,
+            stackForLabels
+        ].forEach {
+            behindView.addSubview($0)
+        }
         addSubview(behindView)
     }
     
     private func addConstraints() {
         
         behindView.snp.makeConstraints { make in
-            make.top.equalTo(self).offset(5)
-            make.left.equalTo(self)
-            make.bottom.equalTo(self).offset(-5)
-            make.right.equalTo(self)
+            make.top.left.bottom.right.equalTo(self)
+        }
+        
+        stackForImageAndLabel.snp.makeConstraints { make in
+            make.left.equalTo(behindView).offset(15)
+            make.right.equalTo(stackForLabels.snp.left)
+            make.centerY.equalTo(behindView)
+            make.height.equalTo(32)
         }
         
         stackForLabels.snp.makeConstraints { make in
-            make.top.left.bottom.right.equalTo(behindView)
+            make.right.equalTo(behindView).offset(-15)
+            make.centerY.equalTo(behindView)
+            make.height.equalTo(40)
+            make.width.greaterThanOrEqualTo(110)
         }
         
     }

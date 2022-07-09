@@ -7,7 +7,7 @@ final class MainScreenView: UIView {
     
     lazy var currentBalanceLabel: UILabel = {
         let label = UILabel(text: R.string.localizable.currentBalanceCapital(),
-                            font: CustomFonts.light(14).roboto,
+                            font: CustomFonts.bold(22).roboto,
                             textColor: .white)
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -15,7 +15,7 @@ final class MainScreenView: UIView {
     }()
     
     lazy var balanceValueLabel: UILabel = {
-        let label = UILabel(text: "", font: CustomFonts.medium(40).roboto, textColor: .white)
+        let label = UILabel(text: "", font: CustomFonts.medium(36).roboto, textColor: .white)
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -82,7 +82,7 @@ final class MainScreenView: UIView {
     
     lazy var incomeSpendingLabel: UILabel = {
         let label = UILabel()
-        let font = CustomFonts.light(14).roboto
+        let font = CustomFonts.regular(14).roboto
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = R.string.localizable.incomeAndExpenses()
         label.textColor = .white
@@ -90,12 +90,29 @@ final class MainScreenView: UIView {
         return label
     }()
     
-    lazy var dateButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle(R.string.localizable.today(), for: .normal)
-        button.setTitleColor(R.color.baseElementsBlue(), for: .normal)
-        return button
+    lazy var dateStack: UIStackView = {
+        let view = UIStackView(arrangedSubviews: [dateLabel, calendarImage])
+        view.axis = .horizontal
+        view.distribution = .fillProportionally
+        view.spacing = 0
+        return view
+    }()
+    
+    lazy var dateLabel: UILabel = {
+        let view = UILabel()
+        let font = CustomFonts.bold(12).roboto
+        view.textAlignment = .right
+        view.text = "TODAY"
+        view.textColor = R.color.baseElementsBlue()
+        view.font = font
+        return view
+    }()
+    
+    lazy var calendarImage: UIImageView = {
+        let view = UIImageView(image: UIImage(systemName: "calendar"))
+        view.tintColor = R.color.baseElementsBlue()
+        view.contentMode = .scaleAspectFit
+        return view
     }()
     
     lazy var transactionsTableView: UITableView = {
@@ -162,7 +179,7 @@ final class MainScreenView: UIView {
             stackForInfoViews,
             lineView,
             incomeSpendingLabel,
-            dateButton,
+            dateStack,
             transactionsTableView,
             emptyView
         ].forEach {
@@ -213,7 +230,7 @@ final class MainScreenView: UIView {
             make.height.equalTo(15)
         }
         
-        dateButton.snp.makeConstraints { make in
+        dateStack.snp.makeConstraints { make in
             make.top.equalTo(stackForInfoViews.snp.bottom).offset(37)
             make.right.equalTo(self.snp.right).offset(-35)
             make.width.equalTo(90)
@@ -222,9 +239,9 @@ final class MainScreenView: UIView {
         
         transactionsTableView.snp.makeConstraints { make in
             make.top.equalTo(incomeSpendingLabel.snp.bottom).offset(18)
-            make.left.equalTo(self.snp.left).offset(30)
+            make.left.equalTo(self.snp.left).offset(35)
             make.bottom.equalTo(self.snp.bottom)
-            make.right.equalTo(self.snp.right).offset(-30)
+            make.right.equalTo(self.snp.right).offset(-35)
         }
         
         emptyView.snp.makeConstraints { make in

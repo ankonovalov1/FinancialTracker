@@ -1,17 +1,18 @@
 import Foundation
+import UIKit
 
 struct TransactionCategoryModel: NSMappingModel, Hashable {
     
     let id: String
     let name: String
     let type: TransactionType
-    let image: Data?
+    let image: UIImage?
     var transactions = Set<TransactionModel>()
     
     init(id: String,
          name: String,
          type: TransactionType,
-         image: Data?) {
+         image: UIImage?) {
         self.id = id
         self.name = name
         self.image = image
@@ -22,7 +23,13 @@ struct TransactionCategoryModel: NSMappingModel, Hashable {
         id = model.id
         name = model.name
         type = model.type == "income" ? .income : .expenses
-        image = model.image
+        
+        guard let imageData = model.image else {
+            image = nil
+            return
+        }
+
+        image = UIImage(data: imageData)
     }
     
     mutating func insert(transaction: TransactionModel) {

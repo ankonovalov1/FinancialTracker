@@ -1,5 +1,6 @@
 import Foundation
 import Combine
+import UIKit
 
 final class TransactionsListVM: ObservableObject {
     
@@ -11,7 +12,15 @@ final class TransactionsListVM: ObservableObject {
     // MARK: - Properties
     
     let transactionInteractor: TransactionInteractorProtocol
-    var transactions = [TransactionModel]()
+    var transactions: [TransactionModel] = [
+    
+        .init(id: "1",
+              value: 4340040.25,
+              category: .init(id: "1", name: "CafeCafeCafeCafeCafe11111", type: .income, image: UIImage(systemName: "cart")),
+              currency: "$",
+              date: Date(),
+              type: .income)
+    ]
     @Published var transactionsState: State = .empty
     
     // MARK: - Lifecycle
@@ -27,7 +36,7 @@ final class TransactionsListVM: ObservableObject {
     // MARK: - Internal
     
     func load() {
-        transactions = Array(transactionInteractor.getAll())
+        //transactions = Array(transactionInteractor.getAll())
         if transactions.isEmpty {
             transactionsState = .empty
         } else {

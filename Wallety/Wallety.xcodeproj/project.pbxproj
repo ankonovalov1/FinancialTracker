@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		120201022879B62500A4F412 /* SFSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120201012879B62500A4F412 /* SFSymbols.swift */; };
 		1208F3B0285E128D001908D8 /* TransactionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1208F3AF285E128D001908D8 /* TransactionInteractor.swift */; };
 		1208F3B2285E12AC001908D8 /* CurrencyInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1208F3B1285E12AC001908D8 /* CurrencyInteractor.swift */; };
 		1208F3B5285E155A001908D8 /* BalanceStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1208F3B4285E155A001908D8 /* BalanceStorage.swift */; };
@@ -162,6 +163,7 @@
 
 /* Begin PBXFileReference section */
 		04C81E6607564A6C96BA94D9 /* Pods_Wallety.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wallety.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		120201012879B62500A4F412 /* SFSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbols.swift; sourceTree = "<group>"; };
 		1208F3AF285E128D001908D8 /* TransactionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionInteractor.swift; sourceTree = "<group>"; };
 		1208F3B1285E12AC001908D8 /* CurrencyInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyInteractor.swift; sourceTree = "<group>"; };
 		1208F3B4285E155A001908D8 /* BalanceStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceStorage.swift; sourceTree = "<group>"; };
@@ -501,6 +503,7 @@
 				12482D8727F5F14F00D292CA /* Assets.xcassets */,
 				12482DA227F5FC9C00D292CA /* Images.xcassets */,
 				12482DA427F5FCAF00D292CA /* Colors.xcassets */,
+				120201012879B62500A4F412 /* SFSymbols.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1268,6 +1271,7 @@
 				1255FC4327F67102002029DE /* Router.swift in Sources */,
 				125974972843F61B001F1056 /* NoDataEmptyView.swift in Sources */,
 				127EDAE62870F104006ABE00 /* CategoriesScreenVM.swift in Sources */,
+				120201022879B62500A4F412 /* SFSymbols.swift in Sources */,
 				12C2D99328707E120063A85F /* TransactionCategoryModel.swift in Sources */,
 				1208F3BD285E2073001908D8 /* CoreDataMappable.swift in Sources */,
 				1208F3B9285E158F001908D8 /* TransactionStorage.swift in Sources */,

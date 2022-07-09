@@ -51,7 +51,7 @@
 
 // MARK: - Statistic -
 
-"statistic" = "Аналитика";
+"statistic" = "Статистика";
 "chart" = "График";
 "analysis" = "Анализ";
 "income" = "Доходы";

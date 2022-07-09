@@ -4,14 +4,14 @@ struct TransactionModel: NSMappingModel, Hashable {
     
     let id: String
     let value: Double
-    let category: TransactionCategory
+    let category: TransactionCategoryModel
     let currency: String
     let date: Date
     let type: TransactionType
     
     init(id: String,
     value: Double,
-    category: TransactionCategory,
+    category: TransactionCategoryModel,
     currency: String,
     date: Date,
     type: TransactionType) {
@@ -26,7 +26,7 @@ struct TransactionModel: NSMappingModel, Hashable {
     init(model: Transaction) {
         id = model.id
         value = model.value
-        category = model.category
+        category = .init(model: model.category)
         currency = model.currency
         date = model.date
         type = model.type == "income" ? .income : .expenses
