@@ -99,6 +99,15 @@
 "category not chosen" = "not chosen";
 "empty all small" = "empty";
 
+// MARK: - Create Category Screen -
+
+"create category" = "Create category";
+"edit category" = "Edit category";
+"choose color" = "Choose color";
+"choose icon" = "Choose icon";
+"name of category" = "Name";
+"max symbols count " = "%@ characters maximum";
+
 // MARK: - Default category -
 
 // Income

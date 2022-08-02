@@ -35,14 +35,14 @@ struct BalanceValidator: ValidationProtocol {
     }
     
     private func checkAllowedSymbols(value: String) -> Bool {
-        let allowedCharacters = CharacterSet(charactersIn: "0123456789.")
+        let allowedCharacters = CharacterSet(charactersIn: "0123456789.,")
         let characterSet = CharacterSet(charactersIn: value)
         return allowedCharacters.isSuperset(of: characterSet)
     }
     
     private func checkNumberCorrectness(fullValue: String?, value: String) -> Bool {
         if let fullValue = fullValue {
-            if fullValue.count == 14 && value == "." {
+            if fullValue.count == 14 && isDelimeter(value) {
                 return false
             }
             if fullValue.count == 15 && value != "" {
@@ -54,20 +54,20 @@ struct BalanceValidator: ValidationProtocol {
     
     private func checkMaxOf(fullValue: String?, value: String, with limit: Int = 15) -> Bool {
         if let fullValue = fullValue {
-            if fullValue.isEmpty && value == "." {
+            if fullValue.isEmpty && isDelimeter(value) {
                 return false
             }
-            if fullValue == "0" && value != "." {
+            if fullValue == "0" && !isDelimeter(value) {
                 if value == "" {
                     return true
                 }
                 return false
             }
-            if fullValue.contains(".") && value == "." {
+            if let _ = isContainDelimeter(fullValue), isDelimeter(value) {
                 return false
             }
-            if fullValue.contains(".") && value != "" {
-                if let range = fullValue.range(of: ".") {
+            if let delimeter = isContainDelimeter(fullValue), value != "" {
+                if let range = fullValue.range(of: delimeter) {
                     let valueInRange = fullValue[range.upperBound...]
                     if valueInRange.count > 1 {
                         return false
@@ -75,11 +75,24 @@ struct BalanceValidator: ValidationProtocol {
                 }
             }
         } else {
-            if value != "." {
+            if !isDelimeter(value) {
                 return false
             }
         }
         return true
+    }
+    
+    private func isDelimeter(_ value: String) -> Bool {
+        return value == "." || value == ","
+    }
+    
+    private func isContainDelimeter(_ fullValue: String) -> String? {
+        if fullValue.contains(".") {
+            return "."
+        } else if fullValue.contains(",") {
+            return ","
+        }
+        return nil
     }
     
 }

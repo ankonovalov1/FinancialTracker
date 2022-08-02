@@ -49,7 +49,8 @@ final class MainScreenVC: UIViewController {
     }
     
     @objc private func increaseTapped() {
-        mainScreenVM.openAddTransaction(with: .income)
+        present(CreateCategoryVC(), animated: true)
+        //mainScreenVM.openAddTransaction(with: .income)
     }
     
     @objc private func decreaseTapped() {

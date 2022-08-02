@@ -36,7 +36,7 @@ final class StartBalanceView: UIView {
         view.textColor = .white
         view.keyboardType = .decimalPad
         view.layer.borderWidth = 1
-        view.layer.cornerRadius = 10
+        view.layer.cornerRadius = 12
         view.layer.borderColor = R.color.baseElementsBlue()?.cgColor
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -99,7 +99,7 @@ final class StartBalanceView: UIView {
     // MARK: - Internal functions
     
     func updateHeight(height: CGFloat, toNormal: Bool) {
-        UIView.animate(withDuration: 0.3, delay: 0) {
+        UIView.transition(with: self, duration: 0.3) {
             self.walletImage.snp.updateConstraints { make in
                 make.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(30 - height)
             }

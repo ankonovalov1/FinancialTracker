@@ -17,6 +17,9 @@
 		1208F3BD285E2073001908D8 /* CoreDataMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1208F3BC285E2073001908D8 /* CoreDataMappable.swift */; };
 		1208F3C0285E2C25001908D8 /* StoragesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1208F3BF285E2C25001908D8 /* StoragesProtocols.swift */; };
 		1208F3C2285E516B001908D8 /* UIKit + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1208F3C1285E516B001908D8 /* UIKit + Extensions.swift */; };
+		123DF8A3288C45FB00CFBB5F /* CreateCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123DF8A2288C45FB00CFBB5F /* CreateCategoryVC.swift */; };
+		123DF8A5288C463600CFBB5F /* CreateCategoryScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123DF8A4288C463600CFBB5F /* CreateCategoryScreenView.swift */; };
+		123DF8A7288D9E4E00CFBB5F /* SimpleCircleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123DF8A6288D9E4E00CFBB5F /* SimpleCircleViewCell.swift */; };
 		12482D7C27F5F14E00D292CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12482D7B27F5F14E00D292CA /* AppDelegate.swift */; };
 		12482D7E27F5F14E00D292CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12482D7D27F5F14E00D292CA /* SceneDelegate.swift */; };
 		12482D8027F5F14E00D292CA /* StartBalanceScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12482D7F27F5F14E00D292CA /* StartBalanceScreenVC.swift */; };
@@ -51,6 +54,12 @@
 		125DA0DC286D18710044BEA5 /* NavigationParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125DA0DB286D18710044BEA5 /* NavigationParams.swift */; };
 		127EDAE62870F104006ABE00 /* CategoriesScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127EDAE52870F104006ABE00 /* CategoriesScreenVM.swift */; };
 		1294BF7D284B8677004AFE0D /* StartCurrencyScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1294BF7C284B8677004AFE0D /* StartCurrencyScreenVM.swift */; };
+		12A5B5E72899AD6F00A80FEB /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A5B5E62899AD6F00A80FEB /* ImageViewCell.swift */; };
+		12A5B5E92899B0DD00A80FEB /* CreateCategoryScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A5B5E82899B0DD00A80FEB /* CreateCategoryScreenVM.swift */; };
+		12A5B5EB2899B17300A80FEB /* ColorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A5B5EA2899B17300A80FEB /* ColorViewModel.swift */; };
+		12A5B5ED2899B18100A80FEB /* CategoryImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A5B5EC2899B18100A80FEB /* CategoryImageViewModel.swift */; };
+		12A5B5EF2899B60600A80FEB /* SFColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A5B5EE2899B60600A80FEB /* SFColors.swift */; };
+		12A5B5F12899CDAE00A80FEB /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A5B5F02899CDAE00A80FEB /* CategoryView.swift */; };
 		12B468F1284B8F3D0023E2D2 /* CoreDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B468F0284B8F3D0023E2D2 /* CoreDataProtocol.swift */; };
 		12B4CACA283EA4F700D775B2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 12B4CACC283EA4F700D775B2 /* Localizable.strings */; };
 		12B4CACF283EA53400D775B2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 12B4CAD1283EA53400D775B2 /* Localizable.strings */; };
@@ -173,6 +182,9 @@
 		1208F3BC285E2073001908D8 /* CoreDataMappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataMappable.swift; sourceTree = "<group>"; };
 		1208F3BF285E2C25001908D8 /* StoragesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoragesProtocols.swift; sourceTree = "<group>"; };
 		1208F3C1285E516B001908D8 /* UIKit + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit + Extensions.swift"; sourceTree = "<group>"; };
+		123DF8A2288C45FB00CFBB5F /* CreateCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoryVC.swift; sourceTree = "<group>"; };
+		123DF8A4288C463600CFBB5F /* CreateCategoryScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoryScreenView.swift; sourceTree = "<group>"; };
+		123DF8A6288D9E4E00CFBB5F /* SimpleCircleViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCircleViewCell.swift; sourceTree = "<group>"; };
 		12482D7827F5F14E00D292CA /* Wallety.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wallety.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12482D7B27F5F14E00D292CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12482D7D27F5F14E00D292CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -209,6 +221,12 @@
 		125DA0DB286D18710044BEA5 /* NavigationParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationParams.swift; sourceTree = "<group>"; };
 		127EDAE52870F104006ABE00 /* CategoriesScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesScreenVM.swift; sourceTree = "<group>"; };
 		1294BF7C284B8677004AFE0D /* StartCurrencyScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCurrencyScreenVM.swift; sourceTree = "<group>"; };
+		12A5B5E62899AD6F00A80FEB /* ImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCell.swift; sourceTree = "<group>"; };
+		12A5B5E82899B0DD00A80FEB /* CreateCategoryScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoryScreenVM.swift; sourceTree = "<group>"; };
+		12A5B5EA2899B17300A80FEB /* ColorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewModel.swift; sourceTree = "<group>"; };
+		12A5B5EC2899B18100A80FEB /* CategoryImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryImageViewModel.swift; sourceTree = "<group>"; };
+		12A5B5EE2899B60600A80FEB /* SFColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFColors.swift; sourceTree = "<group>"; };
+		12A5B5F02899CDAE00A80FEB /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		12B468F0284B8F3D0023E2D2 /* CoreDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProtocol.swift; sourceTree = "<group>"; };
 		12B4CACB283EA4F700D775B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		12B4CAD0283EA53400D775B2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -437,7 +455,7 @@
 				1255FC3C27F66A6F002029DE /* Enumerations */,
 				1255FC3927F6681B002029DE /* Navigation */,
 				12F1D6E427F62B4F0003B10C /* ViewModels */,
-				12F1D6E127F61A3C0003B10C /* CustomControls */,
+				12F1D6E127F61A3C0003B10C /* CustomViews */,
 				12482D9727F5FBB900D292CA /* Views */,
 				12482D9627F5FBB000D292CA /* VC */,
 			);
@@ -452,6 +470,7 @@
 				121A4349283D60AC00C54D9A /* Launching */,
 				121A4348283D608200C54D9A /* Settings */,
 				12C1169F2806AC2600D6B8C0 /* MainTabController.swift */,
+				123DF8A2288C45FB00CFBB5F /* CreateCategoryVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -467,6 +486,7 @@
 				12C1169A2805D50100D6B8C0 /* Settings */,
 				12C116872804284800D6B8C0 /* Profile */,
 				12C1167127FFFD1400D6B8C0 /* Main */,
+				123DF8A4288C463600CFBB5F /* CreateCategoryScreenView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -504,6 +524,7 @@
 				12482DA227F5FC9C00D292CA /* Images.xcassets */,
 				12482DA427F5FCAF00D292CA /* Colors.xcassets */,
 				120201012879B62500A4F412 /* SFSymbols.swift */,
+				12A5B5EE2899B60600A80FEB /* SFColors.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -954,6 +975,8 @@
 			isa = PBXGroup;
 			children = (
 				12E3F95F281035B7003CBF9F /* TitleViewCell.swift */,
+				123DF8A6288D9E4E00CFBB5F /* SimpleCircleViewCell.swift */,
+				12A5B5E62899AD6F00A80FEB /* ImageViewCell.swift */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
@@ -992,15 +1015,16 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
-		12F1D6E127F61A3C0003B10C /* CustomControls */ = {
+		12F1D6E127F61A3C0003B10C /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
 				12E3F961281057D8003CBF9F /* CollectionView */,
 				12F1D6E227F61A6C0003B10C /* WTextField.swift */,
 				12F1D6E727F62EBE0003B10C /* WButton.swift */,
 				12C1167427FFFED600D6B8C0 /* BalanceInfoView.swift */,
+				12A5B5F02899CDAE00A80FEB /* CategoryView.swift */,
 			);
-			path = CustomControls;
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		12F1D6E427F62B4F0003B10C /* ViewModels */ = {
@@ -1017,6 +1041,9 @@
 				12F15505285E85B800F87D9B /* AddTransactionVM.swift */,
 				12C2D9AF2870CEB20063A85F /* TransactionsListVM.swift */,
 				127EDAE52870F104006ABE00 /* CategoriesScreenVM.swift */,
+				12A5B5E82899B0DD00A80FEB /* CreateCategoryScreenVM.swift */,
+				12A5B5EA2899B17300A80FEB /* ColorViewModel.swift */,
+				12A5B5EC2899B18100A80FEB /* CategoryImageViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -1219,17 +1246,20 @@
 				12C1169E2805E01200D6B8C0 /* SettingsViewCell.swift in Sources */,
 				12E3F95C28102B7A003CBF9F /* CategoriesScreenView.swift in Sources */,
 				12C116862800617700D6B8C0 /* SettingsScreenVC.swift in Sources */,
+				12A5B5EB2899B17300A80FEB /* ColorViewModel.swift in Sources */,
 				12C1167527FFFED600D6B8C0 /* BalanceInfoView.swift in Sources */,
 				12507DCD285927FC009C38DC /* Transaction.swift in Sources */,
 				12507DD728592AD2009C38DC /* TransactionType.swift in Sources */,
 				12DAA53E284FF4DE0093F9FD /* CurrencyModel.swift in Sources */,
 				12482D7C27F5F14E00D292CA /* AppDelegate.swift in Sources */,
+				12A5B5E92899B0DD00A80FEB /* CreateCategoryScreenVM.swift in Sources */,
 				12C116A02806AC2600D6B8C0 /* MainTabController.swift in Sources */,
 				12F15506285E85B800F87D9B /* AddTransactionVM.swift in Sources */,
 				12E4D9BC284B9F9200CF6FC9 /* BalanceCDRepository.swift in Sources */,
 				12E4D9B9284B95C300CF6FC9 /* Balance.swift in Sources */,
 				12C1169C2805D53600D6B8C0 /* SettingsScreenView.swift in Sources */,
 				12C2D98E28707B620063A85F /* TransactionCategory.swift in Sources */,
+				123DF8A7288D9E4E00CFBB5F /* SimpleCircleViewCell.swift in Sources */,
 				12C1167B280019DD00D6B8C0 /* IncomeSpendingViewCell.swift in Sources */,
 				12E4D9BE284BA3C100CF6FC9 /* NSMappingModel.swift in Sources */,
 				12C5E73D285E65E60010895D /* AddTransactionScreenVC.swift in Sources */,
@@ -1237,6 +1267,7 @@
 				12C1167327FFFD3500D6B8C0 /* MainScreenView.swift in Sources */,
 				12E4D9C5284BB01900CF6FC9 /* BalanceVM.swift in Sources */,
 				12F1D6E027F60B4B0003B10C /* R.generated.swift in Sources */,
+				12A5B5E72899AD6F00A80FEB /* ImageViewCell.swift in Sources */,
 				12E3F963281057ED003CBF9F /* LeftAlignedCollectionViewFlowLayout.swift in Sources */,
 				12DAA532284FD1330093F9FD /* BalanceValidator.swift in Sources */,
 				12C116782800018000D6B8C0 /* UILabel + Extensions.swift in Sources */,
@@ -1252,12 +1283,14 @@
 				12C5E740285E667F0010895D /* AddTransactionScreenView.swift in Sources */,
 				12482DA027F5FC5500D292CA /* BalanceInteractor.swift in Sources */,
 				12B86DD7280C81D50036FDD3 /* PrivacyPolicyVC.swift in Sources */,
+				12A5B5F12899CDAE00A80FEB /* CategoryView.swift in Sources */,
 				12E3F954280EFF9B003CBF9F /* NotificationScreenView.swift in Sources */,
 				12C116A52806FF2F00D6B8C0 /* ChoicePopup.swift in Sources */,
 				12DAA53C284FF4670093F9FD /* CurrencyCDRepository.swift in Sources */,
 				1255FC4127F67013002029DE /* RouterFactory.swift in Sources */,
 				12C2D9B22870ED900063A85F /* DefaultModelGenerator.swift in Sources */,
 				12C2D9A2287089A10063A85F /* ContainerProtocol.swift in Sources */,
+				12A5B5ED2899B18100A80FEB /* CategoryImageViewModel.swift in Sources */,
 				12B468F1284B8F3D0023E2D2 /* CoreDataProtocol.swift in Sources */,
 				12C2D9992870837A0063A85F /* TransactionCategoryInteractor.swift in Sources */,
 				12C1167E28002AE900D6B8C0 /* MainScreenVM.swift in Sources */,
@@ -1309,7 +1342,9 @@
 				12DAA534284FD27E0093F9FD /* BalanceValidationParams.swift in Sources */,
 				12C2D99B287086210063A85F /* Resetable.swift in Sources */,
 				12E4D9C3284BAD9D00CF6FC9 /* StaticResources.swift in Sources */,
+				12A5B5EF2899B60600A80FEB /* SFColors.swift in Sources */,
 				12C116842800614A00D6B8C0 /* StatisticScreenVC.swift in Sources */,
+				123DF8A3288C45FB00CFBB5F /* CreateCategoryVC.swift in Sources */,
 				12C2D9A62870BC950063A85F /* SJContainer + Interactors.swift in Sources */,
 				12482D7E27F5F14E00D292CA /* SceneDelegate.swift in Sources */,
 				12FAEA7A280ED93D007450C7 /* ContentLoader.swift in Sources */,
@@ -1320,6 +1355,7 @@
 				12B82E26284BE46300C54747 /* HapticHandler.swift in Sources */,
 				12E3F952280EFF6A003CBF9F /* NotificationScreenVC.swift in Sources */,
 				1208F3C2285E516B001908D8 /* UIKit + Extensions.swift in Sources */,
+				123DF8A5288C463600CFBB5F /* CreateCategoryScreenView.swift in Sources */,
 				12C2D997287080E80063A85F /* TransactionCategoryStorage.swift in Sources */,
 				1294BF7D284B8677004AFE0D /* StartCurrencyScreenVM.swift in Sources */,
 				12C2D9B02870CEB20063A85F /* TransactionsListVM.swift in Sources */,

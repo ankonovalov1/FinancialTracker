@@ -100,6 +100,15 @@
 "category not chosen" = "Не выбрана";
 "empty all small" = "пусто";
 
+// MARK: - Create Category Screen -
+
+"create category" = "Создать категорию";
+"edit category" = "Изменить категорию";
+"choose color" = "Выберите цвет";
+"choose icon" = "Выберите иконку";
+"name of category" = "Название";
+"max symbols count " = "Максимум %@ символов";
+
 // MARK: - Default category -
 
 // Income

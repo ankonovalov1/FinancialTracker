@@ -35,6 +35,10 @@ final class StartBalanceScreenVC: UIViewController {
         removeObservers()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
     // MARK: @objc func
     
     @objc private func skipTapped() {

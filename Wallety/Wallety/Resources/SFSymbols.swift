@@ -1,5 +1,3 @@
-import Foundation
-
 struct SFSymbols {
     
     static var names: [String] = [
